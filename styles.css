@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  min-width: 320px;
+  font: 100% Raleway, sans-serif;
+}
+body header {
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
+}
+body header .title {
+  display: block;
+  font-size: 0.7em;
+  margin-left: 25px;
+  color: #08A6E4;
+  font-weight: 300;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+body main {
+  display: block;
+  text-align: center;
+}
+body main .intro-content {
+  display: block;
+}
+body main .intro-content .sell-more {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 310px;
+  margin-top: 3.7rem;
+}/*# sourceMappingURL=styles.css.map */

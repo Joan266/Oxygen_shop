@@ -1,0 +1,43 @@
+$font-stack: Raleway, sans-serif;
+$primary-color: #08A6E4;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  min-width: 320px;
+  font: 100% $font-stack;
+  header {
+    display: flex;
+    align-items: center;
+    height: 3.50rem;
+    box-shadow: 0px 3px 6px 0px #0000004A;
+    .title {
+      display: block;
+      font-size: 0.7em;
+      margin-left: 25px;
+      color: $primary-color;
+      font-weight: 300;
+      margin-top: auto; 
+      margin-bottom: auto;
+    }
+  }
+  main {
+    display: block;
+    text-align: center;
+    .intro-content{
+      display: block;
+      .sell-more {
+        display: block;
+        margin-left: auto; 
+        margin-right: auto;
+        width: 310px;
+        margin-top: 3.7rem;
+      }
+    }
+  }
+}
