@@ -31,10 +31,10 @@ body main {
   display: block;
   text-align: center;
 }
-body main .intro-content {
+body main .intro {
   display: block;
 }
-body main .intro-content .sell-more {
+body main .intro .sell-more {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -42,20 +42,20 @@ body main .intro-content .sell-more {
   margin-top: 3.4rem;
   font-family: Open Sans;
 }
-body main .intro-content .sell-more h1 {
+body main .intro .sell-more h1 {
   display: block;
   font-weight: 400;
   font-family: Raleway;
   font-size: 1.8em;
 }
-body main .intro-content .sell-more p {
+body main .intro .sell-more p {
   display: block;
   font-weight: 400;
   margin-top: 1.2em;
   font-size: 0.9em;
   padding: 0 0.4em;
 }
-body main .intro-content .sell-more button {
+body main .intro .sell-more button {
   display: block;
   font-weight: 700;
   margin-top: 2.5em;
@@ -68,68 +68,163 @@ body main .intro-content .sell-more button {
   height: 2.8rem;
   width: 100%;
 }
-body main .intro-content .img-container {
+body main .intro .img-container {
   margin-top: 3.5rem;
   display: flex;
   justify-content: center;
 }
-body main .intro-content .most-popular {
+body main .intro .most-popular {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 310px;
   margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
   font-family: Open Sans;
 }
-body main .intro-content .most-popular h1 {
+body main .intro .most-popular h1 {
   font-family: Raleway;
   font-weight: 300;
   padding: 0 1.3em;
   font-size: 1.4em;
 }
-body main .intro-content .most-popular .content {
+body main .intro .most-popular .most-popular-content {
   margin-top: 2rem;
 }
-body main .intro-content .most-popular .content .container {
+body main .intro .most-popular .most-popular-content .most-popular-content-container {
   position: relative;
   margin-bottom: 0.7em;
 }
-body main .intro-content .most-popular .content .container img {
+body main .intro .most-popular .most-popular-content .most-popular-content-container img {
+  position: relative;
   width: 2.5em;
   height: 2.5em;
   margin-left: 50px;
+  z-index: 1;
 }
-body main .intro-content .most-popular .content .container .circle {
+body main .intro .most-popular .most-popular-content .most-popular-content-container .circle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: -1;
   width: 3em;
   height: 3em;
+  z-index: 0;
 }
-body main .intro-content .most-popular .content .container .blue {
+body main .intro .most-popular .most-popular-content .most-popular-content-container .blue {
   background-color: #08A6E4;
 }
-body main .intro-content .most-popular .content .container .red {
+body main .intro .most-popular .most-popular-content .most-popular-content-container .red {
   background-color: #FB3B64;
 }
-body main .intro-content .most-popular .content .container .green {
+body main .intro .most-popular .most-popular-content .most-popular-content-container .green {
   background-color: #55DFB4;
 }
-body main .intro-content .most-popular .content span {
+body main .intro .most-popular .most-popular-content span {
   font-family: Raleway;
   font-weight: 800;
   color: #000000;
   font-size: 1em;
   letter-spacing: 0.3em;
 }
-body main .intro-content .most-popular .content p {
+body main .intro .most-popular .most-popular-content p {
   font-family: Raleway;
   font-weight: 400;
   color: #A5A5A5;
   font-size: 0.8em;
   padding: 0 6em;
   margin-top: 1em;
+}
+body main .middle-content {
+  padding-top: 0.1rem;
+  padding-bottom: 2.1rem;
+  display: block;
+  background-color: #F7F7F7;
+}
+body main .middle-content .middle-content-section {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 310px;
+  margin-top: 2rem;
+  background-color: white;
+  text-align: left;
+  color: #000000;
+  padding-top: 0.5em;
+}
+body main .middle-content .middle-content-section h1 {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 1.3em;
+  padding: 1rem 1rem 0 1rem;
+}
+body main .middle-content .middle-content-section p {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 0.6em;
+  padding: 1rem;
+}
+body main .middle-content .middle-content-section .first-container {
+  position: relative;
+}
+body main .middle-content .middle-content-section .first-container img {
+  margin-top: 10%;
+  position: relative;
+  width: 7rem;
+  height: auto;
+  margin-left: 25%;
+  z-index: 1;
+}
+body main .middle-content .middle-content-section .first-container .red-stain {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(45deg);
+  border-radius: 43%;
+  z-index: 0;
+  width: 3.5em;
+  height: 3.5em;
+  background-color: #FB3B64;
+}
+body main .middle-content .middle-content-section .second-container {
+  position: relative;
+  margin-bottom: 0.7em;
+}
+body main .middle-content .middle-content-section .second-container img {
+  position: relative;
+  width: 8rem;
+  height: auto;
+  margin-left: 30%;
+  z-index: 1;
+}
+body main .middle-content .middle-content-section .second-container .blue-stain {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 0;
+  width: 5.5em;
+  height: 5.5em;
+  background-color: #08A6E4;
+}
+body main .middle-content .middle-content-section .third-container {
+  position: relative;
+}
+body main .middle-content .middle-content-section .third-container img {
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 13rem;
+  height: auto;
+}
+body main .middle-content .middle-content-section .third-container .green-background {
+  margin-top: 0.7em;
+  width: 100%;
+  height: 8em;
+  background-color: #55DFB4;
 }/*# sourceMappingURL=styles.css.map */

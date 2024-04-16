@@ -5,6 +5,7 @@ $primary-blue: #08A6E4;
 $primary-green: #55DFB4;
 $primary-grey: #A5A5A5;
 $secondary-blue:#07ACE64A;
+$secondary-grey:#F7F7F7;
 
 * {
   box-sizing: border-box;
@@ -37,7 +38,7 @@ body {
   main {
     display: block;
     text-align: center;
-    .intro-content{
+    .intro{
       display: block;
       .sell-more {
         display: block;
@@ -84,6 +85,7 @@ body {
         margin-right: auto;
         width: 310px;
         margin-top: 0.5rem;
+        margin-bottom: 2.5rem;
         font-family: $font-OpenSans;
         h1 {
           font-family: $font-Raleway;
@@ -91,15 +93,17 @@ body {
           padding: 0 1.3em;
           font-size: 1.4em;
         }
-        .content {
+        .most-popular-content {
           margin-top: 2rem;
-          .container{
+          .most-popular-content-container{
             position: relative;
             margin-bottom: 0.7em;
             img{
+              position: relative;
               width: 2.5em;
               height: 2.5em;
               margin-left: 50px;
+              z-index: 1;
             }
             .circle {
               position: absolute;
@@ -107,9 +111,9 @@ body {
               left: 50%;
               transform: translate(-50%, -50%);
               border-radius: 50%;
-              z-index: -1;
               width: 3em;
               height: 3em;
+              z-index: 0;
             }
             .blue{
               background-color:$primary-blue;
@@ -135,6 +139,98 @@ body {
             font-size: 0.8em;
             padding: 0 6em;
             margin-top: 1em;
+          }
+        }
+      }
+    }
+    .middle-content {
+      padding-top: 0.1rem;
+      padding-bottom: 2.1rem;
+      display: block;
+      background-color: $secondary-grey;
+      .middle-content-section {
+        display: block;
+        margin-left: auto; 
+        margin-right: auto;
+        width: 310px;
+        margin-top: 2rem;
+        background-color: white;
+        text-align: left;
+        color: #000000;
+        padding-top: 0.5em;
+        h1{
+          font-family: $font-Raleway;
+          font-weight: 400;
+          font-size: 1.3em;
+          padding: 1rem 1rem 0 1rem;
+        }
+        p{
+          font-family: $font-Raleway;
+          font-weight: 400;
+          font-size: 0.6em;
+          padding: 1rem;
+        }
+        .first-container{
+          position: relative;
+          img{
+            margin-top: 10%;
+            position: relative;
+            width: 7rem;
+            height: auto;
+            margin-left: 25%;
+            z-index: 1;
+          }
+          .red-stain {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform: rotate(45deg);
+            border-radius: 43%;
+            z-index: 0;
+            width: 3.5em;
+            height: 3.5em;
+            background-color:$primary-red;
+          }
+        }
+        .second-container{
+          position: relative;
+          margin-bottom: 0.7em;
+          img{
+            position: relative;
+            width: 8rem;
+            height: auto;
+            margin-left: 30%;
+            z-index: 1;
+          }
+          .blue-stain {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 0;
+            width: 5.5em;
+            height: 5.5em;
+            background-color:$primary-blue;
+          }
+        }
+        .third-container{
+          position: relative;
+          img {
+            position: absolute;
+            top: 70%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 13rem;
+            height: auto;
+          }
+          .green-background {
+            margin-top: 0.7em;
+            width: 100%;
+            height: 8em;
+            background-color:$primary-green;
           }
         }
       }
