@@ -25,8 +25,6 @@ body {
     .title {
       display: block;
       margin-left: 25px;
-      margin-top: auto; 
-      margin-bottom: auto;
       h1{
         color: $primary-blue;
         font-family: $font-Raleway;
@@ -156,19 +154,20 @@ body {
         margin-top: 2rem;
         background-color: white;
         text-align: left;
-        color: #000000;
         padding-top: 0.5em;
         h1{
           font-family: $font-Raleway;
           font-weight: 400;
           font-size: 1.3em;
           padding: 1rem 1rem 0 1rem;
+          color: #000000;
         }
         p{
           font-family: $font-Raleway;
           font-weight: 400;
           font-size: 0.6em;
           padding: 1rem;
+          color: #000000;
         }
         .first-container{
           position: relative;
@@ -200,7 +199,7 @@ body {
             position: relative;
             width: 8rem;
             height: auto;
-            margin-left: 30%;
+            margin-left: 32%;
             z-index: 1;
           }
           .blue-stain {
@@ -234,6 +233,33 @@ body {
           }
         }
       }
+    }
+  }
+  footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 4rem;
+    box-shadow: 0px -5px 40px 0px #00000033;
+    .title {
+      display: block;
+      margin-left: 25px;
+      width: 85%;
+      h1{
+        color: $primary-blue;
+        font-family: $font-Raleway;
+        font-weight: 300;
+        font-size: 1.5em;
+      }
+      span {
+        font-family: $font-OpenSans;
+        font-weight: 400;
+        font-size: 0.6em;
+        color: $primary-grey;
+      }
+    }
+    img{
+      margin-right: 8px;
     }
   }
 }

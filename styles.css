@@ -18,8 +18,6 @@ body header {
 body header .title {
   display: block;
   margin-left: 25px;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 body header .title h1 {
   color: #08A6E4;
@@ -150,7 +148,6 @@ body main .middle-content .middle-content-section {
   margin-top: 2rem;
   background-color: white;
   text-align: left;
-  color: #000000;
   padding-top: 0.5em;
 }
 body main .middle-content .middle-content-section h1 {
@@ -158,12 +155,14 @@ body main .middle-content .middle-content-section h1 {
   font-weight: 400;
   font-size: 1.3em;
   padding: 1rem 1rem 0 1rem;
+  color: #000000;
 }
 body main .middle-content .middle-content-section p {
   font-family: Raleway;
   font-weight: 400;
   font-size: 0.6em;
   padding: 1rem;
+  color: #000000;
 }
 body main .middle-content .middle-content-section .first-container {
   position: relative;
@@ -196,7 +195,7 @@ body main .middle-content .middle-content-section .second-container img {
   position: relative;
   width: 8rem;
   height: auto;
-  margin-left: 30%;
+  margin-left: 32%;
   z-index: 1;
 }
 body main .middle-content .middle-content-section .second-container .blue-stain {
@@ -227,4 +226,31 @@ body main .middle-content .middle-content-section .third-container .green-backgr
   width: 100%;
   height: 8em;
   background-color: #55DFB4;
+}
+body footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 4rem;
+  box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
+}
+body footer .title {
+  display: block;
+  margin-left: 25px;
+  width: 85%;
+}
+body footer .title h1 {
+  color: #08A6E4;
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+body footer .title span {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 0.6em;
+  color: #A5A5A5;
+}
+body footer img {
+  margin-right: 8px;
 }/*# sourceMappingURL=styles.css.map */
