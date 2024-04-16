@@ -1,5 +1,10 @@
-$font-stack: Raleway, sans-serif;
-$primary-color: #08A6E4;
+$font-Raleway: Raleway;
+$font-OpenSans: Open Sans;
+$primary-red: #FB3B64;
+$primary-blue: #08A6E4;
+$primary-green: #55DFB4;
+$primary-grey: #A5A5A5;
+$secondary-blue:#07ACE64A;
 
 * {
   box-sizing: border-box;
@@ -10,20 +15,23 @@ $primary-color: #08A6E4;
 body {
   display: block;
   min-width: 320px;
-  font: 100% $font-stack;
   header {
     display: flex;
+    width: 100%;
     align-items: center;
-    height: 3.50rem;
+    height: 3.40rem;
     box-shadow: 0px 3px 6px 0px #0000004A;
     .title {
       display: block;
-      font-size: 0.7em;
       margin-left: 25px;
-      color: $primary-color;
-      font-weight: 300;
       margin-top: auto; 
       margin-bottom: auto;
+      h1{
+        color: $primary-blue;
+        font-family: $font-Raleway;
+        font-weight: 300;
+        font-size: 1.5em;
+      }
     }
   }
   main {
@@ -36,7 +44,99 @@ body {
         margin-left: auto; 
         margin-right: auto;
         width: 310px;
-        margin-top: 3.7rem;
+        margin-top: 3.4rem;
+        font-family: $font-OpenSans;
+        h1{
+          display: block;
+          font-weight: 400;
+          font-family: $font-Raleway;
+          font-size: 1.8em;
+        }
+        p{
+          display: block;
+          font-weight: 400;
+          margin-top: 1.2em;
+          font-size: 0.9em;
+          padding: 0 0.4em;
+        }
+        button{
+          display: block;
+          font-weight: 700;
+          margin-top: 2.5em;
+          border-radius: 45px;
+          color: white;
+          background-color: $primary-blue;
+          box-shadow: 5px 10px 14px 0px $secondary-blue;
+          border: none;
+          font-size: 0.8em;
+          height: 2.8rem;
+          width: 100%;
+        }
+      }
+      .img-container {
+        margin-top: 3.5rem;
+        display: flex;
+        justify-content: center;
+      }
+      .most-popular {
+        display: block;
+        margin-left: auto; 
+        margin-right: auto;
+        width: 310px;
+        margin-top: 0.5rem;
+        font-family: $font-OpenSans;
+        h1 {
+          font-family: $font-Raleway;
+          font-weight: 300;
+          padding: 0 1.3em;
+          font-size: 1.4em;
+        }
+        .content {
+          margin-top: 2rem;
+          .container{
+            position: relative;
+            margin-bottom: 0.7em;
+            img{
+              width: 2.5em;
+              height: 2.5em;
+              margin-left: 50px;
+            }
+            .circle {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              border-radius: 50%;
+              z-index: -1;
+              width: 3em;
+              height: 3em;
+            }
+            .blue{
+              background-color:$primary-blue;
+            }
+            .red {
+              background-color:$primary-red;
+            }
+            .green{
+              background-color:$primary-green;
+            }
+          }
+          span{
+            font-family: $font-Raleway;
+            font-weight: 800;
+            color: #000000;
+            font-size: 1em;
+            letter-spacing: 0.3em;
+          }
+          p{
+            font-family: $font-Raleway;
+            font-weight: 400;
+            color:$primary-grey;
+            font-size: 0.8em;
+            padding: 0 6em;
+            margin-top: 1em;
+          }
+        }
       }
     }
   }
