@@ -6,6 +6,7 @@ $primary-green: #55DFB4;
 $primary-grey: #A5A5A5;
 $secondary-blue:#07ACE64A;
 $secondary-grey:#F7F7F7;
+$terciary-grey:#707070;
 
 * {
   box-sizing: border-box;
@@ -306,6 +307,52 @@ body {
           font-family: $font-OpenSans;
           font-weight: 700;
           font-size: 0.7rem;
+        }
+      }
+    }
+    .form{
+      width: 310px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      h1 {
+        font-family: $font-Raleway;
+        font-weight: 400;
+        color: #000;
+        font-size: 2.1rem;
+      }
+      p {
+        font-family: $font-OpenSans;
+        font-weight: 400;
+        color: #000;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+      span {
+        display: flex;
+        justify-items: center;
+        font-family: $font-OpenSans;
+        font-weight: 600;
+        color: $primary-grey;
+        img{
+          margin-right: 5px;
+        }
+      }
+      form{
+        label{
+          font-family: $font-OpenSans;
+          font-weight: 600;
+          color:$primary-blue
+        }
+        input {
+          width: 100%;
+        }
+      }
+      .conditions-container{
+        p{
+          font-family: $font-OpenSans;
+          font-weight: 600;
+          color: $terciary-grey;
         }
       }
     }
