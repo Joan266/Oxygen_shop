@@ -7,26 +7,31 @@
 body {
   display: block;
   min-width: 320px;
-  font: 100% Raleway, sans-serif;
+  width: 100%;
 }
 body header {
   display: flex;
+  width: 100%;
   align-items: center;
-  height: 3.5rem;
+  height: 3.4rem;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
 }
 body header .title {
   display: block;
-  font-size: 0.7em;
   margin-left: 25px;
+  width: 85%;
+}
+body header .title h1 {
   color: #08A6E4;
+  font-family: Raleway;
   font-weight: 300;
-  margin-top: auto;
-  margin-bottom: auto;
+  font-size: 1.5em;
 }
 body main {
   display: block;
   text-align: center;
+  width: 100%;
+  overflow: hidden;
 }
 body main .intro-content {
   display: block;
@@ -36,5 +41,369 @@ body main .intro-content .sell-more {
   margin-left: auto;
   margin-right: auto;
   width: 310px;
-  margin-top: 3.7rem;
+  margin-top: 3.4rem;
+  font-family: Open Sans;
+}
+body main .intro-content .sell-more h1 {
+  display: block;
+  font-weight: 400;
+  font-family: Raleway;
+  font-size: 1.8em;
+}
+body main .intro-content .sell-more p {
+  display: block;
+  font-weight: 400;
+  margin-top: 1.2em;
+  font-size: 0.9em;
+  padding: 0 0.4em;
+}
+body main .intro-content .sell-more button {
+  display: block;
+  font-weight: 700;
+  margin-top: 2.5em;
+  border-radius: 45px;
+  color: white;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  border: none;
+  font-size: 0.8em;
+  height: 2.8rem;
+  width: 100%;
+}
+body main .intro-content .img-container {
+  margin-top: 4.6rem;
+  display: flex;
+  justify-content: center;
+}
+body main .intro-content .most-popular {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 310px;
+  margin-top: 0.5rem;
+  margin-bottom: 2.3rem;
+  font-family: Open Sans;
+}
+body main .intro-content .most-popular h1 {
+  font-family: Raleway;
+  font-weight: 300;
+  padding: 0 1.3em;
+  font-size: 1.4em;
+}
+body main .intro-content .most-popular .most-popular-content {
+  margin-top: 1.7rem;
+}
+body main .intro-content .most-popular .most-popular-content .most-popular-content-container {
+  position: relative;
+  margin-bottom: 0.7em;
+}
+body main .intro-content .most-popular .most-popular-content .most-popular-content-container img {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  margin-left: 50px;
+  z-index: 1;
+}
+body main .intro-content .most-popular .most-popular-content .most-popular-content-container .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  z-index: 0;
+}
+body main .intro-content .most-popular .most-popular-content span {
+  font-family: Raleway;
+  font-weight: 800;
+  color: #000000;
+  font-size: 1em;
+  letter-spacing: 0.3em;
+}
+body main .intro-content .most-popular .most-popular-content p {
+  font-family: Raleway;
+  font-weight: 400;
+  color: #A5A5A5;
+  font-size: 0.8em;
+  padding: 0 6em;
+  margin-top: 1em;
+}
+body main .middle-intro-content {
+  padding-top: 0.1rem;
+  padding-bottom: 2.1rem;
+  display: block;
+  background-color: #F7F7F7;
+}
+body main .middle-intro-content .middle-content-section {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 310px;
+  margin-top: 2rem;
+  background-color: white;
+  text-align: left;
+  padding-top: 0.5em;
+}
+body main .middle-intro-content .middle-content-section h1 {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 1.3em;
+  padding: 1rem 1rem 0 1rem;
+  color: #000000;
+}
+body main .middle-intro-content .middle-content-section p {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 0.6em;
+  padding: 1rem;
+  color: #000000;
+}
+body main .middle-intro-content .middle-content-section .first-container {
+  position: relative;
+}
+body main .middle-intro-content .middle-content-section .first-container img {
+  margin-top: 10%;
+  position: relative;
+  width: 7rem;
+  height: auto;
+  margin-left: 25%;
+  z-index: 1;
+}
+body main .middle-intro-content .middle-content-section .first-container .red-stain {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(45deg);
+  border-radius: 43%;
+  z-index: 0;
+  width: 3.5em;
+  height: 3.5em;
+  background-color: #FB3B64;
+}
+body main .middle-intro-content .middle-content-section .second-container {
+  position: relative;
+}
+body main .middle-intro-content .middle-content-section .second-container img {
+  position: relative;
+  width: 8rem;
+  height: auto;
+  margin-left: 32%;
+  z-index: 1;
+}
+body main .middle-intro-content .middle-content-section .second-container .blue-stain {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 0;
+  width: 5.5em;
+  height: 5.5em;
+  background-color: #08A6E4;
+}
+body main .middle-intro-content .middle-content-section .third-container {
+  position: relative;
+}
+body main .middle-intro-content .middle-content-section .third-container img {
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 13rem;
+  height: auto;
+}
+body main .middle-intro-content .middle-content-section .third-container .green-background {
+  margin-top: 0.7em;
+  width: 100%;
+  height: 8em;
+  background-color: #55DFB4;
+}
+body main .pricing {
+  padding: 0.1rem 0.8rem 1rem 0.8rem;
+}
+body main .pricing h1 {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 2.7rem;
+  margin-bottom: 0.5rem;
+}
+body main .pricing .pricing-container {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 310px;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  padding: 0 0.5rem;
+  padding-bottom: 1rem;
+  height: 250px;
+}
+body main .pricing .pricing-container .pricing-content {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body main .pricing .pricing-container .pricing-content .price-type-content {
+  flex: 1;
+}
+body main .pricing .pricing-container .pricing-content .price-type-content h2 {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 0.9em;
+  color: #000;
+}
+body main .pricing .pricing-container .pricing-content .price-type-content span {
+  font-family: Open Sans;
+  font-weight: 300;
+  font-size: 2.4em;
+}
+body main .pricing .pricing-container .pricing-content .price-type-content p {
+  font-family: Raleway;
+  font-weight: 700;
+  color: #000;
+  font-size: 0.6em;
+}
+body main .pricing .pricing-container .pricing-content .features-content {
+  flex: 1;
+}
+body main .pricing .pricing-container .pricing-content .features-content ul {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+body main .pricing .pricing-container .pricing-content .features-content ul img {
+  margin-right: 5px;
+}
+body main .pricing .pricing-container .pricing-content .features-content ul li {
+  font-family: Open Sans;
+  font-weight: 400;
+  color: #000000;
+  font-size: 0.7em;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+body main .pricing .pricing-container button {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+body main .form {
+  width: 310px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+body main .form h1 {
+  font-family: Raleway;
+  font-weight: 400;
+  color: #000;
+  font-size: 2.1rem;
+}
+body main .form p {
+  font-family: Open Sans;
+  font-weight: 400;
+  color: #000;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+body main .form span {
+  display: flex;
+  justify-items: center;
+  font-family: Open Sans;
+  font-weight: 600;
+  color: #A5A5A5;
+}
+body main .form span img {
+  margin-right: 5px;
+}
+body main .form form label {
+  font-family: Open Sans;
+  font-weight: 600;
+  color: #08A6E4;
+}
+body main .form form input {
+  width: 100%;
+}
+body main .form .conditions-container p {
+  font-family: Open Sans;
+  font-weight: 600;
+  color: #707070;
+}
+body footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 4rem;
+  box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
+}
+body footer .title {
+  display: block;
+  margin-left: 25px;
+  width: 85%;
+}
+body footer .title h1 {
+  color: #08A6E4;
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+body footer .title span {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 0.6em;
+  color: #A5A5A5;
+}
+body footer img {
+  margin-right: 8px;
+}
+
+.blue-background {
+  background-color: #08A6E4;
+}
+
+.red-background {
+  background-color: #FB3B64;
+}
+
+.green-background {
+  background-color: #55DFB4;
+}
+
+.blue-border {
+  border: 1px solid #08A6E4;
+}
+
+.red-border {
+  border: 1px solid #FB3B64;
+}
+
+.green-border {
+  border: 1px solid #55DFB4;
+}
+
+.blue-color {
+  color: #08A6E4;
+}
+
+.red-color {
+  color: #FB3B64;
+}
+
+.green-color {
+  color: #55DFB4;
 }/*# sourceMappingURL=styles.css.map */
