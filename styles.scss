@@ -2,11 +2,13 @@ $font-Raleway: Raleway;
 $font-OpenSans: Open Sans;
 $primary-red: #FB3B64;
 $primary-blue: #08A6E4;
+$secondary-blue:#07ACE64A;
 $primary-green: #55DFB4;
 $primary-grey: #A5A5A5;
-$secondary-blue:#07ACE64A;
 $secondary-grey:#F7F7F7;
-$terciary-grey:#707070;
+$tertiary-grey:#707070;
+$quart-grey:#95989A;
+$checkbox-size: 1.4rem;
 
 * {
   box-sizing: border-box;
@@ -65,7 +67,8 @@ body {
           display: block;
           font-weight: 700;
           margin-top: 2.5em;
-          border-radius: 45px;
+          font-family: $font-OpenSans;
+          border-radius: 2rem;
           color: white;
           background-color: $primary-blue;
           box-shadow: 5px 10px 14px 0px $secondary-blue;
@@ -331,51 +334,133 @@ body {
         }
       }
     }
-    .form{
-      width: 310px;
-      margin-left: auto;
-      margin-right: auto;
+    .contact{
+      padding: 0.1rem 1.5rem 1rem 1.5rem;
       text-align: left;
-      h1 {
+      &__title {
         font-family: $font-Raleway;
         font-weight: 400;
         color: #000;
         font-size: 2.1rem;
+        margin-bottom: 0.3rem;
       }
-      p {
+      &__text {
         font-family: $font-OpenSans;
         font-weight: 400;
         color: #000;
         font-size: 0.8rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
-      span {
+      &__details {
         display: flex;
-        justify-items: center;
-        font-family: $font-OpenSans;
-        font-weight: 600;
-        color: $primary-grey;
-        img{
-          margin-right: 5px;
+        justify-content: left;
+        align-items: center;
+        margin-bottom: 0.7rem;
+        img {
+          margin-right: 0.4em;
+          width: 1.35em;
+          height: 1.35em;
         }
-      }
-      form{
-        label{
+        span {
           font-family: $font-OpenSans;
           font-weight: 600;
-          color:$primary-blue
+          color: $primary-grey;
+          font-size: 0.7rem;
         }
-        input {
+      }
+      &__form{
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        position: relative;
+        display: block;
+        &__label{
+          font-family: $font-OpenSans;
+          font-weight: 600;
+          color:$primary-blue;
+          font-size: 0.65rem;
+          letter-spacing: 0.2em;
+        }
+        &__input {
           width: 100%;
+          border:none;
+          border-bottom: 1px solid $quart-grey;
+          margin-bottom: 1.8rem;
+          margin-top: 1.8rem;
         }
-      }
-      .conditions-container{
-        p{
+        &__checkbox{
+          position: absolute;
+          opacity: 0;
+          // Text
+          & + label{
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            line-height: $checkbox-size;
+            padding-left: $checkbox-size + 0.7rem;
+            font-size: 0.6rem;
+            font-family: sans-serif;
+            color: $tertiary-grey; 
+            
+            // Checkbox
+            &:before{
+              position: absolute;
+              display: block;
+              left: 0;
+              top: 0.5rem;
+              content: "";
+              background: transparent;
+              width: $checkbox-size;
+              height: $checkbox-size;
+              box-shadow: inset 0 0 0 1px $quart-grey;
+              border-radius: 4px;
+              transition: 200ms ease-in-out all;
+            }
+            
+            // Tick
+            &:after{
+              position: absolute;
+              display: block;
+              top: 0.7rem;
+              left: 0.55rem;
+              content: "";
+              width: 0.3rem;
+              height: 0.75rem;
+              border-right: 2px solid transparent;
+              border-bottom: 2px solid transparent;
+              transform: rotate(45deg);
+              transition: 200ms ease-in-out all;
+            }
+          }
+          
+          // Checked
+          &:checked{
+            & + label{
+              &:before{
+                background: white;
+              }
+              &:after{
+                border-color: $primary-blue;
+              }
+            }
+          }
+        }
+        &__button{
+          display: block;
+          font-weight: 700;
+          margin-top: 2.5em;
+          border-radius: 2rem;
           font-family: $font-OpenSans;
-          font-weight: 600;
-          color: $terciary-grey;
+          color: white;
+          background-color: $primary-blue;
+          box-shadow: 5px 10px 14px 0px $secondary-blue;
+          border: none;
+          font-size: 0.7em;
+          height: 2.3rem;
+          width: 70%;
+          margin-left: 30%;
         }
       }
+      
     }
   }
   footer {
