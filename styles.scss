@@ -41,29 +41,27 @@ body {
     text-align: center;
     width: 100%;
     overflow: hidden;
-    .intro-content{
+    .intro{
       display: block;
-      .sell-more {
+      .sellmore {
         display: block;
-        margin-left: auto; 
-        margin-right: auto;
-        width: 310px;
-        margin-top: 3.4rem;
+        padding: 0 1.5rem;
+        margin-top: 6rem;
         font-family: $font-OpenSans;
-        h1{
+        &__title{
           display: block;
           font-weight: 400;
           font-family: $font-Raleway;
           font-size: 1.8em;
         }
-        p{
+        &__text{
           display: block;
           font-weight: 400;
           margin-top: 1.2em;
-          font-size: 0.9em;
+          font-size: 0.8em;
           padding: 0 0.4em;
         }
-        button{
+        &__button{
           display: block;
           font-weight: 700;
           margin-top: 2.5em;
@@ -77,28 +75,26 @@ body {
           width: 100%;
         }
       }
-      .img-container {
-        margin-top: 4.6rem;
+      .split-container {
+        margin-top: 3.6rem;
         display: flex;
         justify-content: center;
       }
-      .most-popular {
+      .mostpopular {
         display: block;
-        margin-left: auto; 
-        margin-right: auto;
-        width: 310px;
+        padding: 0 1.5rem;
         margin-top: 0.5rem;
         margin-bottom: 2.3rem;
         font-family: $font-OpenSans;
-        h1 {
+        &__title {
           font-family: $font-Raleway;
           font-weight: 300;
           padding: 0 1.3em;
           font-size: 1.4em;
         }
-        .most-popular-content {
+        &__content {
           margin-top: 1.7rem;
-          .most-popular-content-container{
+          &__container{
             position: relative;
             margin-bottom: 0.7em;
             img{
@@ -117,16 +113,25 @@ body {
               width: 3em;
               height: 3em;
               z-index: 0;
+              &--red {
+                background-color: $primary-red;
+              }
+              &--blue {
+                background-color: $primary-blue;
+              }
+              &--green {
+                background-color: $primary-green;
+              }
             }
           }
-          span{
+          &__num {
             font-family: $font-Raleway;
             font-weight: 800;
             color: #000000;
             font-size: 1em;
             letter-spacing: 0.3em;
           }
-          p{
+          &__text {
             font-family: $font-Raleway;
             font-weight: 400;
             color:$primary-grey;
@@ -137,45 +142,59 @@ body {
         }
       }
     }
-    .middle-intro-content {
+    .middleintro {
+      padding: 0 1.5rem;
       padding-top: 0.1rem;
       padding-bottom: 2.1rem;
       display: block;
       background-color: $secondary-grey;
-      .middle-content-section {
+      &__content {
         display: block;
-        margin-left: auto; 
-        margin-right: auto;
-        width: 310px;
         margin-top: 2rem;
         background-color: white;
         text-align: left;
         padding-top: 0.5em;
-        h1{
+        &__title{
           font-family: $font-Raleway;
           font-weight: 400;
           font-size: 1.3em;
           padding: 1rem 1rem 0 1rem;
           color: #000000;
         }
-        p{
+        &__text{
           font-family: $font-Raleway;
           font-weight: 400;
-          font-size: 0.6em;
+          font-size: 0.7em;
           padding: 1rem;
           color: #000000;
         }
-        .first-container{
+        &__container{
           position: relative;
-          img{
-            margin-top: 10%;
+          &__macbook{
             position: relative;
+            margin-top: 10%;
             width: 7rem;
             height: auto;
             margin-left: 25%;
             z-index: 1;
           }
-          .red-stain {
+          &__iPhone {
+            position: relative;
+            width: 8rem;
+            height: auto;
+            margin-left: 32%;
+            z-index: 1;
+          }
+          &__trumpet {
+            position: absolute;
+            top: 70%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 13rem;
+            height: auto;
+          }
+          &__redstain{
             position: absolute;
             top: 10%;
             left: 50%;
@@ -187,17 +206,7 @@ body {
             height: 3.5em;
             background-color:$primary-red;
           }
-        }
-        .second-container{
-          position: relative;
-          img{
-            position: relative;
-            width: 8rem;
-            height: auto;
-            margin-left: 32%;
-            z-index: 1;
-          }
-          .blue-stain {
+          &__bluestain{
             position: absolute;
             top: 40%;
             left: 50%;
@@ -208,19 +217,7 @@ body {
             height: 5.5em;
             background-color:$primary-blue;
           }
-        }
-        .third-container{
-          position: relative;
-          img {
-            position: absolute;
-            top: 70%;
-            left: 40%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            width: 13rem;
-            height: auto;
-          }
-          .green-background {
+          &__greenstain{
             margin-top: 0.7em;
             width: 100%;
             height: 8em;
