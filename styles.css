@@ -6,26 +6,34 @@
 
 body {
   display: block;
-  min-width: 320px;
   width: 100%;
 }
 body header {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  height: 3.4rem;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
-}
-body header .title {
   display: block;
-  margin-left: 25px;
-  width: 85%;
+  height: 3.4rem;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2901960784);
+  padding: 0 0.7em;
 }
-body header .title h1 {
+body header .oxygenshop {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  margin-top: 0.5em;
+  width: 68%;
+}
+body header .oxygenshop__title {
   color: #08A6E4;
   font-family: Raleway;
   font-weight: 300;
   font-size: 1.5em;
+}
+body header .menu {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  margin-top: 0.5em;
+  width: 30%;
+  text-align: right;
 }
 body main {
   display: block;
@@ -33,78 +41,76 @@ body main {
   width: 100%;
   overflow: hidden;
 }
-body main .intro-content {
+body main .intro {
   display: block;
 }
-body main .intro-content .sell-more {
+body main .intro .sellmore {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 310px;
-  margin-top: 3.4rem;
+  padding: 0 1.5rem;
+  margin-top: 6rem;
   font-family: Open Sans;
 }
-body main .intro-content .sell-more h1 {
+body main .intro .sellmore__title {
   display: block;
   font-weight: 400;
   font-family: Raleway;
   font-size: 1.8em;
 }
-body main .intro-content .sell-more p {
+body main .intro .sellmore__text {
   display: block;
   font-weight: 400;
   margin-top: 1.2em;
-  font-size: 0.9em;
+  font-size: 0.8em;
   padding: 0 0.4em;
 }
-body main .intro-content .sell-more button {
+body main .intro .sellmore__button {
   display: block;
   font-weight: 700;
   margin-top: 2.5em;
-  border-radius: 45px;
+  font-family: Open Sans;
+  border-radius: 2rem;
   color: white;
   background-color: #08A6E4;
-  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  box-shadow: 0.3em 0.6em 0.8em 0 rgba(7, 172, 230, 0.2901960784);
   border: none;
   font-size: 0.8em;
   height: 2.8rem;
   width: 100%;
+  text-align: center;
 }
-body main .intro-content .img-container {
-  margin-top: 4.6rem;
+body main .intro .split-container {
+  margin-top: 3.6rem;
   display: flex;
   justify-content: center;
 }
-body main .intro-content .most-popular {
+body main .intro .mostpopular {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 310px;
+  padding: 0 1.5rem;
   margin-top: 0.5rem;
   margin-bottom: 2.3rem;
   font-family: Open Sans;
 }
-body main .intro-content .most-popular h1 {
+body main .intro .mostpopular__title {
   font-family: Raleway;
   font-weight: 300;
   padding: 0 1.3em;
   font-size: 1.4em;
 }
-body main .intro-content .most-popular .most-popular-content {
+body main .intro .mostpopular__content {
   margin-top: 1.7rem;
 }
-body main .intro-content .most-popular .most-popular-content .most-popular-content-container {
+body main .intro .mostpopular__content__container {
   position: relative;
   margin-bottom: 0.7em;
 }
-body main .intro-content .most-popular .most-popular-content .most-popular-content-container img {
+body main .intro .mostpopular__content__container img {
   position: relative;
   width: 2.5em;
   height: 2.5em;
-  margin-left: 50px;
+  margin-left: 3rem;
   z-index: 1;
 }
-body main .intro-content .most-popular .most-popular-content .most-popular-content-container .circle {
+body main .intro .mostpopular__content__container .circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -114,14 +120,23 @@ body main .intro-content .most-popular .most-popular-content .most-popular-conte
   height: 3em;
   z-index: 0;
 }
-body main .intro-content .most-popular .most-popular-content span {
+body main .intro .mostpopular__content__container .circle--red {
+  background-color: #FB3B64;
+}
+body main .intro .mostpopular__content__container .circle--blue {
+  background-color: #08A6E4;
+}
+body main .intro .mostpopular__content__container .circle--green {
+  background-color: #55DFB4;
+}
+body main .intro .mostpopular__content__num {
   font-family: Raleway;
   font-weight: 800;
   color: #000000;
   font-size: 1em;
   letter-spacing: 0.3em;
 }
-body main .intro-content .most-popular .most-popular-content p {
+body main .intro .mostpopular__content__text {
   font-family: Raleway;
   font-weight: 400;
   color: #A5A5A5;
@@ -129,48 +144,62 @@ body main .intro-content .most-popular .most-popular-content p {
   padding: 0 6em;
   margin-top: 1em;
 }
-body main .middle-intro-content {
+body main .middleintro {
+  padding: 0 1.5rem;
   padding-top: 0.1rem;
   padding-bottom: 2.1rem;
   display: block;
   background-color: #F7F7F7;
 }
-body main .middle-intro-content .middle-content-section {
+body main .middleintro__content {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 310px;
   margin-top: 2rem;
   background-color: white;
   text-align: left;
   padding-top: 0.5em;
 }
-body main .middle-intro-content .middle-content-section h1 {
+body main .middleintro__content__title {
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.3em;
   padding: 1rem 1rem 0 1rem;
   color: #000000;
 }
-body main .middle-intro-content .middle-content-section p {
+body main .middleintro__content__text {
   font-family: Raleway;
   font-weight: 400;
-  font-size: 0.6em;
+  font-size: 0.7em;
   padding: 1rem;
   color: #000000;
 }
-body main .middle-intro-content .middle-content-section .first-container {
+body main .middleintro__content__container {
   position: relative;
 }
-body main .middle-intro-content .middle-content-section .first-container img {
-  margin-top: 10%;
+body main .middleintro__content__container__macbook {
   position: relative;
+  margin-top: 10%;
   width: 7rem;
   height: auto;
   margin-left: 25%;
   z-index: 1;
 }
-body main .middle-intro-content .middle-content-section .first-container .red-stain {
+body main .middleintro__content__container__iPhone {
+  position: relative;
+  width: 8rem;
+  height: auto;
+  margin-left: 32%;
+  z-index: 1;
+}
+body main .middleintro__content__container__trumpet {
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 13rem;
+  height: auto;
+}
+body main .middleintro__content__container__redstain {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -182,17 +211,7 @@ body main .middle-intro-content .middle-content-section .first-container .red-st
   height: 3.5em;
   background-color: #FB3B64;
 }
-body main .middle-intro-content .middle-content-section .second-container {
-  position: relative;
-}
-body main .middle-intro-content .middle-content-section .second-container img {
-  position: relative;
-  width: 8rem;
-  height: auto;
-  margin-left: 32%;
-  z-index: 1;
-}
-body main .middle-intro-content .middle-content-section .second-container .blue-stain {
+body main .middleintro__content__container__bluestain {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -203,84 +222,91 @@ body main .middle-intro-content .middle-content-section .second-container .blue-
   height: 5.5em;
   background-color: #08A6E4;
 }
-body main .middle-intro-content .middle-content-section .third-container {
-  position: relative;
-}
-body main .middle-intro-content .middle-content-section .third-container img {
-  position: absolute;
-  top: 70%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 13rem;
-  height: auto;
-}
-body main .middle-intro-content .middle-content-section .third-container .green-background {
+body main .middleintro__content__container__greenstain {
   margin-top: 0.7em;
   width: 100%;
   height: 8em;
   background-color: #55DFB4;
 }
 body main .pricing {
-  padding: 0.1rem 0.8rem 1rem 0.8rem;
+  padding: 0.1rem 1.5rem 1rem 1.5rem;
 }
-body main .pricing h1 {
+body main .pricing__title {
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.5rem;
   margin-top: 2.7rem;
   margin-bottom: 0.5rem;
 }
-body main .pricing .pricing-container {
+body main .pricing__container {
   position: relative;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 310px;
-  border-radius: 20px;
+  border-radius: 1.4rem;
   margin-bottom: 3rem;
   padding: 0 0.5rem;
   padding-bottom: 1rem;
-  height: 250px;
+  height: 13rem;
 }
-body main .pricing .pricing-container .pricing-content {
+body main .pricing__container--red {
+  border: 1px solid #FB3B64;
+}
+body main .pricing__container--blue {
+  border: 1px solid #08A6E4;
+}
+body main .pricing__container--green {
+  border: 1px solid #55DFB4;
+}
+body main .pricing__container__subscription {
+  position: relative;
+  display: block;
   height: 100%;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
-body main .pricing .pricing-container .pricing-content .price-type-content {
-  flex: 1;
+body main .pricing__container__subscription__type {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  width: 48%;
 }
-body main .pricing .pricing-container .pricing-content .price-type-content h2 {
+body main .pricing__container__subscription__type__title {
   font-family: Raleway;
   font-weight: 700;
   font-size: 0.9em;
   color: #000;
 }
-body main .pricing .pricing-container .pricing-content .price-type-content span {
+body main .pricing__container__subscription__type__price {
   font-family: Open Sans;
   font-weight: 300;
   font-size: 2.4em;
 }
-body main .pricing .pricing-container .pricing-content .price-type-content p {
+body main .pricing__container__subscription__type__price--red {
+  color: #FB3B64;
+}
+body main .pricing__container__subscription__type__price--blue {
+  color: #08A6E4;
+}
+body main .pricing__container__subscription__type__price--green {
+  color: #55DFB4;
+}
+body main .pricing__container__subscription__type__text {
   font-family: Raleway;
   font-weight: 700;
   color: #000;
   font-size: 0.6em;
 }
-body main .pricing .pricing-container .pricing-content .features-content {
-  flex: 1;
+body main .pricing__container__subscription__features {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  width: 48%;
 }
-body main .pricing .pricing-container .pricing-content .features-content ul {
+body main .pricing__container__subscription__features__list {
   list-style-type: none;
   margin-top: 1rem;
 }
-body main .pricing .pricing-container .pricing-content .features-content ul img {
-  margin-right: 5px;
+body main .pricing__container__subscription__features__list img {
+  margin-right: 0.5em;
 }
-body main .pricing .pricing-container .pricing-content .features-content ul li {
+body main .pricing__container__subscription__features__list__item {
   font-family: Open Sans;
   font-weight: 400;
   color: #000000;
@@ -288,122 +314,188 @@ body main .pricing .pricing-container .pricing-content .features-content ul li {
   text-align: left;
   margin-bottom: 1rem;
 }
-body main .pricing .pricing-container button {
+body main .pricing__container__button {
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 50px;
-  width: 150px;
-  border-radius: 25px;
+  height: 2.5rem;
+  width: 7.5rem;
+  border-radius: 2rem;
   border: none;
   color: white;
   font-family: Open Sans;
   font-weight: 700;
   font-size: 0.7rem;
 }
-body main .form {
-  width: 310px;
-  margin-left: auto;
-  margin-right: auto;
+body main .pricing__container__button--red {
+  background-color: #FB3B64;
+}
+body main .pricing__container__button--blue {
+  background-color: #08A6E4;
+}
+body main .pricing__container__button--green {
+  background-color: #55DFB4;
+}
+body main .contact {
+  padding: 0.1rem 1.5rem 1rem 1.5rem;
   text-align: left;
 }
-body main .form h1 {
+body main .contact__title {
   font-family: Raleway;
   font-weight: 400;
   color: #000;
   font-size: 2.1rem;
+  margin-bottom: 0.3rem;
 }
-body main .form p {
+body main .contact__text {
   font-family: Open Sans;
   font-weight: 400;
   color: #000;
   font-size: 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
-body main .form span {
-  display: flex;
-  justify-items: center;
+body main .contact__details {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.7rem;
+}
+body main .contact__details img {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  margin-right: 0.4em;
+  width: 1.35em;
+  height: 1.35em;
+}
+body main .contact__details span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
   font-family: Open Sans;
   font-weight: 600;
   color: #A5A5A5;
+  font-size: 0.7rem;
 }
-body main .form span img {
-  margin-right: 5px;
+body main .contact__form {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: block;
 }
-body main .form form label {
+body main .contact__form__label {
   font-family: Open Sans;
   font-weight: 600;
   color: #08A6E4;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
 }
-body main .form form input {
+body main .contact__form__input {
   width: 100%;
+  border: none;
+  border-bottom: 1px solid #95989A;
+  margin-bottom: 2.2rem;
+  margin-top: 1.2rem;
 }
-body main .form .conditions-container p {
-  font-family: Open Sans;
-  font-weight: 600;
+body main .contact__form__checkbox {
+  position: absolute;
+  opacity: 0;
+}
+body main .contact__form__checkbox + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1.4rem;
+  padding-left: 2.1rem;
+  font-size: 0.6rem;
+  font-family: sans-serif;
   color: #707070;
 }
-body footer {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  height: 4rem;
-  box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
-}
-body footer .title {
+body main .contact__form__checkbox + label:before {
+  position: absolute;
   display: block;
-  margin-left: 25px;
-  width: 85%;
+  left: 0;
+  top: 0.5rem;
+  content: "";
+  background: transparent;
+  width: 1.4rem;
+  height: 1.4rem;
+  box-shadow: inset 0 0 0 1px #95989A;
+  border-radius: 0.3rem;
+  transition: 200ms ease-in-out all;
 }
-body footer .title h1 {
+body main .contact__form__checkbox + label:after {
+  position: absolute;
+  display: block;
+  top: 0.7rem;
+  left: 0.55rem;
+  content: "";
+  width: 0.3rem;
+  height: 0.75rem;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(45deg);
+  transition: 200ms ease-in-out all;
+}
+body main .contact__form__checkbox:checked + label:before {
+  background: white;
+}
+body main .contact__form__checkbox:checked + label:after {
+  border-color: #08A6E4;
+}
+body main .contact__form__button {
+  display: block;
+  font-weight: 700;
+  margin-top: 2.5em;
+  border-radius: 2rem;
+  font-family: Open Sans;
+  color: white;
+  background-color: #08A6E4;
+  box-shadow: 0.2rem 0.3rem 0.4rem 0 rgba(7, 172, 230, 0.2901960784);
+  border: none;
+  font-size: 0.7em;
+  height: 2.3rem;
+  width: 70%;
+  margin-left: 30%;
+}
+body footer {
+  position: relative;
+  display: block;
+  height: 4rem;
+  box-shadow: 0 -0.3rem 2.4rem 0 rgba(0, 0, 0, 0.2);
+  padding: 0.7em;
+}
+body footer .oxygenshop {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  width: 63%;
+}
+body footer .oxygenshop__title {
   color: #08A6E4;
   font-family: Raleway;
   font-weight: 300;
   font-size: 1.5em;
 }
-body footer .title span {
+body footer .oxygenshop__rights {
   font-family: Open Sans;
   font-weight: 400;
   font-size: 0.6em;
   color: #A5A5A5;
 }
-body footer img {
-  margin-right: 8px;
+body footer .media {
+  position: relative;
+  display: inline-block;
+  width: 35%;
+  vertical-align: middle;
+  line-height: 1;
+  text-align: right;
 }
-
-.blue-background {
-  background-color: #08A6E4;
-}
-
-.red-background {
-  background-color: #FB3B64;
-}
-
-.green-background {
-  background-color: #55DFB4;
-}
-
-.blue-border {
-  border: 1px solid #08A6E4;
-}
-
-.red-border {
-  border: 1px solid #FB3B64;
-}
-
-.green-border {
-  border: 1px solid #55DFB4;
-}
-
-.blue-color {
-  color: #08A6E4;
-}
-
-.red-color {
-  color: #FB3B64;
-}
-
-.green-color {
-  color: #55DFB4;
+body footer .media img {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  margin-left: 0.35rem;
 }/*# sourceMappingURL=styles.css.map */

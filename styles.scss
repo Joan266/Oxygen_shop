@@ -2,11 +2,13 @@ $font-Raleway: Raleway;
 $font-OpenSans: Open Sans;
 $primary-red: #FB3B64;
 $primary-blue: #08A6E4;
+$secondary-blue:#07ACE64A;
 $primary-green: #55DFB4;
 $primary-grey: #A5A5A5;
-$secondary-blue:#07ACE64A;
 $secondary-grey:#F7F7F7;
-$terciary-grey:#707070;
+$tertiary-grey:#707070;
+$quart-grey:#95989A;
+$checkbox-size: 1.4rem;
 
 * {
   box-sizing: border-box;
@@ -16,24 +18,32 @@ $terciary-grey:#707070;
 
 body {
   display: block;
-  min-width: 320px;
   width: 100%;
   header {
-    display: flex;
-    width: 100%;
-    align-items: center;
+    display: block;
     height: 3.40rem;
-    box-shadow: 0px 3px 6px 0px #0000004A;
-    .title {
-      display: block;
-      margin-left: 25px;
-      width: 85%;
-      h1{
+    box-shadow: 0 0.2rem 0.4rem 0 #0000004A;
+    padding: 0 0.7em;
+    .oxygenshop {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5;
+      margin-top: 0.5em;
+      width: 68%;
+      &__title{
         color: $primary-blue;
         font-family: $font-Raleway;
         font-weight: 300;
         font-size: 1.5em;
       }
+    }
+    .menu {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5;
+      margin-top: 0.5em;
+      width: 30%;
+      text-align: right;
     }
   }
   main {
@@ -41,71 +51,69 @@ body {
     text-align: center;
     width: 100%;
     overflow: hidden;
-    .intro-content{
+    .intro{
       display: block;
-      .sell-more {
+      .sellmore {
         display: block;
-        margin-left: auto; 
-        margin-right: auto;
-        width: 310px;
-        margin-top: 3.4rem;
+        padding: 0 1.5rem;
+        margin-top: 6rem;
         font-family: $font-OpenSans;
-        h1{
+        &__title{
           display: block;
           font-weight: 400;
           font-family: $font-Raleway;
           font-size: 1.8em;
         }
-        p{
+        &__text{
           display: block;
           font-weight: 400;
           margin-top: 1.2em;
-          font-size: 0.9em;
+          font-size: 0.8em;
           padding: 0 0.4em;
         }
-        button{
+        &__button{
           display: block;
           font-weight: 700;
           margin-top: 2.5em;
-          border-radius: 45px;
+          font-family: $font-OpenSans;
+          border-radius: 2rem;
           color: white;
           background-color: $primary-blue;
-          box-shadow: 5px 10px 14px 0px $secondary-blue;
+          box-shadow: 0.3em 0.6em 0.8em 0 $secondary-blue;
           border: none;
           font-size: 0.8em;
           height: 2.8rem;
           width: 100%;
+          text-align: center;
         }
       }
-      .img-container {
-        margin-top: 4.6rem;
+      .split-container {
+        margin-top: 3.6rem;
         display: flex;
         justify-content: center;
       }
-      .most-popular {
+      .mostpopular {
         display: block;
-        margin-left: auto; 
-        margin-right: auto;
-        width: 310px;
+        padding: 0 1.5rem;
         margin-top: 0.5rem;
         margin-bottom: 2.3rem;
         font-family: $font-OpenSans;
-        h1 {
+        &__title {
           font-family: $font-Raleway;
           font-weight: 300;
           padding: 0 1.3em;
           font-size: 1.4em;
         }
-        .most-popular-content {
+        &__content {
           margin-top: 1.7rem;
-          .most-popular-content-container{
+          &__container{
             position: relative;
             margin-bottom: 0.7em;
             img{
               position: relative;
               width: 2.5em;
               height: 2.5em;
-              margin-left: 50px;
+              margin-left: 3rem;
               z-index: 1;
             }
             .circle {
@@ -117,16 +125,25 @@ body {
               width: 3em;
               height: 3em;
               z-index: 0;
+              &--red {
+                background-color: $primary-red;
+              }
+              &--blue {
+                background-color: $primary-blue;
+              }
+              &--green {
+                background-color: $primary-green;
+              }
             }
           }
-          span{
+          &__num {
             font-family: $font-Raleway;
             font-weight: 800;
             color: #000000;
             font-size: 1em;
             letter-spacing: 0.3em;
           }
-          p{
+          &__text {
             font-family: $font-Raleway;
             font-weight: 400;
             color:$primary-grey;
@@ -137,45 +154,59 @@ body {
         }
       }
     }
-    .middle-intro-content {
+    .middleintro {
+      padding: 0 1.5rem;
       padding-top: 0.1rem;
       padding-bottom: 2.1rem;
       display: block;
       background-color: $secondary-grey;
-      .middle-content-section {
+      &__content {
         display: block;
-        margin-left: auto; 
-        margin-right: auto;
-        width: 310px;
         margin-top: 2rem;
         background-color: white;
         text-align: left;
         padding-top: 0.5em;
-        h1{
+        &__title{
           font-family: $font-Raleway;
           font-weight: 400;
           font-size: 1.3em;
           padding: 1rem 1rem 0 1rem;
           color: #000000;
         }
-        p{
+        &__text{
           font-family: $font-Raleway;
           font-weight: 400;
-          font-size: 0.6em;
+          font-size: 0.7em;
           padding: 1rem;
           color: #000000;
         }
-        .first-container{
+        &__container{
           position: relative;
-          img{
-            margin-top: 10%;
+          &__macbook{
             position: relative;
+            margin-top: 10%;
             width: 7rem;
             height: auto;
             margin-left: 25%;
             z-index: 1;
           }
-          .red-stain {
+          &__iPhone {
+            position: relative;
+            width: 8rem;
+            height: auto;
+            margin-left: 32%;
+            z-index: 1;
+          }
+          &__trumpet {
+            position: absolute;
+            top: 70%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 13rem;
+            height: auto;
+          }
+          &__redstain{
             position: absolute;
             top: 10%;
             left: 50%;
@@ -187,17 +218,7 @@ body {
             height: 3.5em;
             background-color:$primary-red;
           }
-        }
-        .second-container{
-          position: relative;
-          img{
-            position: relative;
-            width: 8rem;
-            height: auto;
-            margin-left: 32%;
-            z-index: 1;
-          }
-          .blue-stain {
+          &__bluestain{
             position: absolute;
             top: 40%;
             left: 50%;
@@ -208,19 +229,7 @@ body {
             height: 5.5em;
             background-color:$primary-blue;
           }
-        }
-        .third-container{
-          position: relative;
-          img {
-            position: absolute;
-            top: 70%;
-            left: 40%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            width: 13rem;
-            height: auto;
-          }
-          .green-background {
+          &__greenstain{
             margin-top: 0.7em;
             width: 100%;
             height: 8em;
@@ -230,60 +239,79 @@ body {
       }
     }
     .pricing {
-      padding: 0.1rem 0.8rem 1rem 0.8rem;
-      h1{
+      padding: 0.1rem 1.5rem 1rem 1.5rem;
+      &__title {
         font-family: $font-Raleway;
         font-weight: 400;
         font-size: 1.5rem;
         margin-top: 2.7rem;
         margin-bottom: 0.5rem;
       }
-      .pricing-container{
+      &__container{
         position: relative;
         display: block;
-        margin-left: auto; 
-        margin-right: auto;
-        width: 310px;
-        border-radius: 20px;
+        border-radius: 1.4rem;
         margin-bottom: 3rem;
         padding: 0 0.5rem;
         padding-bottom: 1rem;
-        height: 250px;
-        .pricing-content {
+        height: 13rem;
+        &--red {
+          border: 1px solid $primary-red;
+        }
+        &--blue {
+          border: 1px solid $primary-blue;
+        }
+        &--green {
+          border: 1px solid $primary-green;
+        }
+        &__subscription {
+          position: relative;
+          display: block;
           height: 100%;
-          padding: 0;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          .price-type-content {
-            flex: 1;
-            h2 {
+          &__type {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.5;
+            width: 48%;
+            &__title {
               font-family: $font-Raleway;
               font-weight: 700;
               font-size: 0.9em;
               color: #000;
             }
-            span{
+            &__price{
               font-family: $font-OpenSans;
               font-weight: 300;
               font-size: 2.4em;
+              &--red {
+                color: $primary-red;
+              }
+              &--blue {
+                color: $primary-blue;
+              }
+              &--green {
+                color: $primary-green;
+              }
             }
-            p{
+            &__text{
               font-family: $font-Raleway;
               font-weight: 700;
               color: #000;
               font-size: 0.6em;
             }
           }
-          .features-content {
-            flex: 1;
-            ul{
+          &__features {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.5;
+            width: 48%;
+            &__list{
              list-style-type: none;
              margin-top: 1rem;
              img{
-              margin-right: 5px;
+              margin-right: 0.5em;
              }
-             li{
+             &__item{
               font-family: $font-OpenSans;
               font-weight: 400;
               color: #000000;
@@ -294,122 +322,204 @@ body {
             }
           }
         }
-        button{
+        &__button{
           position: absolute;
           top: 100%;
           left: 50%;
           transform: translate(-50%, -50%);
-          height: 50px;
-          width: 150px;
-          border-radius: 25px;
+          height: 2.5rem;
+          width: 7.5rem;
+          border-radius: 2rem;
           border: none;
           color: white;
           font-family: $font-OpenSans;
           font-weight: 700;
           font-size: 0.7rem;
+          &--red {
+            background-color: $primary-red;
+          }
+          &--blue {
+            background-color: $primary-blue;
+          }
+          &--green {
+            background-color: $primary-green;
+          }
         }
       }
     }
-    .form{
-      width: 310px;
-      margin-left: auto;
-      margin-right: auto;
+    .contact{
+      padding: 0.1rem 1.5rem 1rem 1.5rem;
       text-align: left;
-      h1 {
+      &__title {
         font-family: $font-Raleway;
         font-weight: 400;
         color: #000;
         font-size: 2.1rem;
+        margin-bottom: 0.3rem;
       }
-      p {
+      &__text {
         font-family: $font-OpenSans;
         font-weight: 400;
         color: #000;
         font-size: 0.8rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
-      span {
-        display: flex;
-        justify-items: center;
-        font-family: $font-OpenSans;
-        font-weight: 600;
-        color: $primary-grey;
-        img{
-          margin-right: 5px;
+      &__details {
+        display: block;
+        text-align: left;
+        margin-bottom: 0.7rem;
+        img {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1.5;
+          margin-right: 0.4em;
+          width: 1.35em;
+          height: 1.35em;
         }
-      }
-      form{
-        label{
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1.5;
           font-family: $font-OpenSans;
           font-weight: 600;
-          color:$primary-blue
+          color: $primary-grey;
+          font-size: 0.7rem;
         }
-        input {
+      }
+      &__form{
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        position: relative;
+        display: block;
+        &__label{
+          font-family: $font-OpenSans;
+          font-weight: 600;
+          color:$primary-blue;
+          font-size: 0.65rem;
+          letter-spacing: 0.2em;
+        }
+        &__input {
           width: 100%;
+          border:none;
+          border-bottom: 1px solid $quart-grey;
+          margin-bottom: 2.2rem;
+          margin-top: 1.2rem;
         }
-      }
-      .conditions-container{
-        p{
+        &__checkbox{
+          position: absolute;
+          opacity: 0;
+          // Text
+          & + label{
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            line-height: $checkbox-size;
+            padding-left: $checkbox-size + 0.7rem;
+            font-size: 0.6rem;
+            font-family: sans-serif;
+            color: $tertiary-grey; 
+            
+            // Checkbox
+            &:before{
+              position: absolute;
+              display: block;
+              left: 0;
+              top: 0.5rem;
+              content: "";
+              background: transparent;
+              width: $checkbox-size;
+              height: $checkbox-size;
+              box-shadow: inset 0 0 0 1px $quart-grey;
+              border-radius: 0.3rem;
+              transition: 200ms ease-in-out all;
+            }
+            
+            // Tick
+            &:after{
+              position: absolute;
+              display: block;
+              top: 0.7rem;
+              left: 0.55rem;
+              content: "";
+              width: 0.3rem;
+              height: 0.75rem;
+              border-right: 2px solid transparent;
+              border-bottom: 2px solid transparent;
+              transform: rotate(45deg);
+              transition: 200ms ease-in-out all;
+            }
+          }
+          
+          // Checked
+          &:checked{
+            & + label{
+              &:before{
+                background: white;
+              }
+              &:after{
+                border-color: $primary-blue;
+              }
+            }
+          }
+        }
+        &__button{
+          display: block;
+          font-weight: 700;
+          margin-top: 2.5em;
+          border-radius: 2rem;
           font-family: $font-OpenSans;
-          font-weight: 600;
-          color: $terciary-grey;
+          color: white;
+          background-color: $primary-blue;
+          box-shadow: 0.2rem 0.3rem 0.4rem 0 $secondary-blue;
+          border: none;
+          font-size: 0.7em;
+          height: 2.3rem;
+          width: 70%;
+          margin-left: 30%;
         }
       }
+      
     }
   }
   footer {
-    display: flex;
-    width: 100%;
-    align-items: center;
+    position: relative;
+    display: block;
     height: 4rem;
-    box-shadow: 0px -5px 40px 0px #00000033;
-    .title {
-      display: block;
-      margin-left: 25px;
-      width: 85%;
-      h1{
+    box-shadow: 0 -0.3rem 2.4rem 0 #00000033;
+    padding: 0.7em;
+    .oxygenshop {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle; 
+      line-height: 1;
+      width: 63%;
+      &__title{
         color: $primary-blue;
         font-family: $font-Raleway;
         font-weight: 300;
         font-size: 1.5em;
       }
-      span {
+      &__rights {
         font-family: $font-OpenSans;
         font-weight: 400;
         font-size: 0.6em;
         color: $primary-grey;
       }
     }
-    img{
-      margin-right: 8px;
+    .media {
+      position: relative;
+      display: inline-block;
+      width: 35%; 
+      vertical-align: middle; 
+      line-height: 1; 
+      text-align: right;
+      img{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle; 
+        line-height: 1.5;
+        margin-left: 0.35rem;
+      }
     }
   }
-}
-
-.blue-background{
-  background-color:$primary-blue;
-}
-.red-background {
-  background-color:$primary-red;
-}
-.green-background{
-  background-color:$primary-green;
-}
-.blue-border {
-  border: 1px solid $primary-blue;
-}
-.red-border {
-  border: 1px solid $primary-red;
-}
-.green-border {
-  border: 1px solid $primary-green;
-}
-.blue-color {
-  color: $primary-blue;
-}
-.red-color {
-  color: $primary-red;
-}
-.green-color {
-  color: $primary-green;
 }
