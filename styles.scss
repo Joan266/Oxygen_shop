@@ -517,43 +517,56 @@ body {
       max-width:$max-width-phone;
       margin-left: auto;
       margin-right: auto;
+      display: block;
       @media only screen and (min-width: 1000px) {
-        max-width: $max-width-computer;
+        max-width: $max-width-computer+6rem;
+        padding: 0;
+        text-align: center;
       }
-      &__title {
-        font-family: $font-Raleway;
-        font-weight: 400;
-        color: #000;
-        font-size: 2.1rem;
-        margin-bottom: 0.3rem;
-      }
-      &__text {
-        font-family: $font-OpenSans;
-        font-weight: 400;
-        color: #000;
-        font-size: 0.8rem;
-        margin-bottom: 2rem;
-      }
-      &__details {
+      &__info {
         display: block;
         text-align: left;
-        margin-bottom: 0.7rem;
-        img {
+        @media only screen and (min-width: 1000px) {
           display: inline-block;
           vertical-align: middle;
           line-height: 1.5;
-          margin-right: 0.4em;
-          width: 1.35em;
-          height: 1.35em;
+          width: 35%;
         }
-        span {
-          display: inline-block;
-          vertical-align: middle;
-          line-height: 1.5;
+        &__title {
+          font-family: $font-Raleway;
+          font-weight: 400;
+          color: #000;
+          font-size: 2.1rem;
+          margin-bottom: 0.3rem;
+        }
+        &__text {
           font-family: $font-OpenSans;
-          font-weight: 600;
-          color: $primary-grey;
-          font-size: 0.7rem;
+          font-weight: 400;
+          color: #000;
+          font-size: 0.8rem;
+          margin-bottom: 2rem;
+        }
+        &__details {
+          display: block;
+          text-align: left;
+          margin-bottom: 0.7rem;
+          img {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.5;
+            margin-right: 0.4em;
+            width: 1.35em;
+            height: 1.35em;
+          }
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.5;
+            font-family: $font-OpenSans;
+            font-weight: 600;
+            color: $primary-grey;
+            font-size: 0.7rem;
+          }
         }
       }
       &__form{
@@ -561,6 +574,13 @@ body {
         margin-bottom: 2.5rem;
         position: relative;
         display: block;
+        text-align: left;
+        @media only screen and (min-width: 1000px) {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1.5;
+          width: 35%;
+        }
         &__label{
           font-family: $font-OpenSans;
           font-weight: 600;

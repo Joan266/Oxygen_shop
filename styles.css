@@ -550,32 +550,47 @@ body main .contact {
   max-width: 18rem;
   margin-left: auto;
   margin-right: auto;
+  display: block;
 }
 @media only screen and (min-width: 1000px) {
   body main .contact {
-    max-width: 50rem;
+    max-width: 56rem;
+    padding: 0;
+    text-align: center;
   }
 }
-body main .contact__title {
+body main .contact__info {
+  display: block;
+  text-align: left;
+}
+@media only screen and (min-width: 1000px) {
+  body main .contact__info {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 35%;
+  }
+}
+body main .contact__info__title {
   font-family: Raleway;
   font-weight: 400;
   color: #000;
   font-size: 2.1rem;
   margin-bottom: 0.3rem;
 }
-body main .contact__text {
+body main .contact__info__text {
   font-family: Open Sans;
   font-weight: 400;
   color: #000;
   font-size: 0.8rem;
   margin-bottom: 2rem;
 }
-body main .contact__details {
+body main .contact__info__details {
   display: block;
   text-align: left;
   margin-bottom: 0.7rem;
 }
-body main .contact__details img {
+body main .contact__info__details img {
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5;
@@ -583,7 +598,7 @@ body main .contact__details img {
   width: 1.35em;
   height: 1.35em;
 }
-body main .contact__details span {
+body main .contact__info__details span {
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5;
@@ -597,6 +612,15 @@ body main .contact__form {
   margin-bottom: 2.5rem;
   position: relative;
   display: block;
+  text-align: left;
+}
+@media only screen and (min-width: 1000px) {
+  body main .contact__form {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 35%;
+  }
 }
 body main .contact__form__label {
   font-family: Open Sans;
