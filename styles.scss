@@ -9,6 +9,8 @@ $secondary-grey:#F7F7F7;
 $tertiary-grey:#707070;
 $quart-grey:#95989A;
 $checkbox-size: 1.4rem;
+$max-width-phone: 18rem;
+$max-width-computer: 50rem;
 
 * {
   box-sizing: border-box;
@@ -24,6 +26,9 @@ body {
     height: 3.40rem;
     box-shadow: 0 0.2rem 0.4rem 0 #0000004A;
     padding: 0 0.7em;
+    @media only screen and (min-width: 1000px) {
+      padding: 0 3.7em;
+    }
     .oxygenshop {
       display: inline-block;
       vertical-align: middle;
@@ -53,6 +58,12 @@ body {
     overflow: hidden;
     .intro{
       display: block;
+      max-width:$max-width-phone;
+      margin-left: auto;
+      margin-right: auto;
+      @media only screen and (min-width: 1000px) {
+        max-width: $max-width-computer;
+      }
       .sellmore {
         display: block;
         padding: 0 1.5rem;
@@ -177,24 +188,34 @@ body {
       display: block;
       background-color: $secondary-grey;
       &__content {
+        position: relative;
         display: block;
         margin-top: 2rem;
         background-color: white;
         text-align: left;
         padding-top: 0.5em;
         min-height: 0;
+        max-width:$max-width-phone;
+        margin-left: auto;
+        margin-right: auto;
+        &--third {
+          @media only screen and (min-width: 1000px) {
+            background-color: transparent;
+          }
+        }
         @media only screen and (min-width: 1000px) {
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          max-width: 1124px;
           min-height: 17rem;
+          height: 17rem;
+          max-width: $max-width-computer;
         }
         &__description {
           position: relative;
           display: block;
-          order:2;
+          background-color: white;
           @media only screen and (min-width: 1000px) {
             flex: 1;
           }
@@ -203,10 +224,18 @@ body {
               order:1;
             }
           }
+          &--third {
+            @media only screen and (min-width: 1000px) { 
+              height: 100%;
+              flex: 1.25;
+              padding-top: 10%;
+              padding-right: 5%;
+            }
+          }
           &__title{
             font-family: $font-Raleway;
             font-weight: 400;
-            font-size: 1.3em;
+            font-size: 1.2em;
             padding: 1rem 1rem 0 1rem;
             color: #000000;
             @media only screen and (min-width: 1000px) {
@@ -218,7 +247,7 @@ body {
             font-weight: 400;
             font-size: 0.7em;
             padding: 1rem;
-            padding-top: 2.5rem;
+            padding-top: 1.5rem;
             @media only screen and (min-width: 1000px) {
               font-size: 0.8em;
               padding-right: 4rem;  
@@ -233,12 +262,18 @@ body {
           margin-left: 22%;
           min-height: 4.5rem;
           margin-top: 8%;
-          order:1;
+          height: 100%;
           @media only screen and (min-width: 1000px) {
-            flex: 1;
+            flex: 1.5;
             display: flex;
             justify-content: center;
             margin: 0;
+          }
+          &--third {
+            margin: 0;
+            @media only screen and (min-width: 1000px) {
+              flex: 1;
+            }
           }
           &--reverse-order{
             @media only screen and (min-width: 1000px) {
@@ -252,6 +287,14 @@ body {
             @media only screen and (min-width: 1000px) {
               max-width: 18rem;
               margin-top: 3rem;
+            }
+            &--third{
+              min-width: 100%;
+              @media only screen and (min-width: 1000px) {
+                margin: 0;
+                max-width: 0;
+                padding-left: 10%;
+              }
             }
             &__macbook{
               position: relative;
@@ -267,12 +310,16 @@ body {
             }
             &__trumpet {
               position: absolute;
-              top: 70%;
-              left: 40%;
+              top: 75%;
+              left: 45%;
               transform: translate(-50%, -50%);
               z-index: 1;
-              width: 13rem;
-              height: auto;
+              width: 15.5rem;
+              height: auto; 
+              @media only screen and (min-width: 1000px) {
+                top: 55%;
+                left: 50%;
+              }
             }
             &__redstain{
               position: absolute;
@@ -307,10 +354,13 @@ body {
               }
             }
             &__greenstain{
-              margin-top: 0.7em;
               width: 100%;
               height: 8em;
               background-color:$primary-green;
+              @media only screen and (min-width: 1000px) {
+                height: 100%;
+                margin: 0;
+              }
             }
           }
         }
@@ -318,6 +368,12 @@ body {
     }
     .pricing {
       padding: 0.1rem 1.5rem 1rem 1.5rem;
+      max-width:$max-width-phone;
+      margin-left: auto;
+      margin-right: auto;
+      @media only screen and (min-width: 1000px) {
+        max-width: $max-width-computer;
+      }
       &__title {
         font-family: $font-Raleway;
         font-weight: 400;
@@ -428,6 +484,12 @@ body {
     .contact{
       padding: 0.1rem 1.5rem 1rem 1.5rem;
       text-align: left;
+      max-width:$max-width-phone;
+      margin-left: auto;
+      margin-right: auto;
+      @media only screen and (min-width: 1000px) {
+        max-width: $max-width-computer;
+      }
       &__title {
         font-family: $font-Raleway;
         font-weight: 400;
@@ -565,6 +627,9 @@ body {
     height: 4rem;
     box-shadow: 0 -0.3rem 2.4rem 0 #00000033;
     padding: 0.7em;
+    @media only screen and (min-width: 1000px) {
+      padding: 0.7em 3.7em;
+    }
     .oxygenshop {
       position: relative;
       display: inline-block;
