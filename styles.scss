@@ -97,14 +97,29 @@ body {
         padding: 0 1.5rem;
         margin-top: 0.5rem;
         margin-bottom: 2.3rem;
-        font-family: $font-OpenSans;
+        font-family: $font-OpenSans; 
+        @media only screen and (min-width: 1000px) { 
+          margin-bottom: 4.5rem; 
+          margin-top: 1.5rem;
+        }
         &__title {
           font-family: $font-Raleway;
           font-weight: 300;
           padding: 0 1.3em;
           font-size: 1.4em;
+          @media only screen and (min-width: 1000px) {  
+            margin-bottom: 2.5rem;
+          }
+
         }
         &__content {
+          @media only screen and (min-width: 1000px) {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.3;
+            width: 30%;
+            min-height: 10rem;
+          }
           margin-top: 1.7rem;
           &__container{
             position: relative;
@@ -149,7 +164,8 @@ body {
             color:$primary-grey;
             font-size: 0.8em;
             padding: 0 6em;
-            margin-top: 1em;
+            margin-top: 1.3em;
+            white-space: nowrap;
           }
         }
       }
@@ -166,74 +182,136 @@ body {
         background-color: white;
         text-align: left;
         padding-top: 0.5em;
-        &__title{
-          font-family: $font-Raleway;
-          font-weight: 400;
-          font-size: 1.3em;
-          padding: 1rem 1rem 0 1rem;
-          color: #000000;
+        min-height: 0;
+        @media only screen and (min-width: 1000px) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 1124px;
+          min-height: 17rem;
         }
-        &__text{
-          font-family: $font-Raleway;
-          font-weight: 400;
-          font-size: 0.7em;
-          padding: 1rem;
-          color: #000000;
-        }
-        &__container{
+        &__description {
           position: relative;
-          &__macbook{
+          display: block;
+          order:2;
+          @media only screen and (min-width: 1000px) {
+            flex: 1;
+          }
+          &--reverse-order{
+            @media only screen and (min-width: 1000px) {
+              order:1;
+            }
+          }
+          &__title{
+            font-family: $font-Raleway;
+            font-weight: 400;
+            font-size: 1.3em;
+            padding: 1rem 1rem 0 1rem;
+            color: #000000;
+            @media only screen and (min-width: 1000px) {
+              font-size: 1.5em;
+            }
+          }
+          &__text{
+            font-family: $font-Raleway;
+            font-weight: 400;
+            font-size: 0.7em;
+            padding: 1rem;
+            padding-top: 2.5rem;
+            @media only screen and (min-width: 1000px) {
+              font-size: 0.8em;
+              padding-right: 4rem;  
+              padding-top: 0;
+            }
+            color: #000000;
+          }
+        }
+        &__ilustration {
+          position: relative;
+          display: block;
+          margin-left: 22%;
+          min-height: 4.5rem;
+          margin-top: 8%;
+          order:1;
+          @media only screen and (min-width: 1000px) {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+          }
+          &--reverse-order{
+            @media only screen and (min-width: 1000px) {
+              order:2;
+            }
+          }
+          &__container{
             position: relative;
-            margin-top: 10%;
-            width: 7rem;
-            height: auto;
-            margin-left: 25%;
-            z-index: 1;
-          }
-          &__iPhone {
-            position: relative;
-            width: 8rem;
-            height: auto;
-            margin-left: 32%;
-            z-index: 1;
-          }
-          &__trumpet {
-            position: absolute;
-            top: 70%;
-            left: 40%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            width: 13rem;
-            height: auto;
-          }
-          &__redstain{
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transform: rotate(45deg);
-            border-radius: 43%;
-            z-index: 0;
-            width: 3.5em;
-            height: 3.5em;
-            background-color:$primary-red;
-          }
-          &__bluestain{
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            z-index: 0;
-            width: 5.5em;
-            height: 5.5em;
-            background-color:$primary-blue;
-          }
-          &__greenstain{
-            margin-top: 0.7em;
-            width: 100%;
-            height: 8em;
-            background-color:$primary-green;
+            display: block;
+            max-width: 9rem;
+            @media only screen and (min-width: 1000px) {
+              max-width: 18rem;
+              margin-top: 3rem;
+            }
+            &__macbook{
+              position: relative;
+              width: 100%;
+              height: auto;
+              z-index: 1;
+            }
+            &__iPhone {
+              position: relative;
+              width: 100%;
+              height: auto;
+              z-index: 1;
+            }
+            &__trumpet {
+              position: absolute;
+              top: 70%;
+              left: 40%;
+              transform: translate(-50%, -50%);
+              z-index: 1;
+              width: 13rem;
+              height: auto;
+            }
+            &__redstain{
+              position: absolute;
+              top: -15%;
+              left: 65%;
+              transform: translate(-50%, -50%);
+              transform: rotate(45deg);
+              border-radius: 45%;
+              z-index: 0;
+              width: 3.5rem;
+              height: 3.5rem;
+              background-color:$primary-red;
+              @media only screen and (min-width: 1000px) {
+                width: 7rem;
+                height: 7rem;
+                border-radius: 15%;
+              }
+            }
+            &__bluestain{
+              position: absolute;
+              top: 40%;
+              left: 35%;
+              transform: translate(-50%, -50%);
+              border-radius: 50%;
+              z-index: 0;
+              width: 6.5rem;
+              height: 6.5rem;
+              background-color:$primary-blue;
+              @media only screen and (min-width: 1000px) {
+                width: 13rem;
+                height: 13rem;
+              }
+            }
+            &__greenstain{
+              margin-top: 0.7em;
+              width: 100%;
+              height: 8em;
+              background-color:$primary-green;
+            }
           }
         }
       }

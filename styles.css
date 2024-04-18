@@ -90,14 +90,34 @@ body main .intro .mostpopular {
   margin-bottom: 2.3rem;
   font-family: Open Sans;
 }
+@media only screen and (min-width: 1000px) {
+  body main .intro .mostpopular {
+    margin-bottom: 4.5rem;
+    margin-top: 1.5rem;
+  }
+}
 body main .intro .mostpopular__title {
   font-family: Raleway;
   font-weight: 300;
   padding: 0 1.3em;
   font-size: 1.4em;
 }
+@media only screen and (min-width: 1000px) {
+  body main .intro .mostpopular__title {
+    margin-bottom: 2.5rem;
+  }
+}
 body main .intro .mostpopular__content {
   margin-top: 1.7rem;
+}
+@media only screen and (min-width: 1000px) {
+  body main .intro .mostpopular__content {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.3;
+    width: 30%;
+    min-height: 10rem;
+  }
 }
 body main .intro .mostpopular__content__container {
   position: relative;
@@ -142,7 +162,8 @@ body main .intro .mostpopular__content__text {
   color: #A5A5A5;
   font-size: 0.8em;
   padding: 0 6em;
-  margin-top: 1em;
+  margin-top: 1.3em;
+  white-space: nowrap;
 }
 body main .middleintro {
   padding: 0 1.5rem;
@@ -157,40 +178,105 @@ body main .middleintro__content {
   background-color: white;
   text-align: left;
   padding-top: 0.5em;
+  min-height: 0;
 }
-body main .middleintro__content__title {
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1124px;
+    min-height: 17rem;
+  }
+}
+body main .middleintro__content__description {
+  position: relative;
+  display: block;
+  order: 2;
+}
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__description {
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__description--reverse-order {
+    order: 1;
+  }
+}
+body main .middleintro__content__description__title {
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.3em;
   padding: 1rem 1rem 0 1rem;
   color: #000000;
 }
-body main .middleintro__content__text {
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__description__title {
+    font-size: 1.5em;
+  }
+}
+body main .middleintro__content__description__text {
   font-family: Raleway;
   font-weight: 400;
   font-size: 0.7em;
   padding: 1rem;
+  padding-top: 2.5rem;
   color: #000000;
 }
-body main .middleintro__content__container {
-  position: relative;
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__description__text {
+    font-size: 0.8em;
+    padding-right: 4rem;
+    padding-top: 0;
+  }
 }
-body main .middleintro__content__container__macbook {
+body main .middleintro__content__ilustration {
   position: relative;
-  margin-top: 10%;
-  width: 7rem;
+  display: block;
+  margin-left: 22%;
+  min-height: 4.5rem;
+  margin-top: 8%;
+  order: 1;
+}
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__ilustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__ilustration--reverse-order {
+    order: 2;
+  }
+}
+body main .middleintro__content__ilustration__container {
+  position: relative;
+  display: block;
+  max-width: 9rem;
+}
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__ilustration__container {
+    max-width: 18rem;
+    margin-top: 3rem;
+  }
+}
+body main .middleintro__content__ilustration__container__macbook {
+  position: relative;
+  width: 100%;
   height: auto;
-  margin-left: 25%;
   z-index: 1;
 }
-body main .middleintro__content__container__iPhone {
+body main .middleintro__content__ilustration__container__iPhone {
   position: relative;
-  width: 8rem;
+  width: 100%;
   height: auto;
-  margin-left: 32%;
   z-index: 1;
 }
-body main .middleintro__content__container__trumpet {
+body main .middleintro__content__ilustration__container__trumpet {
   position: absolute;
   top: 70%;
   left: 40%;
@@ -199,30 +285,43 @@ body main .middleintro__content__container__trumpet {
   width: 13rem;
   height: auto;
 }
-body main .middleintro__content__container__redstain {
+body main .middleintro__content__ilustration__container__redstain {
   position: absolute;
-  top: 10%;
-  left: 50%;
+  top: -15%;
+  left: 65%;
   transform: translate(-50%, -50%);
   transform: rotate(45deg);
-  border-radius: 43%;
+  border-radius: 45%;
   z-index: 0;
-  width: 3.5em;
-  height: 3.5em;
+  width: 3.5rem;
+  height: 3.5rem;
   background-color: #FB3B64;
 }
-body main .middleintro__content__container__bluestain {
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__ilustration__container__redstain {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 15%;
+  }
+}
+body main .middleintro__content__ilustration__container__bluestain {
   position: absolute;
   top: 40%;
-  left: 50%;
+  left: 35%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   z-index: 0;
-  width: 5.5em;
-  height: 5.5em;
+  width: 6.5rem;
+  height: 6.5rem;
   background-color: #08A6E4;
 }
-body main .middleintro__content__container__greenstain {
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__ilustration__container__bluestain {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+body main .middleintro__content__ilustration__container__greenstain {
   margin-top: 0.7em;
   width: 100%;
   height: 8em;
