@@ -417,26 +417,27 @@ body main .middleintro__content__ilustration__container__greenstain {
   }
 }
 body main .pricing {
-  padding: 0.1rem 1.5rem 1rem 1.5rem;
+  padding: 0.1rem 0 1rem 0;
   max-width: 18rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3rem;
 }
 @media only screen and (min-width: 1000px) {
   body main .pricing {
-    max-width: 50rem;
+    margin-top: 6rem;
+    max-width: 58rem;
   }
 }
 body main .pricing__title {
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.5rem;
-  margin-top: 2.7rem;
   margin-bottom: 0.5rem;
 }
 @media only screen and (min-width: 1000px) {
   body main .pricing__title {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 }
 body main .pricing__container {
@@ -454,9 +455,10 @@ body main .pricing__container {
     vertical-align: middle;
     line-height: 1.5;
     width: 28%;
-    height: 21rem;
+    height: 23rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    border-radius: 0.7rem;
   }
 }
 body main .pricing__container--red {
@@ -485,6 +487,7 @@ body main .pricing__container__subscription__type {
     text-align: center;
     width: 100%;
     margin-top: 2rem;
+    min-height: 6.5rem;
   }
 }
 body main .pricing__container__subscription__type__title {
@@ -492,6 +495,11 @@ body main .pricing__container__subscription__type__title {
   font-weight: 700;
   font-size: 0.9em;
   color: #000;
+}
+@media only screen and (min-width: 1000px) {
+  body main .pricing__container__subscription__type__title {
+    margin-bottom: 0.5rem;
+  }
 }
 body main .pricing__container__subscription__type__price {
   font-family: Open Sans;
@@ -523,6 +531,7 @@ body main .pricing__container__subscription__features {
   body main .pricing__container__subscription__features {
     display: block;
     width: 100%;
+    margin-top: 2rem;
   }
 }
 body main .pricing__container__subscription__features__list {
@@ -595,6 +604,7 @@ body main .contact__info {
     vertical-align: middle;
     line-height: 1.5;
     width: 35%;
+    margin-bottom: 15em;
   }
 }
 body main .contact__info__title {
@@ -616,6 +626,14 @@ body main .contact__info__details {
   text-align: left;
   margin-bottom: 0.7rem;
 }
+@media only screen and (min-width: 1000px) {
+  body main .contact__info__details {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 48%;
+  }
+}
 body main .contact__info__details img {
   display: inline-block;
   vertical-align: middle;
@@ -634,7 +652,7 @@ body main .contact__info__details span {
   font-size: 0.7rem;
 }
 body main .contact__form {
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
   margin-bottom: 2.5rem;
   position: relative;
   display: block;
@@ -645,7 +663,7 @@ body main .contact__form {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.5;
-    width: 35%;
+    width: 37%;
   }
 }
 body main .contact__form__label {
