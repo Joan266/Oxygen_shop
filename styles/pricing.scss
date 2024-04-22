@@ -1,29 +1,30 @@
+@import "variables";
 .pricing {
-  padding: 0.1rem 0 1rem 0;
+  padding: 0.1em 0 1em 0;
   max-width:$max-width-phone;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;
+  margin-top: 3em;
   @media only screen and (min-width: 1000px) {
-    margin-top: 6rem;
+    margin-top: 6em;
     max-width: $max-width-computer+8rem;
   }
   &__title {
     font-family: $font-Raleway;
     font-weight: 400;
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
     @media only screen and (min-width: 1000px) {
-      margin-bottom: 3rem;
+      margin-bottom: 3em;
     }
   }
   &__container{
     position: relative;
     display: block;
-    border-radius: 1.4rem;
-    margin-bottom: 3rem;
-    padding: 0 0.5rem;
-    padding-bottom: 1rem;
+    border-radius: 1.4em;
+    margin-bottom: 3em;
+    padding: 0 0.5em;
+    padding-bottom: 1em;
     height: 13rem;
     @media only screen and (min-width: 1000px) {
       display: inline-block;
@@ -31,18 +32,45 @@
       line-height: 1.5;
       width: 28%;
       height: 23rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-      border-radius: 0.7rem;
+      margin-left: 1em;
+      margin-right: 1em;
+      border-radius: 0.7em;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out; 
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out; 
+      }
     }
     &--red {
       border: 1px solid $primary-red;
+      box-shadow: none;
+      @media only screen and (min-width: 1000px) {
+        transition: box-shadow 0.3s;
+        &:hover {
+          box-shadow: 0 0.3em 0.4em 0 rgba($primary-red, 0.4)
+        }
+      }
     }
     &--blue {
       border: 1px solid $primary-blue;
+      box-shadow: none;
+      @media only screen and (min-width: 1000px) {
+        transition: box-shadow 0.3s;
+        &:hover {
+          box-shadow: 0 0.3em 0.4em 0 rgba($primary-blue, 0.4)
+        }
+      }
     }
     &--green {
       border: 1px solid $primary-green;
+      box-shadow: none;
+      @media only screen and (min-width: 1000px) {
+        transition: box-shadow 0.3s;
+        &:hover {
+          box-shadow: 0 0.3em 0.4em 0 rgba($primary-green, 0.4)
+        }
+      }
     }
     &__subscription {
       position: relative;
@@ -57,22 +85,22 @@
           display: block;
           text-align: center;
           width: 100%;
-          margin-top: 2rem;
+          margin-top: 2em;
           min-height: 6.5rem;
         }
         &__title {
           font-family: $font-Raleway;
           font-weight: 700;
-          font-size: 0.9em;
+          font-size: 0.9rem;
           color: #000; 
           @media only screen and (min-width: 1000px) {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.5em;
           }
         }
         &__price{
           font-family: $font-OpenSans;
           font-weight: 300;
-          font-size: 2.4em; 
+          font-size: 2.4rem; 
           &--red {
             color: $primary-red;
           }
@@ -87,7 +115,7 @@
           font-family: $font-Raleway;
           font-weight: 700;
           color: #000;
-          font-size: 0.6em;
+          font-size: 0.6rem;
         }
       }
       &__features {
@@ -95,14 +123,15 @@
         vertical-align: middle;
         line-height: 1.5;
         width: 48%;
+        margin-top: 1.5em;
         @media only screen and (min-width: 1000px) {
           display: block;
           width: 100%;
-          margin-top: 2rem;
+          margin-top: 2em;
         }
         &__list{
          list-style-type: none;
-         margin-top: 1rem;
+         margin-top: 1em;
          img{
           margin-right: 0.5em;
          }
@@ -110,9 +139,9 @@
           font-family: $font-OpenSans;
           font-weight: 400;
           color: #000000;
-          font-size: 0.7em;
+          font-size: 0.7rem;
           text-align: left;
-          margin-bottom: 1rem;
+          margin-bottom: 1em;
           @media only screen and (min-width: 1000px) {
             display: block;
             width: 100%;
@@ -127,22 +156,42 @@
       top: 100%;
       left: 50%;
       transform: translate(-50%, -50%);
-      height: 2.5rem;
-      width: 7.5rem;
-      border-radius: 2rem;
+      padding: 1em 3em;
+      border-radius: 2em;
       border: none;
       color: white;
       font-family: $font-OpenSans;
       font-weight: 700;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       &--red {
         background-color: $primary-red;
+        @media only screen and (min-width: 1000px) {
+          cursor: pointer;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: $sencondary-red;
+          }
+        }
       }
       &--blue {
         background-color: $primary-blue;
+        @media only screen and (min-width: 1000px) {
+          cursor: pointer;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: $tertiary-blue;
+          }
+        }
       }
       &--green {
         background-color: $primary-green;
+        @media only screen and (min-width: 1000px) {
+          cursor: pointer;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: $sencondary-green;
+          }
+        }
       }
     }
   }
