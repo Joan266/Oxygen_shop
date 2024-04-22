@@ -1,0 +1,167 @@
+.contact{
+  padding: 0.1rem 1.5rem 1rem 1.5rem;
+  text-align: left;
+  max-width:$max-width-phone;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  @media only screen and (min-width: 1000px) {
+    max-width: $max-width-computer+6rem;
+    padding: 0;
+    text-align: center;
+  }
+  &__info {
+    display: block;
+    text-align: left;
+    @media only screen and (min-width: 1000px) {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5;
+      width: 35%;
+      margin-bottom: 15em;
+    }
+    &__title {
+      font-family: $font-Raleway;
+      font-weight: 400;
+      color: #000;
+      font-size: 2.1rem;
+      margin-bottom: 0.3rem;
+      
+    }
+    &__text {
+      font-family: $font-OpenSans;
+      font-weight: 400;
+      color: #000;
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    &__details {
+      display: block;
+      text-align: left;
+      margin-bottom: 0.7rem;
+      @media only screen and (min-width: 1000px) {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.5;
+        width: 48%;
+      }
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.5;
+        margin-right: 0.4em;
+        width: 1.35em;
+        height: 1.35em;
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.5;
+        font-family: $font-OpenSans;
+        font-weight: 600;
+        color: $primary-grey;
+        font-size: 0.7rem;
+      }
+    }
+  }
+  &__form{
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: block;
+    text-align: left;
+    @media only screen and (min-width: 1000px) {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5;
+      width: 37%;
+    }
+    &__label{
+      font-family: $font-OpenSans;
+      font-weight: 600;
+      color:$primary-blue;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+    }
+    &__input {
+      width: 100%;
+      border:none;
+      border-bottom: 1px solid $quart-grey;
+      margin-bottom: 2.2rem;
+      margin-top: 1.2rem;
+    }
+    &__checkbox{
+      position: absolute;
+      opacity: 0;
+      // Text
+      & + label{
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        line-height: $checkbox-size;
+        padding-left: $checkbox-size + 0.7rem;
+        font-size: 0.6rem;
+        font-family: sans-serif;
+        color: $tertiary-grey; 
+        
+        // Checkbox
+        &:before{
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 0.5rem;
+          content: "";
+          background: transparent;
+          width: $checkbox-size;
+          height: $checkbox-size;
+          box-shadow: inset 0 0 0 1px $quart-grey;
+          border-radius: 0.3rem;
+          transition: 200ms ease-in-out all;
+        }
+        
+        // Tick
+        &:after{
+          position: absolute;
+          display: block;
+          top: 0.7rem;
+          left: 0.55rem;
+          content: "";
+          width: 0.3rem;
+          height: 0.75rem;
+          border-right: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          transform: rotate(45deg);
+          transition: 200ms ease-in-out all;
+        }
+      }
+      
+      // Checked
+      &:checked{
+        & + label{
+          &:before{
+            background: white;
+          }
+          &:after{
+            border-color: $primary-blue;
+          }
+        }
+      }
+    }
+    &__button{
+      display: block;
+      font-weight: 700;
+      margin-top: 2.5em;
+      border-radius: 2rem;
+      font-family: $font-OpenSans;
+      color: white;
+      background-color: $primary-blue;
+      box-shadow: 0.2rem 0.3rem 0.4rem 0 $secondary-blue;
+      border: none;
+      font-size: 0.7em;
+      height: 2.3rem;
+      width: 70%;
+      margin-left: 30%;
+    }
+  }
+  
+}

@@ -1,38 +1,238 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.contact {
+  padding: 0.1rem 1.5rem 1rem 1.5rem;
+  text-align: left;
+  max-width: 18rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+@media only screen and (min-width: 1000px) {
+  .contact {
+    max-width: 56rem;
+    padding: 0;
+    text-align: center;
+  }
+}
+.contact__info {
+  display: block;
+  text-align: left;
+}
+@media only screen and (min-width: 1000px) {
+  .contact__info {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 35%;
+    margin-bottom: 15em;
+  }
+}
+.contact__info__title {
+  font-family: Raleway;
+  font-weight: 400;
+  color: #000;
+  font-size: 2.1rem;
+  margin-bottom: 0.3rem;
+}
+.contact__info__text {
+  font-family: Open Sans;
+  font-weight: 400;
+  color: #000;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+.contact__info__details {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.7rem;
+}
+@media only screen and (min-width: 1000px) {
+  .contact__info__details {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 48%;
+  }
+}
+.contact__info__details img {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  margin-right: 0.4em;
+  width: 1.35em;
+  height: 1.35em;
+}
+.contact__info__details span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-family: Open Sans;
+  font-weight: 600;
+  color: #A5A5A5;
+  font-size: 0.7rem;
+}
+.contact__form {
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: block;
+  text-align: left;
+}
+@media only screen and (min-width: 1000px) {
+  .contact__form {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 37%;
+  }
+}
+.contact__form__label {
+  font-family: Open Sans;
+  font-weight: 600;
+  color: #08A6E4;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+.contact__form__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #95989A;
+  margin-bottom: 2.2rem;
+  margin-top: 1.2rem;
+}
+.contact__form__checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.contact__form__checkbox + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1.4rem;
+  padding-left: 2.1rem;
+  font-size: 0.6rem;
+  font-family: sans-serif;
+  color: #707070;
+}
+.contact__form__checkbox + label:before {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0.5rem;
+  content: "";
+  background: transparent;
+  width: 1.4rem;
+  height: 1.4rem;
+  box-shadow: inset 0 0 0 1px #95989A;
+  border-radius: 0.3rem;
+  transition: 200ms ease-in-out all;
+}
+.contact__form__checkbox + label:after {
+  position: absolute;
+  display: block;
+  top: 0.7rem;
+  left: 0.55rem;
+  content: "";
+  width: 0.3rem;
+  height: 0.75rem;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(45deg);
+  transition: 200ms ease-in-out all;
+}
+.contact__form__checkbox:checked + label:before {
+  background: white;
+}
+.contact__form__checkbox:checked + label:after {
+  border-color: #08A6E4;
+}
+.contact__form__button {
+  display: block;
+  font-weight: 700;
+  margin-top: 2.5em;
+  border-radius: 2rem;
+  font-family: Open Sans;
+  color: white;
+  background-color: #08A6E4;
+  box-shadow: 0.2rem 0.3rem 0.4rem 0 rgba(7, 172, 230, 0.2901960784);
+  border: none;
+  font-size: 0.7em;
+  height: 2.3rem;
+  width: 70%;
+  margin-left: 30%;
 }
 
-body {
+footer {
+  position: relative;
   display: block;
-  width: 100%;
+  height: 4rem;
+  box-shadow: 0 -0.3rem 2.4rem 0 rgba(0, 0, 0, 0.2);
+  padding: 0.7em;
 }
-body header {
+@media only screen and (min-width: 1000px) {
+  footer {
+    padding: 0.7em 4.7em;
+  }
+}
+footer .oxygenshop {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  width: 63%;
+}
+footer .oxygenshop__title {
+  color: #08A6E4;
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+footer .oxygenshop__rights {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 0.6em;
+  color: #A5A5A5;
+}
+footer .media {
+  position: relative;
+  display: inline-block;
+  width: 35%;
+  vertical-align: middle;
+  line-height: 1;
+  text-align: right;
+}
+footer .media img {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  margin-left: 0.35rem;
+}
+
+header {
   display: block;
   height: 3.4rem;
   box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2901960784);
   padding: 0 0.7em;
 }
 @media only screen and (min-width: 1000px) {
-  body header {
+  header {
     padding: 0 4.7em;
   }
 }
-body header .oxygenshop {
+header .oxygenshop {
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5;
   margin-top: 0.5em;
   width: 68%;
 }
-body header .oxygenshop__title {
+header .oxygenshop__title {
   color: #08A6E4;
   font-family: Raleway;
   font-weight: 300;
   font-size: 1.5em;
 }
-body header .menu {
+header .menu {
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5;
@@ -40,43 +240,38 @@ body header .menu {
   width: 30%;
   text-align: right;
 }
-body main {
-  display: block;
-  text-align: center;
-  width: 100%;
-  overflow: hidden;
-}
-body main .intro {
+
+.intro {
   display: block;
   max-width: 18rem;
   margin-left: auto;
   margin-right: auto;
 }
 @media only screen and (min-width: 1000px) {
-  body main .intro {
+  .intro {
     max-width: 50rem;
   }
 }
-body main .intro .sellmore {
+.intro .sellmore {
   display: block;
   padding: 0 1.5rem;
   margin-top: 6rem;
   font-family: Open Sans;
 }
-body main .intro .sellmore__title {
+.intro .sellmore__title {
   display: block;
   font-weight: 400;
   font-family: Raleway;
   font-size: 1.8em;
 }
-body main .intro .sellmore__text {
+.intro .sellmore__text {
   display: block;
   font-weight: 400;
   margin-top: 1.2em;
   font-size: 0.8em;
   padding: 0 0.4em;
 }
-body main .intro .sellmore__button {
+.intro .sellmore__button {
   display: block;
   font-weight: 700;
   margin-top: 2.5em;
@@ -94,7 +289,7 @@ body main .intro .sellmore__button {
   margin-left: auto;
   margin-right: auto;
 }
-body main .intro .split-container {
+.intro .split-container {
   margin-top: 3.6rem;
   position: relative;
   display: flex;
@@ -102,7 +297,7 @@ body main .intro .split-container {
   align-items: center;
   width: 100%;
 }
-body main .intro .mostpopular {
+.intro .mostpopular {
   display: block;
   padding: 0 1.5rem;
   margin-top: 0.5rem;
@@ -110,27 +305,27 @@ body main .intro .mostpopular {
   font-family: Open Sans;
 }
 @media only screen and (min-width: 1000px) {
-  body main .intro .mostpopular {
+  .intro .mostpopular {
     margin-bottom: 4.5rem;
     margin-top: 1.5rem;
   }
 }
-body main .intro .mostpopular__title {
+.intro .mostpopular__title {
   font-family: Raleway;
   font-weight: 300;
   padding: 0 1.3em;
   font-size: 1.4em;
 }
 @media only screen and (min-width: 1000px) {
-  body main .intro .mostpopular__title {
+  .intro .mostpopular__title {
     margin-bottom: 2.5rem;
   }
 }
-body main .intro .mostpopular__content {
+.intro .mostpopular__content {
   margin-top: 1.7rem;
 }
 @media only screen and (min-width: 1000px) {
-  body main .intro .mostpopular__content {
+  .intro .mostpopular__content {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.3;
@@ -138,18 +333,18 @@ body main .intro .mostpopular__content {
     min-height: 10rem;
   }
 }
-body main .intro .mostpopular__content__container {
+.intro .mostpopular__content__container {
   position: relative;
   margin-bottom: 0.7em;
 }
-body main .intro .mostpopular__content__container img {
+.intro .mostpopular__content__container img {
   position: relative;
   width: 2.5em;
   height: 2.5em;
   margin-left: 3rem;
   z-index: 1;
 }
-body main .intro .mostpopular__content__container .circle {
+.intro .mostpopular__content__container .circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -159,23 +354,23 @@ body main .intro .mostpopular__content__container .circle {
   height: 3em;
   z-index: 0;
 }
-body main .intro .mostpopular__content__container .circle--red {
+.intro .mostpopular__content__container .circle--red {
   background-color: #FB3B64;
 }
-body main .intro .mostpopular__content__container .circle--blue {
+.intro .mostpopular__content__container .circle--blue {
   background-color: #08A6E4;
 }
-body main .intro .mostpopular__content__container .circle--green {
+.intro .mostpopular__content__container .circle--green {
   background-color: #55DFB4;
 }
-body main .intro .mostpopular__content__num {
+.intro .mostpopular__content__num {
   font-family: Raleway;
   font-weight: 800;
   color: #000000;
   font-size: 1em;
   letter-spacing: 0.3em;
 }
-body main .intro .mostpopular__content__text {
+.intro .mostpopular__content__text {
   font-family: Raleway;
   font-weight: 400;
   color: #A5A5A5;
@@ -184,14 +379,15 @@ body main .intro .mostpopular__content__text {
   margin-top: 1.3em;
   white-space: nowrap;
 }
-body main .middleintro {
+
+.middleintro {
   padding: 0 1.5rem;
   padding-top: 0.1rem;
   padding-bottom: 2.1rem;
   display: block;
   background-color: #F7F7F7;
 }
-body main .middleintro__content {
+.middleintro__content {
   position: relative;
   display: block;
   margin-top: 2rem;
@@ -204,12 +400,12 @@ body main .middleintro__content {
   margin-right: auto;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content--third {
+  .middleintro__content--third {
     background-color: transparent;
   }
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content {
+  .middleintro__content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -219,14 +415,14 @@ body main .middleintro__content {
     max-width: 50rem;
   }
 }
-body main .middleintro__content__description {
+.middleintro__content__description {
   position: relative;
   display: block;
   background-color: white;
   padding: 0 1rem;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__description {
+  .middleintro__content__description {
     flex: 1;
     padding: 2rem;
     padding-right: 0.5rem;
@@ -234,30 +430,30 @@ body main .middleintro__content__description {
   }
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__description--reverse-order {
+  .middleintro__content__description--reverse-order {
     order: 1;
   }
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__description--third {
+  .middleintro__content__description--third {
     height: 100%;
     flex: 1.25;
     padding-right: 5%;
   }
 }
-body main .middleintro__content__description__title {
+.middleintro__content__description__title {
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.2em;
   color: #000000;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__description__title {
+  .middleintro__content__description__title {
     font-size: 1.5em;
     padding: 0;
   }
 }
-body main .middleintro__content__description__text {
+.middleintro__content__description__text {
   font-family: Raleway;
   font-weight: 400;
   font-size: 0.5em;
@@ -266,33 +462,33 @@ body main .middleintro__content__description__text {
   color: #000000;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__description__text {
+  .middleintro__content__description__text {
     font-size: 0.7em;
     padding: 0;
     margin-top: 2rem;
   }
 }
-body main .middleintro__content__description__vector {
+.middleintro__content__description__vector {
   min-height: 0.2rem;
   width: 75%;
   display: none;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__description__vector {
+  .middleintro__content__description__vector {
     margin-top: 2.5rem;
     display: block;
   }
 }
-body main .middleintro__content__description__vector--red {
+.middleintro__content__description__vector--red {
   background-color: #FB3B64;
 }
-body main .middleintro__content__description__vector--blue {
+.middleintro__content__description__vector--blue {
   background-color: #08A6E4;
 }
-body main .middleintro__content__description__vector--green {
+.middleintro__content__description__vector--green {
   background-color: #55DFB4;
 }
-body main .middleintro__content__ilustration {
+.middleintro__content__ilustration {
   position: relative;
   display: block;
   margin-left: 22%;
@@ -301,60 +497,60 @@ body main .middleintro__content__ilustration {
   height: 100%;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__ilustration {
+  .middleintro__content__ilustration {
     flex: 1.5;
     display: flex;
     justify-content: center;
     margin: 0;
   }
 }
-body main .middleintro__content__ilustration--third {
+.middleintro__content__ilustration--third {
   margin: 0;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__ilustration--third {
+  .middleintro__content__ilustration--third {
     flex: 1;
   }
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__ilustration--reverse-order {
+  .middleintro__content__ilustration--reverse-order {
     order: 2;
   }
 }
-body main .middleintro__content__ilustration__container {
+.middleintro__content__ilustration__container {
   position: relative;
   display: block;
   max-width: 9rem;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__ilustration__container {
+  .middleintro__content__ilustration__container {
     max-width: 18rem;
     margin-top: 3rem;
   }
 }
-body main .middleintro__content__ilustration__container--third {
+.middleintro__content__ilustration__container--third {
   min-width: 100%;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__ilustration__container--third {
+  .middleintro__content__ilustration__container--third {
     margin: 0;
     max-width: 0;
     padding-left: 10%;
   }
 }
-body main .middleintro__content__ilustration__container__macbook {
+.middleintro__content__ilustration__container__macbook {
   position: relative;
   width: 100%;
   height: auto;
   z-index: 1;
 }
-body main .middleintro__content__ilustration__container__iPhone {
+.middleintro__content__ilustration__container__iPhone {
   position: relative;
   width: 100%;
   height: auto;
   z-index: 1;
 }
-body main .middleintro__content__ilustration__container__trumpet {
+.middleintro__content__ilustration__container__trumpet {
   position: absolute;
   top: 75%;
   left: 45%;
@@ -364,12 +560,12 @@ body main .middleintro__content__ilustration__container__trumpet {
   height: auto;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__ilustration__container__trumpet {
+  .middleintro__content__ilustration__container__trumpet {
     top: 55%;
     left: 50%;
   }
 }
-body main .middleintro__content__ilustration__container__redstain {
+.middleintro__content__ilustration__container__redstain {
   position: absolute;
   top: -15%;
   left: 65%;
@@ -382,13 +578,13 @@ body main .middleintro__content__ilustration__container__redstain {
   background-color: #FB3B64;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__ilustration__container__redstain {
+  .middleintro__content__ilustration__container__redstain {
     width: 7rem;
     height: 7rem;
     border-radius: 15%;
   }
 }
-body main .middleintro__content__ilustration__container__bluestain {
+.middleintro__content__ilustration__container__bluestain {
   position: absolute;
   top: 40%;
   left: 35%;
@@ -400,23 +596,24 @@ body main .middleintro__content__ilustration__container__bluestain {
   background-color: #08A6E4;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__ilustration__container__bluestain {
+  .middleintro__content__ilustration__container__bluestain {
     width: 13rem;
     height: 13rem;
   }
 }
-body main .middleintro__content__ilustration__container__greenstain {
+.middleintro__content__ilustration__container__greenstain {
   width: 100%;
   height: 8em;
   background-color: #55DFB4;
 }
 @media only screen and (min-width: 1000px) {
-  body main .middleintro__content__ilustration__container__greenstain {
+  .middleintro__content__ilustration__container__greenstain {
     height: 100%;
     margin: 0;
   }
 }
-body main .pricing {
+
+.pricing {
   padding: 0.1rem 0 1rem 0;
   max-width: 18rem;
   margin-left: auto;
@@ -424,23 +621,23 @@ body main .pricing {
   margin-top: 3rem;
 }
 @media only screen and (min-width: 1000px) {
-  body main .pricing {
+  .pricing {
     margin-top: 6rem;
     max-width: 58rem;
   }
 }
-body main .pricing__title {
+.pricing__title {
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 @media only screen and (min-width: 1000px) {
-  body main .pricing__title {
+  .pricing__title {
     margin-bottom: 3rem;
   }
 }
-body main .pricing__container {
+.pricing__container {
   position: relative;
   display: block;
   border-radius: 1.4rem;
@@ -450,7 +647,7 @@ body main .pricing__container {
   height: 13rem;
 }
 @media only screen and (min-width: 1000px) {
-  body main .pricing__container {
+  .pricing__container {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.5;
@@ -461,28 +658,28 @@ body main .pricing__container {
     border-radius: 0.7rem;
   }
 }
-body main .pricing__container--red {
+.pricing__container--red {
   border: 1px solid #FB3B64;
 }
-body main .pricing__container--blue {
+.pricing__container--blue {
   border: 1px solid #08A6E4;
 }
-body main .pricing__container--green {
+.pricing__container--green {
   border: 1px solid #55DFB4;
 }
-body main .pricing__container__subscription {
+.pricing__container__subscription {
   position: relative;
   display: block;
   height: 100%;
 }
-body main .pricing__container__subscription__type {
+.pricing__container__subscription__type {
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5;
   width: 48%;
 }
 @media only screen and (min-width: 1000px) {
-  body main .pricing__container__subscription__type {
+  .pricing__container__subscription__type {
     display: block;
     text-align: center;
     width: 100%;
@@ -490,58 +687,58 @@ body main .pricing__container__subscription__type {
     min-height: 6.5rem;
   }
 }
-body main .pricing__container__subscription__type__title {
+.pricing__container__subscription__type__title {
   font-family: Raleway;
   font-weight: 700;
   font-size: 0.9em;
   color: #000;
 }
 @media only screen and (min-width: 1000px) {
-  body main .pricing__container__subscription__type__title {
+  .pricing__container__subscription__type__title {
     margin-bottom: 0.5rem;
   }
 }
-body main .pricing__container__subscription__type__price {
+.pricing__container__subscription__type__price {
   font-family: Open Sans;
   font-weight: 300;
   font-size: 2.4em;
 }
-body main .pricing__container__subscription__type__price--red {
+.pricing__container__subscription__type__price--red {
   color: #FB3B64;
 }
-body main .pricing__container__subscription__type__price--blue {
+.pricing__container__subscription__type__price--blue {
   color: #08A6E4;
 }
-body main .pricing__container__subscription__type__price--green {
+.pricing__container__subscription__type__price--green {
   color: #55DFB4;
 }
-body main .pricing__container__subscription__type__text {
+.pricing__container__subscription__type__text {
   font-family: Raleway;
   font-weight: 700;
   color: #000;
   font-size: 0.6em;
 }
-body main .pricing__container__subscription__features {
+.pricing__container__subscription__features {
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5;
   width: 48%;
 }
 @media only screen and (min-width: 1000px) {
-  body main .pricing__container__subscription__features {
+  .pricing__container__subscription__features {
     display: block;
     width: 100%;
     margin-top: 2rem;
   }
 }
-body main .pricing__container__subscription__features__list {
+.pricing__container__subscription__features__list {
   list-style-type: none;
   margin-top: 1rem;
 }
-body main .pricing__container__subscription__features__list img {
+.pricing__container__subscription__features__list img {
   margin-right: 0.5em;
 }
-body main .pricing__container__subscription__features__list__item {
+.pricing__container__subscription__features__list__item {
   font-family: Open Sans;
   font-weight: 400;
   color: #000000;
@@ -550,13 +747,13 @@ body main .pricing__container__subscription__features__list__item {
   margin-bottom: 1rem;
 }
 @media only screen and (min-width: 1000px) {
-  body main .pricing__container__subscription__features__list__item {
+  .pricing__container__subscription__features__list__item {
     display: block;
     width: 100%;
     text-align: center;
   }
 }
-body main .pricing__container__button {
+.pricing__container__button {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -570,220 +767,30 @@ body main .pricing__container__button {
   font-weight: 700;
   font-size: 0.7rem;
 }
-body main .pricing__container__button--red {
+.pricing__container__button--red {
   background-color: #FB3B64;
 }
-body main .pricing__container__button--blue {
+.pricing__container__button--blue {
   background-color: #08A6E4;
 }
-body main .pricing__container__button--green {
+.pricing__container__button--green {
   background-color: #55DFB4;
 }
-body main .contact {
-  padding: 0.1rem 1.5rem 1rem 1.5rem;
-  text-align: left;
-  max-width: 18rem;
-  margin-left: auto;
-  margin-right: auto;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   display: block;
-}
-@media only screen and (min-width: 1000px) {
-  body main .contact {
-    max-width: 56rem;
-    padding: 0;
-    text-align: center;
-  }
-}
-body main .contact__info {
-  display: block;
-  text-align: left;
-}
-@media only screen and (min-width: 1000px) {
-  body main .contact__info {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.5;
-    width: 35%;
-    margin-bottom: 15em;
-  }
-}
-body main .contact__info__title {
-  font-family: Raleway;
-  font-weight: 400;
-  color: #000;
-  font-size: 2.1rem;
-  margin-bottom: 0.3rem;
-}
-body main .contact__info__text {
-  font-family: Open Sans;
-  font-weight: 400;
-  color: #000;
-  font-size: 0.8rem;
-  margin-bottom: 2rem;
-}
-body main .contact__info__details {
-  display: block;
-  text-align: left;
-  margin-bottom: 0.7rem;
-}
-@media only screen and (min-width: 1000px) {
-  body main .contact__info__details {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.5;
-    width: 48%;
-  }
-}
-body main .contact__info__details img {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1.5;
-  margin-right: 0.4em;
-  width: 1.35em;
-  height: 1.35em;
-}
-body main .contact__info__details span {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1.5;
-  font-family: Open Sans;
-  font-weight: 600;
-  color: #A5A5A5;
-  font-size: 0.7rem;
-}
-body main .contact__form {
-  margin-top: 3.5rem;
-  margin-bottom: 2.5rem;
-  position: relative;
-  display: block;
-  text-align: left;
-}
-@media only screen and (min-width: 1000px) {
-  body main .contact__form {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.5;
-    width: 37%;
-  }
-}
-body main .contact__form__label {
-  font-family: Open Sans;
-  font-weight: 600;
-  color: #08A6E4;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-}
-body main .contact__form__input {
   width: 100%;
-  border: none;
-  border-bottom: 1px solid #95989A;
-  margin-bottom: 2.2rem;
-  margin-top: 1.2rem;
 }
-body main .contact__form__checkbox {
-  position: absolute;
-  opacity: 0;
-}
-body main .contact__form__checkbox + label {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  line-height: 1.4rem;
-  padding-left: 2.1rem;
-  font-size: 0.6rem;
-  font-family: sans-serif;
-  color: #707070;
-}
-body main .contact__form__checkbox + label:before {
-  position: absolute;
+
+main {
   display: block;
-  left: 0;
-  top: 0.5rem;
-  content: "";
-  background: transparent;
-  width: 1.4rem;
-  height: 1.4rem;
-  box-shadow: inset 0 0 0 1px #95989A;
-  border-radius: 0.3rem;
-  transition: 200ms ease-in-out all;
-}
-body main .contact__form__checkbox + label:after {
-  position: absolute;
-  display: block;
-  top: 0.7rem;
-  left: 0.55rem;
-  content: "";
-  width: 0.3rem;
-  height: 0.75rem;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  transform: rotate(45deg);
-  transition: 200ms ease-in-out all;
-}
-body main .contact__form__checkbox:checked + label:before {
-  background: white;
-}
-body main .contact__form__checkbox:checked + label:after {
-  border-color: #08A6E4;
-}
-body main .contact__form__button {
-  display: block;
-  font-weight: 700;
-  margin-top: 2.5em;
-  border-radius: 2rem;
-  font-family: Open Sans;
-  color: white;
-  background-color: #08A6E4;
-  box-shadow: 0.2rem 0.3rem 0.4rem 0 rgba(7, 172, 230, 0.2901960784);
-  border: none;
-  font-size: 0.7em;
-  height: 2.3rem;
-  width: 70%;
-  margin-left: 30%;
-}
-body footer {
-  position: relative;
-  display: block;
-  height: 4rem;
-  box-shadow: 0 -0.3rem 2.4rem 0 rgba(0, 0, 0, 0.2);
-  padding: 0.7em;
-}
-@media only screen and (min-width: 1000px) {
-  body footer {
-    padding: 0.7em 4.7em;
-  }
-}
-body footer .oxygenshop {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
-  width: 63%;
-}
-body footer .oxygenshop__title {
-  color: #08A6E4;
-  font-family: Raleway;
-  font-weight: 300;
-  font-size: 1.5em;
-}
-body footer .oxygenshop__rights {
-  font-family: Open Sans;
-  font-weight: 400;
-  font-size: 0.6em;
-  color: #A5A5A5;
-}
-body footer .media {
-  position: relative;
-  display: inline-block;
-  width: 35%;
-  vertical-align: middle;
-  line-height: 1;
-  text-align: right;
-}
-body footer .media img {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1.5;
-  margin-left: 0.35rem;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
 }/*# sourceMappingURL=styles.css.map */
