@@ -1,29 +1,30 @@
-header {
+@import "variables";
+.header {
+  position: relative;
   display: block;
-  height: 3.40rem;
-  box-shadow: 0 0.2rem 0.4rem 0 #0000004A;
-  padding: 0 0.7em;
+  min-height: 20%;
+  box-shadow: 0 0.2em 0.4em 0 #0000004A;
+  padding: 0.5em;
   @media only screen and (min-width: 1000px) {
-    padding: 0 4.7em;
+    padding-left: 3em;
+    padding-right: 3em;
   }
-  .oxygenshop {
+  &__oxygenshop {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.5;
-    margin-top: 0.5em;
     width: 68%;
     &__title{
       color: $primary-blue;
       font-family: $font-Raleway;
       font-weight: 300;
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
   }
-  .menu {
+  &__menu {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.5;
-    margin-top: 0.5em;
     width: 30%;
     text-align: right;
   }

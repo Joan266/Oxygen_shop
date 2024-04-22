@@ -1,22 +1,10 @@
-$font-Raleway: Raleway;
-$font-OpenSans: Open Sans;
-$primary-red: #FB3B64;
-$primary-blue: #08A6E4;
-$secondary-blue:#07ACE64A;
-$primary-green: #55DFB4;
-$primary-grey: #A5A5A5;
-$secondary-grey:#F7F7F7;
-$tertiary-grey:#707070;
-$quart-grey:#95989A;
-$checkbox-size: 1.4rem;
-$max-width-phone: 18rem;
-$max-width-computer: 50rem;
 @import "styles/contact.scss";
 @import "styles/footer.scss";
 @import "styles/header.scss";
 @import "styles/intro.scss";
 @import "styles/middleintro.scss";
 @import "styles/pricing.scss";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,10 +14,12 @@ $max-width-computer: 50rem;
 body {
   display: block;
   width: 100%;
+  position: relative;
 }
 main {
   display: block;
   text-align: center;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }

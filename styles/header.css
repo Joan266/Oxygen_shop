@@ -1,0 +1,32 @@
+.header {
+  position: relative;
+  display: block;
+  min-height: 20%;
+  box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2901960784);
+  padding: 0.5em;
+}
+@media only screen and (min-width: 1000px) {
+  .header {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+.header__oxygenshop {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  width: 68%;
+}
+.header__oxygenshop__title {
+  color: #08A6E4;
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.header__menu {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  width: 30%;
+  text-align: right;
+}/*# sourceMappingURL=header.css.map */
