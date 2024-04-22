@@ -29,7 +29,7 @@
           <button class="sellmore__button">Open your shop</button>
         </section>
         <div class="split-container">
-          <img src="./public/img/ordenador_background.png" alt="Ordenador fondo" />
+          <img class="split-container__img" src="./public/img/ordenador_background.png" alt="Ordenador fondo" />
         </div>
         <section class="mostpopular">
           <h1 class="mostpopular__title">The most popular sales platform in country</h1>
@@ -47,7 +47,7 @@
               <img src="./public/svg/ojo.svg" alt="Ojo dibujado" />
             </div>
             <span class="mostpopular__content__num">2000000+</span>
-            <p class="mostpopular__content__text">seen products every day</p>
+            <p class="mostpopular__content__text">seen products<br/>every day</p>
           </section>
           <section class="mostpopular__content">
             <div class="mostpopular__content__container">
@@ -55,34 +55,49 @@
               <img src="./public/svg/posts.svg" alt="Posts" />
             </div>
             <span class="mostpopular__content__num">10000+</span>
-            <p class="mostpopular__content__text">added posts daily</p>
+            <p class="mostpopular__content__text">added posts<br/>daily</p>
           </section>
         </section>
       </section>
       <section class="middleintro">
-        <section class="middleintro__content">
-          <div class="middleintro__content__container">
-            <div class="middleintro__content__container__redstain"></div>
-            <img class="middleintro__content__container__macbook" src="./public/img/mackbook.png" alt="Foto mackbook" />
+        <section class="middleintro__content ">
+          <div class="middleintro__content__ilustration middleintro__content__ilustration--reverse-order">
+            <div class="middleintro__content__ilustration__container">
+              <div class="middleintro__content__ilustration__container__redstain"></div>
+              <img class="middleintro__content__ilustration__container__macbook" src="./public/img/macbook.png" alt="Foto mackbook" />
+            </div>
           </div>
-          <h1 class="middleintro__content__title">Be always first</h1>
-          <p class="middleintro__content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <div class="middleintro__content__description middleintro__content__description--reverse-order">
+            <h1 class="middleintro__content__description__title"><br/>Be always first</h1>
+            <p class="middleintro__content__description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>sed do eiusmod tempor incididunt ut labore et dolore<br/>magna aliqua. Ut enim ad minim veniam.</p>
+            <div class="middleintro__content__description__vector middleintro__content__description__vector--red"></div>
+          </div>
         </section>
         <section class="middleintro__content">
-          <div class="middleintro__content__container">
-            <div class="middleintro__content__container__bluestain"></div>
-            <img class="middleintro__content__container__iPhone" src="./public/img/iPhone.png" alt="iPhone" />
+          <div class="middleintro__content__ilustration">
+            <div class="middleintro__content__ilustration__container">
+              <div class="middleintro__content__ilustration__container__bluestain"></div>
+              <img class="middleintro__content__ilustration__container__iPhone" src="./public/img/iPhone.png" alt="iPhone" />
+            </div>
           </div>
-          <h1 class="middleintro__content__title">Your shop is where you are!</h1>
-          <p class="middleintro__content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <div class="middleintro__content__description">
+            <h1 class="middleintro__content__description__title">Your shop is<br/>where you are!</h1>
+            <p class="middleintro__content__description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>sed do eiusmod tempor incididunt ut labore et dolore<br/>magna aliqua. Ut enim ad minim veniam.</p>
+            <div class="middleintro__content__description__vector middleintro__content__description__vector--blue"></div>
+          </div>
         </section>
-        <section class="middleintro__content">
-          <h1 class="middleintro__content__title">Increase recognition your brand</h1>
-          <p class="middleintro__content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-          <div class="middleintro__content__container">
-            <div class="middleintro__content__container__greenstain"></div>
-            <img class="middleintro__content__container__trumpet" src="./public/img/trumpet.png" alt="Trumpet" />
+        <section class="middleintro__content middleintro__content--third">
+          <div class="middleintro__content__description middleintro__content__description--third">
+            <h1 class="middleintro__content__description__title">Increase recognition<br/>your brand!</h1>
+            <p class="middleintro__content__description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>sed do eiusmod tempor incididunt ut labore et dolore<br/>magna aliqua. Ut enim ad minim veniam.</p>
+            <div class="middleintro__content__description__vector middleintro__content__description__vector--green"></div>
           </div>
+         <div class="middleintro__content__ilustration middleintro__content__ilustration--third">
+           <div class="middleintro__content__ilustration__container middleintro__content__ilustration__container--third">
+             <div class="middleintro__content__ilustration__container__greenstain"></div>
+             <img class="middleintro__content__ilustration__container__trumpet" src="./public/img/trumpet.png" alt="Trumpet" />
+           </div>
+         </div>
         </section>
       </section>
       <section class="pricing">
@@ -145,10 +160,12 @@
         </section>
       </section>
       <section class="contact">
-        <h1 class="contact__title">Any questions?</h1>
-        <p class="contact__text">Leave your email address or call us!</p>
-        <div class="contact__details"><img src="./public/svg/email.svg" alt="email icon"/><span>info@bestshop.xyz</span></div>
-        <div class="contact__details"><img src="./public/svg/telefono.svg" alt="telefono icon"/><span>123 456 789</span></div>
+        <div class="contact__info">
+          <h1 class="contact__info__title">Any questions?</h1>
+          <p class="contact__info__text">Leave your email address or call us!</p>
+          <div class="contact__info__details"><img src="./public/svg/email.svg" alt="email icon"/><span>info@bestshop.xyz</span></div>
+          <div class="contact__info__details"><img src="./public/svg/telefono.svg" alt="telefono icon"/><span>123 456 789</span></div>
+        </div>
         <form class="contact__form" action="/submit" method="post">
           <label class="contact__form__label" for="name">NAME</label>
           <input class="contact__form__input" type="text" id="name" >
