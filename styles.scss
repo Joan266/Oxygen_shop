@@ -103,8 +103,11 @@ body {
       }
       .split-container {
         margin-top: 3.6rem;
+        position: relative;
         display: flex;
         justify-content: center;
+        align-items: center;
+        width: 100%;
       }
       .mostpopular {
         display: block;
@@ -219,8 +222,12 @@ body {
           position: relative;
           display: block;
           background-color: white;
+          padding: 0 1rem;
           @media only screen and (min-width: 1000px) {
             flex: 1;
+            padding: 2rem;
+            padding-right: 0.5rem;
+            min-height: 100%;
           }
           &--reverse-order{
             @media only screen and (min-width: 1000px) {
@@ -231,7 +238,6 @@ body {
             @media only screen and (min-width: 1000px) { 
               height: 100%;
               flex: 1.25;
-              padding-top: 10%;
               padding-right: 5%;
             }
           }
@@ -239,24 +245,42 @@ body {
             font-family: $font-Raleway;
             font-weight: 400;
             font-size: 1.2em;
-            padding: 1rem 1rem 0 1rem;
             color: #000000;
             @media only screen and (min-width: 1000px) {
               font-size: 1.5em;
+              padding: 0;
             }
           }
           &__text{
             font-family: $font-Raleway;
             font-weight: 400;
-            font-size: 0.7em;
-            padding: 1rem;
-            padding-top: 1.5rem;
+            font-size: 0.5em;
+            margin-top: 1.5rem;
+            padding-bottom: 1.5rem;
             @media only screen and (min-width: 1000px) {
-              font-size: 0.8em;
-              padding-right: 4rem;  
-              padding-top: 0;
+              font-size: 0.7em;
+              padding: 0;
+              margin-top: 2rem;
             }
             color: #000000;
+          }
+          &__vector {
+            min-height: 0.20rem;
+            width: 75%;
+            display: none;
+            @media only screen and (min-width: 1000px) {
+              margin-top: 2.5rem;
+              display: block;
+            }
+            &--red{
+              background-color: $primary-red;
+            }
+            &--blue{
+              background-color: $primary-blue;
+            }
+            &--green{
+              background-color: $primary-green;
+            }
           }
         }
         &__ilustration {

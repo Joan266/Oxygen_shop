@@ -96,8 +96,11 @@ body main .intro .sellmore__button {
 }
 body main .intro .split-container {
   margin-top: 3.6rem;
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 body main .intro .mostpopular {
   display: block;
@@ -220,10 +223,14 @@ body main .middleintro__content__description {
   position: relative;
   display: block;
   background-color: white;
+  padding: 0 1rem;
 }
 @media only screen and (min-width: 1000px) {
   body main .middleintro__content__description {
     flex: 1;
+    padding: 2rem;
+    padding-right: 0.5rem;
+    min-height: 100%;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -235,7 +242,6 @@ body main .middleintro__content__description {
   body main .middleintro__content__description--third {
     height: 100%;
     flex: 1.25;
-    padding-top: 10%;
     padding-right: 5%;
   }
 }
@@ -243,28 +249,48 @@ body main .middleintro__content__description__title {
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.2em;
-  padding: 1rem 1rem 0 1rem;
   color: #000000;
 }
 @media only screen and (min-width: 1000px) {
   body main .middleintro__content__description__title {
     font-size: 1.5em;
+    padding: 0;
   }
 }
 body main .middleintro__content__description__text {
   font-family: Raleway;
   font-weight: 400;
-  font-size: 0.7em;
-  padding: 1rem;
-  padding-top: 1.5rem;
+  font-size: 0.5em;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
   color: #000000;
 }
 @media only screen and (min-width: 1000px) {
   body main .middleintro__content__description__text {
-    font-size: 0.8em;
-    padding-right: 4rem;
-    padding-top: 0;
+    font-size: 0.7em;
+    padding: 0;
+    margin-top: 2rem;
   }
+}
+body main .middleintro__content__description__vector {
+  min-height: 0.2rem;
+  width: 75%;
+  display: none;
+}
+@media only screen and (min-width: 1000px) {
+  body main .middleintro__content__description__vector {
+    margin-top: 2.5rem;
+    display: block;
+  }
+}
+body main .middleintro__content__description__vector--red {
+  background-color: #FB3B64;
+}
+body main .middleintro__content__description__vector--blue {
+  background-color: #08A6E4;
+}
+body main .middleintro__content__description__vector--green {
+  background-color: #55DFB4;
 }
 body main .middleintro__content__ilustration {
   position: relative;
