@@ -57,7 +57,7 @@
   font-weight: 700;
   font-size: 0.55rem;
   color: #A5A5A5;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
 }
 .header__dropdown:after {
   content: "";

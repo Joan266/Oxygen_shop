@@ -278,7 +278,7 @@
   font-weight: 700;
   font-size: 0.55rem;
   color: #A5A5A5;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
 }
 .header__dropdown:after {
   content: "";
@@ -934,4 +934,38 @@ main {
   background-color: #08A6E4;
   z-index: 3;
   transition: width 0.3s ease;
+}
+
+.scroll-top {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 7%;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+.scroll-top__button {
+  display: block;
+  font-weight: 600;
+  border-radius: 2.5em;
+  font-family: Open Sans;
+  color: white;
+  background-color: #08A6E4;
+  box-shadow: 0.2em 0.3em 0.4em 0 rgba(7, 172, 230, 0.2901960784);
+  border: none;
+  font-size: 0.75rem;
+  padding: 1.5em 0;
+  max-width: 9rem;
+  width: 60%;
+  transition: opacity 0.6s ease;
+}
+@media only screen and (min-width: 1000px) {
+  .scroll-top__button {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .scroll-top__button:hover {
+    background-color: #088ce4;
+  }
 }/*# sourceMappingURL=styles.css.map */
