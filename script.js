@@ -2,22 +2,24 @@ const headerMenu = document.querySelector('.header__menu');
 const headerMenuImg = document.querySelector('.header__menu__img');
 const headerDropdown = document.querySelector('.header__dropdown');
 const header = document.querySelector('.header');
-const menuFilePath = "./public/svg/menu.svg";
-const xFilePath = "./public/svg/x.svg";
-const menuAltString = "menu icon";
-const xAltString = "x icon";
-headerMenu.addEventListener('click', function() {
+
+function toggleDropdown(headerDropdown, header) {
   headerDropdown.classList.toggle('disabled');
   header.classList.toggle('boxshadow-disabled');
+}
 
-  if (headerMenuImg.getAttribute('src') === menuFilePath) {
-    headerMenuImg.setAttribute('src', xFilePath);
-    headerMenuImg.setAttribute('alt', xAltString);
+function switchMenuIcon(headerMenuImg) {
+  if (headerMenuImg.src.includes('menu')) {
+    headerMenuImg.src = './public/svg/x.svg';
+    headerMenuImg.alt = 'x icon';
   } else {
-    headerMenuImg.setAttribute('src', menuFilePath);
-    headerMenuImg.setAttribute('alt', menuAltString);
+    headerMenuImg.src = './public/svg/menu.svg';
+    headerMenuImg.alt = 'menu icon';
   }
-  console.log("Header Dropdown Classes: ", headerDropdown.classList);
-  console.log("Header Classes: ", header.classList);
-  console.log("Header Menu Classes: ", headerMenu.classList);
+}
+
+headerMenu.addEventListener('click', function() {
+  toggleDropdown(headerDropdown, header);
+  switchMenuIcon(headerMenuImg);
 });
+

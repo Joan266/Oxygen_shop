@@ -263,7 +263,8 @@
   left: 0;
   display: block;
   text-align: left;
-  padding: 1.4em;
+  padding: 1.5em;
+  padding-top: 0.9em;
   background-color: white;
   width: 100%;
   z-index: 1;
@@ -277,7 +278,7 @@
   font-weight: 700;
   font-size: 0.55rem;
   color: #A5A5A5;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
 }
 .header__dropdown:after {
   content: "";
