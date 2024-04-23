@@ -1,34 +1,34 @@
-.intro {
+.whyus {
   display: block;
   max-width: 18rem;
   margin-left: auto;
   margin-right: auto;
 }
 @media only screen and (min-width: 1000px) {
-  .intro {
+  .whyus {
     max-width: 50rem;
   }
 }
-.intro .sellmore {
+.whyus__sellmore {
   display: block;
   padding: 0 1.5em;
   margin-top: 6em;
   font-family: Open Sans;
 }
-.intro .sellmore__title {
+.whyus__sellmore__title {
   display: block;
   font-weight: 400;
   font-family: Raleway;
   font-size: 1.8em;
 }
-.intro .sellmore__text {
+.whyus__sellmore__text {
   display: block;
   font-weight: 400;
   margin-top: 1.2em;
   font-size: 0.8rem;
   padding: 0 0.4em;
 }
-.intro .sellmore__button {
+.whyus__sellmore__button {
   display: block;
   font-weight: 700;
   margin-top: 2.5em;
@@ -47,15 +47,15 @@
   margin-right: auto;
 }
 @media only screen and (min-width: 1000px) {
-  .intro .sellmore__button {
+  .whyus__sellmore__button {
     cursor: pointer;
     transition: background-color 0.3s;
   }
-  .intro .sellmore__button:hover {
+  .whyus__sellmore__button:hover {
     background-color: #088ce4;
   }
 }
-.intro .split-container {
+.whyus__split-container {
   margin-top: 3.6em;
   position: relative;
   display: flex;
@@ -63,7 +63,7 @@
   align-items: center;
   width: 100%;
 }
-.intro .mostpopular {
+.whyus__mostpopular {
   display: block;
   padding: 0 1.5em;
   margin-top: 0.5em;
@@ -71,27 +71,27 @@
   font-family: Open Sans;
 }
 @media only screen and (min-width: 1000px) {
-  .intro .mostpopular {
+  .whyus__mostpopular {
     margin-bottom: 4.5em;
     margin-top: 1.5em;
   }
 }
-.intro .mostpopular__title {
+.whyus__mostpopular__title {
   font-family: Raleway;
   font-weight: 300;
   padding: 0 0.5em;
   font-size: 1.4rem;
 }
 @media only screen and (min-width: 1000px) {
-  .intro .mostpopular__title {
+  .whyus__mostpopular__title {
     margin-bottom: 2.5em;
   }
 }
-.intro .mostpopular__content {
+.whyus__mostpopular__content {
   margin-top: 1.7em;
 }
 @media only screen and (min-width: 1000px) {
-  .intro .mostpopular__content {
+  .whyus__mostpopular__content {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.3;
@@ -99,18 +99,18 @@
     min-height: 10rem;
   }
 }
-.intro .mostpopular__content__container {
+.whyus__mostpopular__content__container {
   position: relative;
   margin-bottom: 0.7em;
 }
-.intro .mostpopular__content__container img {
+.whyus__mostpopular__content__container img {
   position: relative;
   width: 2.5em;
   height: 2.5em;
   margin-left: 3em;
   z-index: 1;
 }
-.intro .mostpopular__content__container .circle {
+.whyus__mostpopular__content__container .circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -120,23 +120,23 @@
   height: 3em;
   z-index: 0;
 }
-.intro .mostpopular__content__container .circle--red {
+.whyus__mostpopular__content__container .circle--red {
   background-color: #FB3B64;
 }
-.intro .mostpopular__content__container .circle--blue {
+.whyus__mostpopular__content__container .circle--blue {
   background-color: #08A6E4;
 }
-.intro .mostpopular__content__container .circle--green {
+.whyus__mostpopular__content__container .circle--green {
   background-color: #55DFB4;
 }
-.intro .mostpopular__content__num {
+.whyus__mostpopular__content__num {
   font-family: Raleway;
   font-weight: 800;
   color: #000000;
   font-size: 1rem;
   letter-spacing: 0.3em;
 }
-.intro .mostpopular__content__text {
+.whyus__mostpopular__content__text {
   font-family: Raleway;
   font-weight: 400;
   color: #A5A5A5;
@@ -144,4 +144,4 @@
   padding: 0 6em;
   margin-top: 1.3em;
   white-space: nowrap;
-}/*# sourceMappingURL=intro.css.map */
+}/*# sourceMappingURL=whyus.css.map */

@@ -1,5 +1,5 @@
 @import "variables";
-.intro{
+.whyus{
   display: block;
   max-width:$max-width-phone;
   margin-left: auto;
@@ -7,7 +7,7 @@
   @media only screen and (min-width: 1000px) {
     max-width: $max-width-computer;
   }
-  .sellmore {
+  &__sellmore {
     display: block;
     padding: 0 1.5em;
     margin-top: 6em;
@@ -51,7 +51,7 @@
       }
     }
   }
-  .split-container {
+  &__split-container {
     margin-top: 3.6em;
     position: relative;
     display: flex;
@@ -59,7 +59,7 @@
     align-items: center;
     width: 100%;
   }
-  .mostpopular {
+  &__mostpopular {
     display: block;
     padding: 0 1.5em;
     margin-top: 0.5em;
