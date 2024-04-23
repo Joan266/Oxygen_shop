@@ -1,11 +1,11 @@
-.middleintro {
+.benefits {
   padding: 0 1.5em;
   padding-top: 0.1em;
   padding-bottom: 2.1em;
   display: block;
   background-color: #F7F7F7;
 }
-.middleintro__content {
+.benefits__content {
   position: relative;
   display: block;
   margin-top: 2em;
@@ -18,12 +18,12 @@
   margin-right: auto;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content--third {
+  .benefits__content--third {
     background-color: transparent;
   }
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content {
+  .benefits__content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -33,14 +33,14 @@
     max-width: 50rem;
   }
 }
-.middleintro__content__description {
+.benefits__content__description {
   position: relative;
   display: block;
   background-color: white;
   padding: 0 1em;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__description {
+  .benefits__content__description {
     flex: 1;
     padding: 2em;
     padding-right: 0.5em;
@@ -48,30 +48,30 @@
   }
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__description--reverse-order {
+  .benefits__content__description--reverse-order {
     order: 1;
   }
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__description--third {
+  .benefits__content__description--third {
     height: 100%;
     flex: 1.25;
     padding-right: 5%;
   }
 }
-.middleintro__content__description__title {
+.benefits__content__description__title {
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.2rem;
   color: #000000;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__description__title {
+  .benefits__content__description__title {
     font-size: 1.5rem;
     padding: 0;
   }
 }
-.middleintro__content__description__text {
+.benefits__content__description__text {
   font-family: Raleway;
   font-weight: 400;
   font-size: 0.5rem;
@@ -80,33 +80,33 @@
   color: #000000;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__description__text {
+  .benefits__content__description__text {
     font-size: 0.7rem;
     padding: 0;
     margin-top: 2em;
   }
 }
-.middleintro__content__description__vector {
+.benefits__content__description__vector {
   min-height: 0.2rem;
   width: 75%;
   display: none;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__description__vector {
+  .benefits__content__description__vector {
     margin-top: 2.5em;
     display: block;
   }
 }
-.middleintro__content__description__vector--red {
+.benefits__content__description__vector--red {
   background-color: #FB3B64;
 }
-.middleintro__content__description__vector--blue {
+.benefits__content__description__vector--blue {
   background-color: #08A6E4;
 }
-.middleintro__content__description__vector--green {
-  background-color: rgb(7, 7, 7) 4;
+.benefits__content__description__vector--green {
+  background-color: #55DFB4;
 }
-.middleintro__content__ilustration {
+.benefits__content__ilustration {
   position: relative;
   display: block;
   margin-left: 22%;
@@ -115,60 +115,60 @@
   height: 100%;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__ilustration {
+  .benefits__content__ilustration {
     flex: 1.5;
     display: flex;
     justify-content: center;
     margin: 0;
   }
 }
-.middleintro__content__ilustration--third {
+.benefits__content__ilustration--third {
   margin: 0;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__ilustration--third {
+  .benefits__content__ilustration--third {
     flex: 1;
   }
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__ilustration--reverse-order {
+  .benefits__content__ilustration--reverse-order {
     order: 2;
   }
 }
-.middleintro__content__ilustration__container {
+.benefits__content__ilustration__container {
   position: relative;
   display: block;
   max-width: 9rem;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__ilustration__container {
+  .benefits__content__ilustration__container {
     max-width: 18rem;
     margin-top: 3em;
   }
 }
-.middleintro__content__ilustration__container--third {
+.benefits__content__ilustration__container--third {
   min-width: 100%;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__ilustration__container--third {
+  .benefits__content__ilustration__container--third {
     margin: 0;
     max-width: 0;
     padding-left: 10%;
   }
 }
-.middleintro__content__ilustration__container__macbook {
+.benefits__content__ilustration__container__macbook {
   position: relative;
   width: 100%;
   height: auto;
   z-index: 1;
 }
-.middleintro__content__ilustration__container__iPhone {
+.benefits__content__ilustration__container__iPhone {
   position: relative;
   width: 100%;
   height: auto;
   z-index: 1;
 }
-.middleintro__content__ilustration__container__trumpet {
+.benefits__content__ilustration__container__trumpet {
   position: absolute;
   top: 75%;
   left: 45%;
@@ -178,12 +178,12 @@
   height: auto;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__ilustration__container__trumpet {
+  .benefits__content__ilustration__container__trumpet {
     top: 55%;
     left: 50%;
   }
 }
-.middleintro__content__ilustration__container__redstain {
+.benefits__content__ilustration__container__redstain {
   position: absolute;
   top: -15%;
   left: 65%;
@@ -196,13 +196,13 @@
   background-color: #FB3B64;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__ilustration__container__redstain {
+  .benefits__content__ilustration__container__redstain {
     width: 7rem;
     height: 7rem;
     border-radius: 15%;
   }
 }
-.middleintro__content__ilustration__container__bluestain {
+.benefits__content__ilustration__container__bluestain {
   position: absolute;
   top: 40%;
   left: 35%;
@@ -214,19 +214,19 @@
   background-color: #08A6E4;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__ilustration__container__bluestain {
+  .benefits__content__ilustration__container__bluestain {
     width: 13rem;
     height: 13rem;
   }
 }
-.middleintro__content__ilustration__container__greenstain {
+.benefits__content__ilustration__container__greenstain {
   width: 100%;
   height: 8em;
-  background-color: rgb(7, 7, 7) 4;
+  background-color: #55DFB4;
 }
 @media only screen and (min-width: 1000px) {
-  .middleintro__content__ilustration__container__greenstain {
+  .benefits__content__ilustration__container__greenstain {
     height: 100%;
     margin: 0;
   }
-}/*# sourceMappingURL=middleintro.css.map */
+}/*# sourceMappingURL=benefits.css.map */
