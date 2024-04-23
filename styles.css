@@ -922,4 +922,16 @@ main {
   width: 100%;
   overflow: hidden;
   position: relative;
+}
+
+.percentage-scroller {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0.2em;
+  background-color: #08A6E4;
+  z-index: 3;
+  transition: width 0.3s ease;
 }/*# sourceMappingURL=styles.css.map */

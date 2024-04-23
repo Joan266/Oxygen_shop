@@ -4,7 +4,7 @@
 @import "styles/whyus.scss";
 @import "styles/benefits.scss";
 @import "styles/pricing.scss";
-
+@import "styles/variables.scss";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,4 +22,15 @@ main {
   width: 100%;
   overflow: hidden;
   position: relative;
+}
+.percentage-scroller {
+  display: block;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 0;
+  height: 0.2em;
+  background-color: $primary-blue;
+  z-index: 3;
+  transition: width 0.3s ease; 
 }
