@@ -91,11 +91,29 @@ function isEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  if (validateForm()) {
+  const isContentFormValid = validateForm()
+  if (isContentFormValid) {
+    const validFormContent = {
+      name: nameInput.value,
+      email: emailInput.value,
+    }
+    await fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify(validFormContent),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      if(json){
+        alert("Form submitted successfully!");
+      }
+    });
     resetFormInputClasses();
-    alert("Form submitted successfully!");
     form.reset();
   }
 });
