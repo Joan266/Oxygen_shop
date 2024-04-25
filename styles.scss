@@ -34,39 +34,43 @@ main {
   z-index: 3;
   transition: width 0.3s ease; 
 }
-.scroll-top {
-  display: flex;
-  justify-content: center;
+.scroll-top-button {
   position: fixed;
-  bottom: 7%;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  background-color: transparent;
-  &__button {
-    display: block;
-    font-weight: 600;
-    border-radius: 2.5em;
-    font-family: $font-OpenSans;
-    color: white;
-    background-color: $primary-blue;
-    box-shadow: 0.2em 0.3em 0.4em 0 $secondary-blue;
-    border: none;
-    font-size: 0.75rem;
-    padding: 1.5em 0;
-    max-width: 9rem;
-    z-index: 3;
-    width: 60%;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    @media only screen and (min-width: 1000px) {
-      cursor: pointer;
-      transition: background-color 0.3s opacity 0.6s ease;
-      &:hover {
-        background-color: $tertiary-blue;
-      }
+  bottom: 12%;
+  left: 2%;
+  display: block;
+  font-weight: 600;
+  border-radius: 50%;
+  font-family: $font-OpenSans;
+  color: white;
+  background-color: $primary-grey;
+  box-shadow: 0 0.1em 0.2em 0 $primary-grey;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  z-index: 3;
+  transition: opacity 0.6s ease;
+  opacity: 0;
+  width: 1.6em;
+  height: 1.6em;
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  @media only screen and (min-width: 1000px) {
+    cursor: pointer;
+    transition: background-color 0.3s opacity 0.6s ease;
+    &:hover {
+      background-color: $tertiary-blue;
     }
-
   }
 }
 
+.boxshadow-disabled {
+  box-shadow: none;
+}
+
+.disabled {
+  display: none;
+}

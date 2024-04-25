@@ -4,7 +4,7 @@ const headerDropdown = document.querySelector('.header__dropdown');
 const header = document.querySelector('.header');
 
 const percentageScroller = document.querySelector('.percentage-scroller');
-const scrollTopButton = document.querySelector('.scroll-top__button');
+const scrollTopButton = document.querySelector('.scroll-top-button');
 
 const form = document.getElementById('contactForm');
 const nameInput = document.getElementById("contactFormName");
@@ -31,7 +31,12 @@ function setPercentageScrollBar(scrollPercentage, percentageScroller) {
 }
 
 function handleScrollTopButtonOpacity(scrollPercentage, scrollTopButton) {
-  if(scrollPercentage < 95){
+  if(scrollPercentage < 24){
+    scrollTopButton.classList.add('disabled');
+  }else {
+    scrollTopButton.classList.remove('disabled');
+  }
+  if(scrollPercentage < 25){
     scrollTopButton.style.opacity = 0;
   }else {
     scrollTopButton.style.opacity = 1;
@@ -118,12 +123,14 @@ form.addEventListener("submit", async (event) => {
   }
 });
 
-headerMenu.addEventListener('click', function() {
+headerMenu.addEventListener('click', function(event) {
+  event.preventDefault();
   toggleDropdown(headerDropdown, header);
   switchMenuIcon(headerMenuImg);
 });
 
-scrollTopButton.addEventListener('click', function() {
+scrollTopButton.addEventListener('click', function(event) {
+  event.preventDefault();
   handleScrollToTop();
 });
 

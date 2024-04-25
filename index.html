@@ -8,7 +8,7 @@
     <title>Oxygen Shop</title>
     <link rel="stylesheet" href="./styles.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="percentage-scroller"></div>
@@ -121,7 +121,12 @@
           <div class="pricing__container__subscription">
             <div class="pricing__container__subscription__type">
               <h2 class="pricing__container__subscription__type__title">Basic</h2>
-              <span class="pricing__container__subscription__type__price pricing__container__subscription__type__price--red">$0</span>
+              <div class="pricing__container__subscription__type__price pricing__container__subscription__type__price--red">
+                <div class="pricing__container__subscription__type__price__controls pricing__container__subscription__type__price--red">
+
+                </div>
+                <span>$0</span>
+              </div>
             </div>
             <div class="pricing__container__subscription__features">
               <ul class="pricing__container__subscription__features__list">
@@ -202,7 +207,7 @@
         <img class="footer__media__img" src="./public/svg/facebook.svg" alt="facebook icon"><img/>
       </div>
     </footer>
-    <div class="scroll-top disabled"><button class="scroll-top__button">Return to the top</button></div>
+    <button class="scroll-top-button"><span class="scroll-top-button__text">^</span></button>
     <script src="./script.js"></script>
   </body>
 </html>

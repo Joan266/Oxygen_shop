@@ -45,18 +45,18 @@
     left: 0;
     display: block;
     text-align: left;
-    padding: 1.5em;
-    padding-top: 0.9em;
+    padding: 1.2em;
+    padding-top: 0.4em;
     background-color: white;
     width: 100%;
     z-index: 1;
     &__section {
       display: block;
-      margin-top: 0.4em;
+      margin-top: 0.1em;
       &__text {
-        font-family: $font-OpenSans;
-        font-weight: 700;
-        font-size: 0.55rem;
+        font-family: $font-Raleway;
+        font-weight: 800;
+        font-size: 0.6rem;
         color: $primary-grey;
         letter-spacing: 0.15rem;
       }
@@ -74,10 +74,3 @@
   }
 }
 
-.boxshadow-disabled {
-  box-shadow: none;
-}
-
-.disabled {
-  display: none;
-}
