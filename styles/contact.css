@@ -171,22 +171,4 @@
   .contact__form__button:hover {
     background-color: #088ce4;
   }
-}
-
-.feedback {
-  border-radius: 0.3em;
-}
-.feedback--error {
-  border: 1px solid #FB3B64;
-}
-.feedback--error + label:before {
-  border: 1px solid #FB3B64;
-  box-shadow: none;
-}
-.feedback--success {
-  border: 1px solid #00e19a;
-}
-.feedback--success + label:before {
-  border: 1px solid #00e19a;
-  box-shadow: none;
 }/*# sourceMappingURL=contact.css.map */

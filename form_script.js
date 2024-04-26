@@ -24,15 +24,17 @@ modalForm.addEventListener("submit", async function(event) {
   };
 });
 
-document.addEventListener('scroll', function scrollPopupHandler() {
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollPosition = document.documentElement.scrollTop;
-  const scrollPercentage = Math.floor((scrollPosition / maxScroll) * 100);
-  if (scrollPercentage > 25) {
-    showModal();
-    document.removeEventListener('scroll', scrollPopupHandler);
-  }
-});
+if(!checkModalClosed()){
+  document.addEventListener('scroll', function scrollPopupHandler() {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPosition = document.documentElement.scrollTop;
+    const scrollPercentage = Math.floor((scrollPosition / maxScroll) * 100);
+    if (scrollPercentage > 25 && !checkModalClosed()) {
+      showModal();
+      document.removeEventListener('scroll', scrollPopupHandler);
+    }
+  });
+}
     
 //CONTACT FORM EVENT LISTENER
 contactForm.addEventListener("submit", function(event) {
@@ -41,33 +43,43 @@ contactForm.addEventListener("submit", function(event) {
 });
 
 // FORM FUNCTIONS
+let isSubmitting = false;
+
 async function subscribe(form, nameInput, emailInput, checkbox) {
-  const isContentFormValid = validateForm(nameInput, emailInput, checkbox)
-  if (isContentFormValid) {
-    const validFormContent = {
-      name: nameInput.value,
-      email: emailInput.value,
-    }
-    await fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      body: JSON.stringify(validFormContent),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-    .then((response) => response.json())
-    .then((json) => {
+  if (isSubmitting) {
+    return;
+  }
+
+  isSubmitting = true;
+
+  try {
+    const isContentFormValid = validateForm(nameInput, emailInput, checkbox);
+    if (isContentFormValid) {
+      const validFormContent = {
+        name: nameInput.value,
+        email: emailInput.value,
+      };
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify(validFormContent),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      });
+      const json = await response.json();
       console.log(json);
-      if(json){
+      if (json) {
         alert("Form submitted successfully!");
       }
-    });
-    resetFormInputClasses(nameInput, emailInput, checkbox);
-    form.reset();
-    return true; 
+      resetFormInputClasses(nameInput, emailInput, checkbox);
+      form.reset();
+      return true;
+    } else {
+      return false;
+    }
+  } finally {
+    isSubmitting = false;
   }
-  
-  return false; 
 }
 
 function setErrorInputClass(input) {
@@ -118,11 +130,12 @@ function validateForm(nameInput, emailInput, checkbox) {
 //MODAL FORM FUNCTIONS
 
 function showModal() {
-  modalOverlay.classList.remove('disable');
+  if(checkModalClosed()) return;
+  modalOverlay.classList.remove('disabled');
 }
 
 function hideModal() {
-  modalOverlay.classList.add('disable');
+  modalOverlay.classList.add('disabled');
 }
 
 function closeModal() {
@@ -131,10 +144,17 @@ function closeModal() {
 }
 
 function checkModalClosed() {
-  if (localStorage.getItem('modalClosed')) {
+  if(localStorage.getItem('modalClosed')){
+    return true
+  }
+  return false
+}
+
+function setModalOpenIn() {
+  if (checkModalClosed()) {
     hideModal();
   } else {
-    setTimeout(showModal, 5000); 
+    setTimeout(showModal, 10000); 
   }
 }
 
@@ -150,4 +170,4 @@ function handleClickOutside(event) {
   }
 }
 
-checkModalClosed();
+setModalOpenIn();

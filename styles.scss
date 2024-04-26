@@ -230,3 +230,25 @@ main {
 .disabled {
   display: none;
 }
+
+.feedback {
+  border-radius: 0.3em;
+  &--error {
+    border: 1px solid $primary-red;
+    & + label{
+      &:before{
+        border: 1px solid $primary-red;
+        box-shadow: none;
+      }
+    }
+  }
+  &--success {
+    border: 1px solid $sencondary-green;
+    & + label{
+      &:before{
+        border: 1px solid $sencondary-green;
+        box-shadow: none;
+      }
+    }
+  }
+}
