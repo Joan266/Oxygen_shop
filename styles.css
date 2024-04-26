@@ -291,14 +291,14 @@
 }
 .header__dropdown__section {
   display: block;
-  margin-top: 0.3em;
+  margin-top: 0.1em;
 }
 .header__dropdown__section__text {
   font-family: Raleway;
   font-weight: 800;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: #A5A5A5;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
 }
 .header__dropdown:after {
   content: "";
@@ -709,11 +709,19 @@
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.5rem;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
 }
 @media only screen and (min-width: 1000px) {
   .pricing__title {
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
+  }
+}
+.pricing__currency-selector {
+  margin-bottom: 1.25em;
+}
+@media only screen and (min-width: 1000px) {
+  .pricing__currency-selector {
+    margin-bottom: 1.5em;
   }
 }
 .pricing__container {
@@ -724,6 +732,8 @@
   padding: 0 0.5em;
   padding-bottom: 1em;
   height: 13rem;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 @media only screen and (min-width: 1000px) {
   .pricing__container {
@@ -732,8 +742,6 @@
     line-height: 1.5;
     width: 28%;
     height: 23rem;
-    margin-left: 1em;
-    margin-right: 1em;
     border-radius: 0.7em;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;

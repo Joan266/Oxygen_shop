@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <div class="percentage-scroller"></div>
@@ -117,67 +118,69 @@
       </section>
       <section class="pricing">
         <h1 class="pricing__title">Pricing</h1>
-        <section class="pricing__container pricing__container--red">
-          <div class="pricing__container__subscription">
-            <div class="pricing__container__subscription__type">
-              <h2 class="pricing__container__subscription__type__title">Basic</h2>
-              <div class="pricing__container__subscription__type__price pricing__container__subscription__type__price--red">
-                <div class="pricing__container__subscription__type__price__controls pricing__container__subscription__type__price--red">
-
-                </div>
-                <span>$0</span>
+        <select class="pricing__currency-selector">
+          <option class="pricing__currency-selector__option" value="eur">EUR</option>
+          <option class="pricing__currency-selector__option" value="usd" selected>USD</option>
+          <option class="pricing__currency-selector__option" value="gbp">GBP</option>
+        </select>
+        <div>
+          <section class="pricing__container pricing__container--red">
+            <div class="pricing__container__subscription">
+              <div class="pricing__container__subscription__type">
+                <h2 class="pricing__container__subscription__type__title">Basic</h2>
+                <span id="basic-price" class="pricing__container__subscription__type__price pricing__container__subscription__type__price--red">$0</span>
+              </div>
+              <div class="pricing__container__subscription__features">
+                <ul class="pricing__container__subscription__features__list">
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>100 MB HDD</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>1 Subdomain</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>2 E-mails</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/cross.svg" alt="cross"><img/>Two years license</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/cross.svg" alt="cross"><img/>Full support</li>
+                </ul>
               </div>
             </div>
-            <div class="pricing__container__subscription__features">
-              <ul class="pricing__container__subscription__features__list">
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>100 MB HDD</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>1 Subdomain</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>2 E-mails</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/cross.svg" alt="cross"><img/>Two years license</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/cross.svg" alt="cross"><img/>Full support</li>
-              </ul>
+            <button class="pricing__container__button pricing__container__button--red">Begin</button>
+          </section>
+          <section class="pricing__container pricing__container--blue">
+            <div class="pricing__container__subscription">
+              <div class="pricing__container__subscription__type">
+                <h2 class="pricing__container__subscription__type__title">Professional</h2>
+                <span id="professional-price" class="pricing__container__subscription__type__price pricing__container__subscription__type__price--blue">$25</span>
+                <p class="pricing__container__subscription__type__text">Limited offer</p>
+              </div>
+              <div class="pricing__container__subscription__features">
+                <ul class="pricing__container__subscription__features__list">
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>500 MB HDD</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>2 Subdomain</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>5 E-mails</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>One year license</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/cross.svg" alt="cross"><img/>Full support</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <button class="pricing__container__button pricing__container__button--red">Begin</button>
-        </section>
-        <section class="pricing__container pricing__container--blue">
-          <div class="pricing__container__subscription">
-            <div class="pricing__container__subscription__type">
-              <h2 class="pricing__container__subscription__type__title">Professional</h2>
-              <span class="pricing__container__subscription__type__price pricing__container__subscription__type__price--blue">$25</span>
-              <p class="pricing__container__subscription__type__text">Limited offer</p>
+            <button class="pricing__container__button pricing__container__button--blue">Begin</button>
+          </section>
+          <section class="pricing__container pricing__container--green">
+            <div class="pricing__container__subscription">
+              <div class="pricing__container__subscription__type">
+                <h2 class="pricing__container__subscription__type__title">Premium</h2>
+                <span id="premium-price" class="pricing__container__subscription__type__price pricing__container__subscription__type__price--green">$60</span>
+                <p class="pricing__container__subscription__type__text">Limited offer</p>
+              </div>
+              <div class="pricing__container__subscription__features">
+                <ul class="pricing__container__subscription__features__list">
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>2 GB HDD</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>5 Subdomain</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>20 E-mails</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>Two year license</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>Full support</li>
+                </ul>
+              </div>
             </div>
-            <div class="pricing__container__subscription__features">
-              <ul class="pricing__container__subscription__features__list">
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>500 MB HDD</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>2 Subdomain</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>5 E-mails</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>One year license</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/cross.svg" alt="cross"><img/>Full support</li>
-              </ul>
-            </div>
-          </div>
-          <button class="pricing__container__button pricing__container__button--blue">Begin</button>
-        </section>
-        <section class="pricing__container pricing__container--green">
-          <div class="pricing__container__subscription">
-            <div class="pricing__container__subscription__type">
-              <h2 class="pricing__container__subscription__type__title">Premium</h2>
-              <span class="pricing__container__subscription__type__price pricing__container__subscription__type__price--green">$60</span>
-              <p class="pricing__container__subscription__type__text">Limited offer</p>
-            </div>
-            <div class="pricing__container__subscription__features">
-              <ul class="pricing__container__subscription__features__list">
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>2 GB HDD</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>5 Subdomain</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>20 E-mails</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>Two year license</li>
-                <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>Full support</li>
-              </ul>
-            </div>
-          </div>
-          <button class="pricing__container__button pricing__container__button--green">Begin</button>
-        </section>
+            <button class="pricing__container__button pricing__container__button--green">Begin</button>
+          </section>
+        </div>
       </section>
       <section class="contact">
         <div class="contact__info">
@@ -208,6 +211,5 @@
       </div>
     </footer>
     <button class="scroll-top-button"><span class="scroll-top-button__text">^</span></button>
-    <script src="./script.js"></script>
   </body>
 </html>
