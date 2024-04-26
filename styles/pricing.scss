@@ -13,15 +13,15 @@
     font-family: $font-Raleway;
     font-weight: 400;
     font-size: 1.5rem;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5em;
     @media only screen and (min-width: 1000px) {
       margin-bottom: 1.5em;
     }
   }
   &__currency-selector {
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
     @media only screen and (min-width: 1000px) {
-      margin-bottom: 1.5em;
+      margin-bottom: 0.5em;
     }  
   }
   &__container{

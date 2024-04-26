@@ -22,6 +22,13 @@ const premiumPriceElement = document.getElementById('premium-price');
 
 let subcriptions = JSON.parse(localStorage.getItem('subcriptions'));
 
+//MODAL ELEMENTS
+const modalOverlay = document.querySelector('.modal-overlay');
+const modal = document.querySelector('.modal');
+const closeButton = document.querySelector('modal__close-button');
+const modalEmailInput = document.getElementById('email-input');
+const subscribeForm = document.getElementById('subscribe-form');
+
 //EVENT LISTENERS
 princingCurrencySelector.addEventListener("change", async (event) => {
   const selectedCurrency = event.target.value;
@@ -232,3 +239,61 @@ async function calculateCurrency() {
 
 
 calculateCurrency();
+
+function showModal() {
+  modalOverlay.classList.remove('modal-overlay--hidden');
+}
+
+function hideModal() {
+  modalOverlay.classList.add('modal-overlay--hidden');
+}
+
+function closeModal() {
+  hideModal();
+  localStorage.setItem('modalClosed', 'true');
+}
+
+function subscribe(event) {
+  event.preventDefault();
+  const email = emailInput.value;
+  // Validar el email aquí antes de enviarlo al servidor
+  console.log('Email:', email);
+  closeModal();
+}
+
+function checkModalClosed() {
+  if (localStorage.getItem('modalClosed')) {
+    hideModal();
+  } else {
+    setTimeout(showModal, 5000); // Aparece después de 5 segundos
+  }
+}
+
+function handleEscapeKey(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+}
+
+function handleClickOutside(event) {
+  if (event.target === modalOverlay) {
+    closeModal();
+  }
+}
+
+closeButton.addEventListener('click', closeModal);
+subscribeForm.addEventListener('submit', subscribe);
+modalOverlay.addEventListener('click', handleClickOutside);
+document.addEventListener('keydown', handleEscapeKey);
+
+window.addEventListener('scroll', function() {
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.body.clientHeight;
+  if ((scrollPosition / (documentHeight - windowHeight)) > 0.25) {
+    showModal();
+    window.removeEventListener('scroll', arguments.callee);
+  }
+});
+
+checkModalClosed();

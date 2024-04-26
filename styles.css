@@ -709,7 +709,7 @@
   font-family: Raleway;
   font-weight: 400;
   font-size: 1.5rem;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
 }
 @media only screen and (min-width: 1000px) {
   .pricing__title {
@@ -717,11 +717,11 @@
   }
 }
 .pricing__currency-selector {
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
 }
 @media only screen and (min-width: 1000px) {
   .pricing__currency-selector {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
   }
 }
 .pricing__container {
@@ -987,6 +987,164 @@ main {
     transition: background-color 0.3s opacity 0.6s ease;
   }
   .scroll-top-button:hover {
+    background-color: #088ce4;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.783);
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: block;
+  background-color: white;
+  border-radius: 1em;
+  width: 98%;
+  height: auto;
+  padding: 1em;
+}
+@media only screen and (min-width: 1000px) {
+  .modal {
+    width: 50%;
+    padding: 1em 1.5em;
+  }
+}
+.modal__close-button {
+  position: relative;
+  cursor: pointer;
+  text-align: right;
+}
+@media only screen and (min-width: 1000px) {
+  .modal__close-button {
+    margin-bottom: 0.5em;
+  }
+}
+.modal__title {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+@media only screen and (min-width: 1000px) {
+  .modal__title {
+    margin-bottom: 1.5em;
+    font-size: 1.5rem;
+  }
+}
+.modal__form {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.25em;
+}
+@media only screen and (min-width: 1000px) {
+  .modal__form {
+    margin-bottom: 0.8em;
+  }
+}
+.modal__form__label {
+  font-family: Open Sans;
+  font-weight: 600;
+  color: #08A6E4;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+.modal__form__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.2em 0.4em;
+  margin-bottom: 1.2em;
+  margin-top: 0.6em;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #95989A;
+}
+@media only screen and (min-width: 1000px) {
+  .modal__form__input {
+    margin-bottom: 2.2em;
+    margin-top: 1.2em;
+  }
+}
+.modal__form__checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.modal__form__checkbox + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1.4rem;
+  padding-left: 2.1rem;
+  font-size: 0.6rem;
+  font-family: sans-serif;
+  color: #707070;
+  margin-right: 1.5em;
+}
+.modal__form__checkbox + label:before {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0.5rem;
+  content: "";
+  background: transparent;
+  width: 1.4rem;
+  height: 1.4rem;
+  box-shadow: inset 0 0 0 1px #95989A;
+  border-radius: 0.3em;
+  border: 1px solid transparent;
+}
+.modal__form__checkbox + label:after {
+  position: absolute;
+  display: block;
+  top: 0.7rem;
+  left: 0.55rem;
+  content: "";
+  width: 0.3rem;
+  height: 0.75rem;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(45deg);
+  transition: 200ms ease-in-out all;
+}
+.modal__form__checkbox:checked + label:before {
+  background: white;
+}
+.modal__form__checkbox:checked + label:after {
+  border-color: #08A6E4;
+}
+.modal__form__button {
+  display: block;
+  font-weight: 700;
+  margin-top: 2.5em;
+  border-radius: 2em;
+  font-family: Open Sans;
+  color: white;
+  background-color: #08A6E4;
+  box-shadow: 0.2em 0.3em 0.4em 0 rgba(7, 172, 230, 0.2901960784);
+  border: none;
+  font-size: 0.7rem;
+  padding: 1em 0;
+  width: 70%;
+  margin-left: 30%;
+}
+@media only screen and (min-width: 1000px) {
+  .modal__form__button {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .modal__form__button:hover {
     background-color: #088ce4;
   }
 }
