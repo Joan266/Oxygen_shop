@@ -24,10 +24,11 @@
 }
 .pricing__currency-selector {
   margin-bottom: 1.5em;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1000px) {
   .pricing__currency-selector {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 .pricing__container {

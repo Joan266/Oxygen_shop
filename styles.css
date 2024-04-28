@@ -700,10 +700,11 @@
 }
 .pricing__currency-selector {
   margin-bottom: 1.5em;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1000px) {
   .pricing__currency-selector {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 .pricing__container {
@@ -966,7 +967,7 @@ main {
 @media only screen and (min-width: 1000px) {
   .scroll-top-button {
     cursor: pointer;
-    transition: background-color 0.3s opacity 0.6s ease;
+    transition: background-color 0.3s ease-in-out opacity 0.6s ease-in-out;
   }
   .scroll-top-button:hover {
     background-color: #088ce4;

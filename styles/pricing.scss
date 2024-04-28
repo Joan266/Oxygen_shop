@@ -20,8 +20,9 @@
   }
   &__currency-selector {
     margin-bottom: 1.5em;
+    cursor: pointer;
     @media only screen and (min-width: 1000px) {
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
     }  
   }
   &__container{
