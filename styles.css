@@ -1162,11 +1162,10 @@ main {
   display: inline-block;
   background-color: black;
   position: relative;
-  width: 40em;
-  height: 23em;
   vertical-align: middle;
-  overflow: hidden;
   z-index: 0;
+  padding: 2em 0;
+  border-radius: 0.2em;
 }
 .slider__img {
   width: 100%;
@@ -1176,18 +1175,47 @@ main {
 .slider__button {
   z-index: 2;
   position: absolute;
-  border: 2px solid #A5A5A5;
-  background-color: black;
-  color: #A5A5A5;
+  border: 0.15em solid #F7F7F7;
+  background-color: rgba(128, 128, 128, 0.745);
+  color: #F7F7F7;
   border-radius: 50%;
   font-size: 1rem;
   font-family: Open Sans;
   font-weight: 800;
   text-align: center;
+  width: 2em;
+  height: 2em;
   cursor: pointer;
-  top: 50% .slider__button --left;
-  top-left: 10%;
+  top: 45%;
+  transition: all 200ms ease;
+}
+.slider__button:hover {
+  background-color: rgba(0, 174, 255, 0.252);
+}
+.slider__button--left {
+  left: 1%;
 }
 .slider__button--right {
-  left: 100%;
+  right: 1%;
+}
+.slider__img-selector {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  position: absolute;
+  bottom: 2.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.slider__img-selector__option {
+  margin: 0 0.25em;
+  cursor: pointer;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+}
+.slider__img-selector__option.active {
+  background-color: #08A6E4;
 }/*# sourceMappingURL=styles.css.map */
