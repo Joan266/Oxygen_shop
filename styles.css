@@ -1156,4 +1156,38 @@ main {
 .feedback--success + label:before {
   border: 1px solid #00e19a;
   box-shadow: none;
+}
+
+.slider {
+  display: inline-block;
+  background-color: black;
+  position: relative;
+  width: 40em;
+  height: 23em;
+  vertical-align: middle;
+  overflow: hidden;
+  z-index: 0;
+}
+.slider__img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+.slider__button {
+  z-index: 2;
+  position: absolute;
+  border: 2px solid #A5A5A5;
+  background-color: black;
+  color: #A5A5A5;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-family: Open Sans;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  top: 50% .slider__button --left;
+  top-left: 10%;
+}
+.slider__button--right {
+  left: 100%;
 }/*# sourceMappingURL=styles.css.map */

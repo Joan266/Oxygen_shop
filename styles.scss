@@ -252,3 +252,38 @@ main {
     }
   }
 }
+.slider {
+  display: inline-block;
+  background-color: black;
+  position: relative;
+  width: 40em;
+  height: 23em;
+  vertical-align: middle;
+  overflow: hidden;
+  z-index: 0;
+  &__img {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+  &__button{
+    z-index: 2;
+    position:absolute;
+    border: 2px solid $primary-grey;
+    background-color: black;
+    color: $primary-grey;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: $font-OpenSans;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+    top:50%
+    &--left {
+      left: 10%;
+    }
+    &--right {
+      left: 100%;
+    }
+  }
+}
