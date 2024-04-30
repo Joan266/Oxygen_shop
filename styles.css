@@ -227,7 +227,8 @@
   width: 100%;
   min-height: 7%;
   box-shadow: 0 0.4em 0.2em -0.2em rgba(0, 0, 0, 0.2901960784);
-  padding: 0.5em 1em 0.5em 1.25em;
+  padding-left: 1.25em;
+  padding-right: 1em;
   background-color: rgba(255, 255, 255, 0.85);
   z-index: 2;
   -webkit-backdrop-filter: blur(60px);
@@ -242,13 +243,13 @@
 .header__oxygenshop {
   display: inline-block;
   vertical-align: middle;
-  line-height: 1.5;
+  line-height: 2.4;
   width: 68%;
 }
 @media only screen and (min-width: 1000px) {
   .header__oxygenshop {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
   }
 }
 .header__oxygenshop__title {
@@ -263,17 +264,22 @@
   .header__oxygenshop__title {
     display: inline-block;
     width: 58%;
+    height: 100%;
   }
 }
 .header__oxygenshop__section-list {
   display: block;
   width: 100%;
+  padding-bottom: 0.3em;
 }
 @media only screen and (min-width: 1000px) {
   .header__oxygenshop__section-list {
     display: inline-block;
     width: 40%;
     text-align: center;
+    height: 100%;
+    line-height: 3.2;
+    padding: 0;
   }
 }
 .header__oxygenshop__section-list__option {
@@ -284,62 +290,40 @@
   font-size: 0.7rem;
   color: #A5A5A5;
   cursor: pointer;
-  transition: color 200ms ease;
 }
 @media only screen and (min-width: 1000px) {
   .header__oxygenshop__section-list__option {
     display: inline-block;
     width: 24%;
+    height: 100%;
+    line-height: 4;
+  }
+  .header__oxygenshop__section-list__option:hover {
+    color: black;
   }
 }
-.header__oxygenshop__section-list__option:hover {
+.header__oxygenshop__section-list__option--active {
   color: black;
+  border: none;
+  transition: color 200ms ease border 200ms ease;
+}
+@media only screen and (min-width: 1000px) {
+  .header__oxygenshop__section-list__option--active {
+    border-bottom: 4px solid #08A6E4;
+  }
 }
 .header__menu {
   display: inline-block;
   vertical-align: top;
   width: 30%;
   text-align: right;
-  margin-top: 0.4em;
+  margin-top: 1.2em;
 }
 @media only screen and (min-width: 1000px) {
   .header__menu {
     display: none;
     margin: 0;
   }
-}
-.header__dropdown {
-  position: absolute;
-  top: 100;
-  left: 0;
-  display: block;
-  text-align: left;
-  padding: 1.2em;
-  padding-top: 0.4em;
-  background-color: white;
-  width: 100%;
-  z-index: 1;
-}
-.header__dropdown__section {
-  display: block;
-  margin-top: 0.1em;
-}
-.header__dropdown__section__text {
-  font-family: Raleway;
-  font-weight: 800;
-  font-size: 0.6rem;
-  color: #A5A5A5;
-  letter-spacing: 0.15rem;
-}
-.header__dropdown:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.4em;
-  width: 100%;
-  height: 0.4em;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2901960784), transparent);
-  z-index: -1;
 }
 
 .whyus {
