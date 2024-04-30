@@ -259,7 +259,10 @@ main {
   vertical-align: middle;
   z-index: 0;
   padding: 2em 0;
-  border-radius: 0.2em;
+  border-radius: 0.5em;
+  margin: 0 0.2em;
+  margin-bottom: 2em;
+  margin-top: 1em;
   &__img {
     width: 100%;
     height: auto;
@@ -280,9 +283,11 @@ main {
     height: 2em;
     cursor: pointer;
     top:45%;
-    transition: all 200ms ease;
-    &:hover{
-      background-color: rgba(0, 174, 255, 0.252);
+    @media only screen and (min-width: 1000px) {
+      transition: all 200ms ease;
+      &:hover{
+        background-color: rgba(0, 174, 255, 0.252);
+      }
     }
     &--left {
       left: 1%;
