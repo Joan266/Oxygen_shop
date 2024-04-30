@@ -235,7 +235,7 @@
   -webkit-backdrop-filter: blur(60px);
           backdrop-filter: blur(60px);
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1150px) {
   .nav {
     padding-left: 3em;
     padding-right: 3em;
@@ -247,7 +247,7 @@
   line-height: 2.4;
   width: 68%;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1150px) {
   .nav__oxygenshop {
     width: 100%;
     min-height: 100%;
@@ -261,7 +261,7 @@
   display: block;
   width: 100%;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1150px) {
   .nav__oxygenshop__title {
     display: inline-block;
     width: 58%;
@@ -273,7 +273,7 @@
   width: 100%;
   padding-bottom: 0.3em;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1150px) {
   .nav__oxygenshop__section-list {
     display: inline-block;
     width: 40%;
@@ -292,7 +292,7 @@
   color: #A5A5A5;
   cursor: pointer;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1150px) {
   .nav__oxygenshop__section-list__option {
     display: inline-block;
     width: 24%;
@@ -308,7 +308,7 @@
   border: none;
   transition: color 200ms ease border 200ms ease;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1150px) {
   .nav__oxygenshop__section-list__option--active {
     border-bottom: 4px solid #08A6E4;
   }
@@ -318,9 +318,10 @@
   vertical-align: top;
   width: 30%;
   text-align: right;
+  cursor: pointer;
   margin-top: 1.2em;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1150px) {
   .nav__menu {
     display: none;
     margin: 0;
