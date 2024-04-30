@@ -1,0 +1,112 @@
+// MENU ELEMENTS
+const headerMenu = document.querySelector('.header__menu');
+const headerMenuImg = document.querySelector('.header__menu__img');
+const header = document.querySelector('.header');
+const sectionList = document.querySelector('.header__oxygenshop__section-list');
+const sectionOptions = document.querySelectorAll('.header__oxygenshop__section-list__option');
+
+// MAIN SECTIONS
+const whyUsSection = document.getElementById('why-us');
+const benefits = document.getElementById('benefits');
+const prices = document.getElementById('prices');
+const contact = document.getElementById('contact');
+
+// MEDIA QUERY
+const tabletMediaQuery = window.matchMedia("(min-width: 1000px)");
+
+function handleTabletChange(event) {
+  if (event.matches) {
+    sectionList.classList.remove("disabled");
+  } else {
+    sectionList.classList.add("disabled");
+    closeNavMenu();
+  }
+}
+
+document.addEventListener('click', handleClickOutside);
+
+tabletMediaQuery.addEventListener('change', handleTabletChange);
+
+// INITIAL CHECK
+handleTabletChange(tabletMediaQuery);
+
+// MENU EVENT LISTENERS
+headerMenu.addEventListener('click', function(event) {
+  event.preventDefault();
+  toggleNavMenu();
+});
+
+function toggleNavMenu() {
+  if (headerMenuImg.src.includes('menu')) {
+    openNavMenu();
+  } else {
+    closeNavMenu();
+  }
+}
+
+function openNavMenu() {
+  headerMenuImg.src = './public/svg/x.svg';
+  headerMenuImg.alt = 'x icon';
+  sectionList.classList.remove("disabled");
+}
+
+function closeNavMenu() {
+  headerMenuImg.src = './public/svg/menu.svg';
+  headerMenuImg.alt = 'menu icon';
+  sectionList.classList.add("disabled");
+}
+
+function handleClickOutside(event) {
+  event.preventDefault();
+  if (!header.contains(event.target) && !tabletMediaQuery.matches) {
+    closeNavMenu();
+  }
+}
+
+// SMOOTH SCROLLING TO SECTION
+
+sectionOptions.forEach(option => {
+  option.addEventListener('click', function(event) {
+    event.preventDefault();
+    const sectionId = option.dataset.value;
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      const viewportHeight = window.innerHeight;
+      const offsetTop = targetSection.offsetTop - (viewportHeight * 0.13); 
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+      if(!tabletMediaQuery.matches){
+        closeNavMenu();
+      }
+    }
+  });
+});
+
+// SECTION OBSERVER
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.4, 
+};
+
+const sectionObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const sectionId = entry.target.id;
+      sectionOptions.forEach((option) => {
+        if (option.dataset.value === sectionId) {
+          option.classList.add("header__oxygenshop__section-list__option--active");
+        } else {
+          option.classList.remove("header__oxygenshop__section-list__option--active");
+        }
+      });
+    }
+  });
+}, observerOptions);
+
+sectionObserver.observe(whyUsSection);
+sectionObserver.observe(benefits);
+sectionObserver.observe(prices);
+sectionObserver.observe(contact);

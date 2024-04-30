@@ -19,7 +19,16 @@
 }
 @media only screen and (min-width: 1000px) {
   .pricing__title {
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
+  }
+}
+.pricing__currency-selector {
+  margin-bottom: 1.5em;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+  .pricing__currency-selector {
+    margin-bottom: 1em;
   }
 }
 .pricing__container {
@@ -30,6 +39,8 @@
   padding: 0 0.5em;
   padding-bottom: 1em;
   height: 13rem;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 @media only screen and (min-width: 1000px) {
   .pricing__container {
@@ -38,8 +49,6 @@
     line-height: 1.5;
     width: 28%;
     height: 23rem;
-    margin-left: 1em;
-    margin-right: 1em;
     border-radius: 0.7em;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
