@@ -1,28 +1,57 @@
-//MENU ELEMENTS
+// MENU ELEMENTS
 const headerMenu = document.querySelector('.header__menu');
 const headerMenuImg = document.querySelector('.header__menu__img');
-const headerDropdown = document.querySelector('.header__dropdown');
 const header = document.querySelector('.header');
+const sectionList = document.querySelector('.header__oxygenshop__section-list');
 
-//MENU EVENT LISTENERS
-headerMenu.addEventListener('click', function(event) {
-  event.preventDefault();
-  toggleDropdown(headerDropdown, header);
-  switchMenuIcon(headerMenuImg);
-});
+// MEDIA QUERY
+const tabletMediaQuery = window.matchMedia("(min-width: 1000px)");
 
-//MENU FUNCTIONS
-function toggleDropdown(headerDropdown, header) {
-  headerDropdown.classList.toggle('disabled');
-  header.classList.toggle('boxshadow-disabled');
+function handleTabletChange(event) {
+  if (event.matches) {
+    sectionList.classList.remove("disabled");
+  } else {
+    sectionList.classList.add("disabled");
+    closeNavMenu();
+  }
 }
 
-function switchMenuIcon(headerMenuImg) {
+document.addEventListener('click', handleClickOutside);
+
+tabletMediaQuery.addEventListener('change', handleTabletChange);
+
+// INITIAL CHECK
+handleTabletChange(tabletMediaQuery);
+
+// MENU EVENT LISTENERS
+headerMenu.addEventListener('click', function(event) {
+  event.preventDefault();
+  toggleNavMenu();
+});
+
+function toggleNavMenu() {
   if (headerMenuImg.src.includes('menu')) {
-    headerMenuImg.src = './public/svg/x.svg';
-    headerMenuImg.alt = 'x icon';
+    openNavMenu();
   } else {
-    headerMenuImg.src = './public/svg/menu.svg';
-    headerMenuImg.alt = 'menu icon';
+    closeNavMenu();
+  }
+}
+
+function openNavMenu() {
+  headerMenuImg.src = './public/svg/x.svg';
+  headerMenuImg.alt = 'x icon';
+  sectionList.classList.remove("disabled");
+}
+
+function closeNavMenu() {
+  headerMenuImg.src = './public/svg/menu.svg';
+  headerMenuImg.alt = 'menu icon';
+  sectionList.classList.add("disabled");
+}
+
+function handleClickOutside(event) {
+  event.preventDefault();
+  if (!header.contains(event.target) && !tabletMediaQuery.matches) {
+    closeNavMenu();
   }
 }
