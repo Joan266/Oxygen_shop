@@ -1,9 +1,9 @@
 // MENU ELEMENTS
-const headerMenu = document.querySelector('.header__menu');
-const headerMenuImg = document.querySelector('.header__menu__img');
-const header = document.querySelector('.header');
-const sectionList = document.querySelector('.header__oxygenshop__section-list');
-const sectionOptions = document.querySelectorAll('.header__oxygenshop__section-list__option');
+const navMenu = document.querySelector('.nav__menu');
+const navMenuImg = document.querySelector('.nav__menu__img');
+const nav = document.querySelector('.nav');
+const sectionList = document.querySelector('.nav__oxygenshop__section-list');
+const sectionOptions = document.querySelectorAll('.nav__oxygenshop__section-list__option');
 
 // MAIN SECTIONS
 const whyUsSection = document.getElementById('why-us');
@@ -23,7 +23,7 @@ function handleTabletChange(event) {
   }
 }
 
-document.addEventListener('click', handleClickOutside);
+document.addEventListener('click', handleClickOutsideMenu);
 
 tabletMediaQuery.addEventListener('change', handleTabletChange);
 
@@ -31,13 +31,13 @@ tabletMediaQuery.addEventListener('change', handleTabletChange);
 handleTabletChange(tabletMediaQuery);
 
 // MENU EVENT LISTENERS
-headerMenu.addEventListener('click', function(event) {
+navMenu.addEventListener('click', function(event) {
   event.preventDefault();
   toggleNavMenu();
 });
 
 function toggleNavMenu() {
-  if (headerMenuImg.src.includes('menu')) {
+  if (navMenuImg.src.includes('menu')) {
     openNavMenu();
   } else {
     closeNavMenu();
@@ -45,20 +45,19 @@ function toggleNavMenu() {
 }
 
 function openNavMenu() {
-  headerMenuImg.src = './public/svg/x.svg';
-  headerMenuImg.alt = 'x icon';
+  navMenuImg.src = './public/svg/x.svg';
+  navMenuImg.alt = 'x icon';
   sectionList.classList.remove("disabled");
 }
 
 function closeNavMenu() {
-  headerMenuImg.src = './public/svg/menu.svg';
-  headerMenuImg.alt = 'menu icon';
+  navMenuImg.src = './public/svg/menu.svg';
+  navMenuImg.alt = 'menu icon';
   sectionList.classList.add("disabled");
 }
 
-function handleClickOutside(event) {
-  event.preventDefault();
-  if (!header.contains(event.target) && !tabletMediaQuery.matches) {
+function handleClickOutsideMenu(event) {
+  if (!nav.contains(event.target) && !tabletMediaQuery.matches) {
     closeNavMenu();
   }
 }
@@ -97,9 +96,9 @@ const sectionObserver = new IntersectionObserver((entries, observer) => {
       const sectionId = entry.target.id;
       sectionOptions.forEach((option) => {
         if (option.dataset.value === sectionId) {
-          option.classList.add("header__oxygenshop__section-list__option--active");
+          option.classList.add("nav__oxygenshop__section-list__option--active");
         } else {
-          option.classList.remove("header__oxygenshop__section-list__option--active");
+          option.classList.remove("nav__oxygenshop__section-list__option--active");
         }
       });
     }

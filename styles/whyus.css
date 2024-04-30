@@ -9,60 +9,6 @@
     max-width: 50rem;
   }
 }
-.whyus__sellmore {
-  display: block;
-  padding: 0 1.5em;
-  margin-top: 6em;
-  font-family: Open Sans;
-}
-.whyus__sellmore__title {
-  display: block;
-  font-weight: 400;
-  font-family: Raleway;
-  font-size: 1.8em;
-}
-.whyus__sellmore__text {
-  display: block;
-  font-weight: 400;
-  margin-top: 1.2em;
-  font-size: 0.8rem;
-  padding: 0 0.4em;
-}
-.whyus__sellmore__button {
-  display: block;
-  font-weight: 700;
-  margin-top: 2.5em;
-  font-family: Open Sans;
-  border-radius: 2em;
-  color: white;
-  background-color: #08A6E4;
-  box-shadow: 0.3em 0.6em 0.8em 0 rgba(7, 172, 230, 0.2901960784);
-  border: none;
-  font-size: 0.75rem;
-  width: 100%;
-  text-align: center;
-  padding: 1em 0;
-  max-width: 15rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media only screen and (min-width: 1000px) {
-  .whyus__sellmore__button {
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  .whyus__sellmore__button:hover {
-    background-color: #088ce4;
-  }
-}
-.whyus__split-container {
-  margin-top: 3.6em;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
 .whyus__mostpopular {
   display: block;
   padding: 0 1.5em;
