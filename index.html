@@ -30,6 +30,25 @@
         <img class="nav__menu__img" src="./public/svg/menu.svg" alt="menu icon"><img/>
       </article>
     </nav>
+    <article class="percentage-scroller"></article>
+    <button class="scroll-top-button"><span class="scroll-top-button__text">^</span></button>
+    <article id="modal-overlay" class="modal-overlay disabled">
+      <div class="modal" >
+        <div class="modal__close-button" >
+          <img class="modal__close-button__img" src="./public/svg/x.svg" alt="cross icon">
+        </div>
+        <h2 class="modal__title">Subscribe to our newsletter</h2>
+        <form class="modal__form" id="modalForm" action="" method="post" novalidate>
+          <label class="modal__form__label" for="modalFormName">NAME</label>
+          <input class="modal__form__input" id="modalFormName" type="text">
+          <label class="modal__form__label" for="modalFormEmail">EMAIL</label>
+          <input class="modal__form__input" id="modalFormEmail" type="email">
+          <input class="modal__form__checkbox" id="modalFormCheckbox" type="checkbox">
+          <label class="modal__form__checkbox-label" for="modalFormCheckbox">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+          <button class="modal__form__button" type="submit" id="modalFormButton">Send</button>
+        </form>
+      </div>
+    </article>
     <main>
       <header>
         <article class="sellmore">
@@ -217,24 +236,5 @@
         <img class="footer__media__img" src="./public/svg/facebook.svg" alt="facebook icon"><img/>
       </article>
     </footer>
-    <article class="percentage-scroller"></article>
-    <button class="scroll-top-button"><span class="scroll-top-button__text">^</span></button>
-    <article class="modal-overlay disabled">
-      <div class="modal" >
-        <div class="modal__close-button" >
-          <img class="modal__close-button__img" src="./public/svg/x.svg" alt="cross icon">
-        </div>
-        <h2 class="modal__title">Subscribe to our newsletter</h2>
-        <form class="modal__form" id="modalForm" action="" method="post" novalidate>
-          <label class="modal__form__label" for="modalFormName">NAME</label>
-          <input class="modal__form__input" id="modalFormName" type="text">
-          <label class="modal__form__label" for="modalFormEmail">EMAIL</label>
-          <input class="modal__form__input" id="modalFormEmail" type="email">
-          <input class="modal__form__checkbox" id="modalFormCheckbox" type="checkbox">
-          <label class="modal__form__checkbox-label" for="modalFormCheckbox">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
-          <button class="modal__form__button" type="submit" id="modalFormButton">Send</button>
-        </form>
-      </div>
-    </article>
   </body>
 </html>

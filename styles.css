@@ -1027,7 +1027,7 @@ main {
   width: 100%;
   height: 100%;
   background-color: rgba(128, 128, 128, 0.783);
-  z-index: 4;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1037,7 +1037,7 @@ main {
   position: relative;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 6;
   display: block;
   background-color: white;
   border-radius: 1em;

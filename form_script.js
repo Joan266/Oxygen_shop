@@ -1,5 +1,5 @@
 //MODAL ELEMENTS
-const modalOverlay = document.querySelector('.modal-overlay');
+const modalOverlay = document.getElementById('modal-overlay');
 const modalCloseButton = document.querySelector('.modal__close-button__img');
 const modalForm = document.getElementById('modalForm');
 const modalFormNameInput = document.getElementById("modalFormName");
@@ -11,6 +11,8 @@ const contactForm = document.getElementById('contactForm');
 const contactFormNameInput = document.getElementById("contactFormName");
 const contactFormEmailInput = document.getElementById("contactFormEmail");
 const contactFormCheckbox = document.getElementById("contactFormCheckbox");
+
+let isModalClosed = localStorage.getItem('modalClosed') ? true : false ;
 
 //MODAL FORM EVENT LISTENERS
 document.addEventListener('keydown', handleEscapeKey);
@@ -24,17 +26,17 @@ modalForm.addEventListener("submit", async function(event) {
   };
 });
 
-if(!checkModalClosed()){
-  document.addEventListener('scroll', function scrollPopupHandler() {
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPosition = document.documentElement.scrollTop;
-    const scrollPercentage = Math.floor((scrollPosition / maxScroll) * 100);
-    if (scrollPercentage > 25 && !checkModalClosed()) {
-      showModal();
-      document.removeEventListener('scroll', scrollPopupHandler);
-    }
-  });
-}
+
+document.addEventListener('scroll', function scrollPopupHandler() {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPosition = document.documentElement.scrollTop;
+  const scrollPercentage = Math.floor((scrollPosition / maxScroll) * 100);
+  if (scrollPercentage > 25) {
+    showModal();
+    document.removeEventListener('scroll', scrollPopupHandler);
+  }
+});
+
     
 //CONTACT FORM EVENT LISTENER
 contactForm.addEventListener("submit", function(event) {
@@ -130,8 +132,11 @@ function validateForm(nameInput, emailInput, checkbox) {
 //MODAL FORM FUNCTIONS
 
 function showModal() {
-  if(checkModalClosed()) return;
-  modalOverlay.classList.remove('disabled');
+  console.log(isModalClosed)
+  if(!isModalClosed) {
+    console.log(!isModalClosed)
+    modalOverlay.classList.remove('disabled');
+  }
 }
 
 function hideModal() {
@@ -141,21 +146,7 @@ function hideModal() {
 function closeModal() {
   hideModal();
   localStorage.setItem('modalClosed', 'true');
-}
-
-function checkModalClosed() {
-  if(localStorage.getItem('modalClosed')){
-    return true
-  }
-  return false
-}
-
-function setModalOpenIn() {
-  if (checkModalClosed()) {
-    hideModal();
-  } else {
-    setTimeout(showModal, 10000); 
-  }
+  isModalClosed = true;
 }
 
 function handleEscapeKey(event) {
@@ -170,4 +161,5 @@ function handleClickOutside(event) {
   }
 }
 
-setModalOpenIn();
+
+setTimeout(showModal, 5000);
