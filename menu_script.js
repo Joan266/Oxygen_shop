@@ -12,7 +12,7 @@ const prices = document.getElementById('prices');
 const contact = document.getElementById('contact');
 
 // MEDIA QUERY
-const tabletMediaQuery = window.matchMedia("(min-width: 1000px)");
+const tabletMediaQuery = window.matchMedia("(min-width: 1150px)");
 
 function handleTabletChange(event) {
   if (event.matches) {
