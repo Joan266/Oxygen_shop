@@ -36,7 +36,8 @@ class ImageSlider {
         this.pause = false;
       }
       this.clock();
-    }, 5000);
+      console.log(`clock, pause: ${this.pause}`);
+    }, 8000);
   };
   
   setEventListeners() {
