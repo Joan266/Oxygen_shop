@@ -5,49 +5,91 @@ const rightButton = document.querySelector(".slider__button--right");
 const imgSelector = document.querySelector(".slider__img-selector");
 const imgSelectorOptions = document.querySelectorAll(".slider__img-selector__option");
 
-function setActiveImage(index) {
-  imgSelectorOptions.forEach((option, i) => {
-    if (i === index) {
-      option.classList.add('active');
-    } else {
-      option.classList.remove('active');
-    }
-  });
-}
+class ImageSlider {
+  constructor(slider, sliderImg, leftButton, rightButton, imgSelector, imgSelectorOptions) {
+    this.slider = slider;
+    this.sliderImg = sliderImg;
+    this.leftButton = leftButton;
+    this.rightButton = rightButton;
+    this.imgSelector = imgSelector;
+    this.imgSelectorOptions = imgSelectorOptions;
+    this.pause = false;
+    this.setEventListeners();
+    this.clock()
+  }
 
-imgSelectorOptions.forEach((option, index) => {
-  option.addEventListener('click', (event) => {
-    event.preventDefault()
-    const value = event.currentTarget.dataset.value;
-    const srcString = `./public/picsum-img/${value}.webp`
-    sliderImg.src = srcString;
-    setActiveImage(index);
-  });
-});
-
-function changeImage(indexOffset) {
-  let currentIndex = -1;
-  imgSelectorOptions.forEach((option, index) => {
-    if (option.classList.contains('active')) {
-      currentIndex = index;
-    }
-  });
+  setActiveOptionSelector(index) {
+    this.imgSelectorOptions.forEach((option, i) => {
+      if (i === index) {
+        option.classList.add('active');
+      } else {
+        option.classList.remove('active');
+      }
+    });
+  }
   
-  if (currentIndex !== -1) {
-    const newIndex = (currentIndex + indexOffset + imgSelectorOptions.length) % imgSelectorOptions.length;
-    const value = imgSelectorOptions[newIndex].dataset.value;
+  clock() {
+    setTimeout(() => {
+      if (!this.pause) {
+        this.calculatedImgSelectedValue(1);
+      } else {
+        this.pause = false;
+      }
+      this.clock();
+    }, 5000);
+  };
+  
+  setEventListeners() {
+    this.imgSelectorOptions.forEach((option, index) => {
+      option.addEventListener('click', (event) => {
+        event.preventDefault();
+        const value = event.currentTarget.dataset.value;
+        this.changeImgSrcPath(value);
+        this.setActiveOptionSelector(index);
+        this.pause = true;
+      });
+    });
+
+    this.leftButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      this.calculatedImgSelectedValue(-1);
+      this.pause = true;
+    });
+
+    this.rightButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      this.calculatedImgSelectedValue(1);
+      this.pause = true;
+    });
+  }
+
+  calculatedImgSelectedValue(indexOffset) {
+    let currentIndex = -1;
+    this.imgSelectorOptions.forEach((option, index) => {
+      if (option.classList.contains('active')) {
+        currentIndex = index;
+      }
+    });
+
+    if (currentIndex !== -1) {
+      const newIndex = (currentIndex + indexOffset + this.imgSelectorOptions.length) % this.imgSelectorOptions.length;
+      const value = this.imgSelectorOptions[newIndex].dataset.value;
+      this.changeImgSrcPath(value);
+      this.setActiveOptionSelector(newIndex);
+    }
+  }
+  
+  changeImgSrcPath(value) {
     const srcString = `./public/picsum-img/${value}.webp`;
-    sliderImg.src = srcString;
-    setActiveImage(newIndex);
+    this.sliderImg.src = srcString;
   }
 }
 
-leftButton.addEventListener('click', (event) => {
-  event.preventDefault();
-  changeImage(-1);
-});
-
-rightButton.addEventListener('click', (event) => {
-  event.preventDefault();
-  changeImage(1);
-});
+const imageSlider = new ImageSlider(
+  slider,
+  sliderImg,
+  leftButton,
+  rightButton,
+  imgSelector,
+  imgSelectorOptions,
+);

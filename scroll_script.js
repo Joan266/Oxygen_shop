@@ -22,14 +22,14 @@ function setPercentageScrollBar(scrollPercentage, percentageScroller) {
 }
 
 function handleScrollTopButtonOpacity(scrollPercentage, scrollTopButton) {
-  if(scrollPercentage < 24){
+  if (scrollPercentage < 24) {
     scrollTopButton.classList.add('disabled');
-  }else {
+  } else {
     scrollTopButton.classList.remove('disabled');
   }
-  if(scrollPercentage < 25){
+  if (scrollPercentage < 25) {
     scrollTopButton.style.opacity = 0;
-  }else {
+  } else {
     scrollTopButton.style.opacity = 1;
   }
 }
