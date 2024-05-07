@@ -1,18 +1,11 @@
-const slider = document.getElementById("slider");
-const sliderImg = document.querySelector(".slider__img");
-const leftButton = document.querySelector(".slider__button--left");
-const rightButton = document.querySelector(".slider__button--right");
-const imgSelector = document.querySelector(".slider__img-selector");
-const imgSelectorOptions = document.querySelectorAll(".slider__img-selector__option");
-
 class ImageSlider {
-  constructor(slider, sliderImg, leftButton, rightButton, imgSelector, imgSelectorOptions) {
-    this.slider = slider;
-    this.sliderImg = sliderImg;
-    this.leftButton = leftButton;
-    this.rightButton = rightButton;
-    this.imgSelector = imgSelector;
-    this.imgSelectorOptions = imgSelectorOptions;
+  constructor(id) {
+    this.slider = document.getElementById(id);
+    this.sliderImg = this.slider.querySelector(".slider__img");
+    this.leftButton = this.slider.querySelector(".slider__button--left");
+    this.rightButton = this.slider.querySelector(".slider__button--right");
+    this.imgSelector = this.slider.querySelector(".slider__img-selector");
+    this.imgSelectorOptions = this.slider.querySelectorAll(".slider__img-selector__option");
     this.pause = false;
     this.setEventListeners();
     this.clock()
@@ -86,11 +79,4 @@ class ImageSlider {
   }
 }
 
-const imageSlider = new ImageSlider(
-  slider,
-  sliderImg,
-  leftButton,
-  rightButton,
-  imgSelector,
-  imgSelectorOptions,
-);
+const imageSlider = new ImageSlider('slider');
