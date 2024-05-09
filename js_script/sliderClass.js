@@ -1,4 +1,4 @@
-class ImageSlider {
+export class ImageSlider {
   constructor(id) {
     this.slider = document.getElementById(id);
     this.sliderImg = this.slider.querySelector(".slider__img");
@@ -78,5 +78,3 @@ class ImageSlider {
     this.sliderImg.src = srcString;
   }
 }
-
-const imageSlider = new ImageSlider('slider');
