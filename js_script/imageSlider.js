@@ -78,3 +78,6 @@ export class ImageSlider {
     this.sliderImg.src = srcString;
   }
 }
+
+//create Slider
+new ImageSlider('slider');
