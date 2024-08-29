@@ -1,19 +1,17 @@
+@import "variables";
+
 .slider {
-  display: inline-block;
   background-color: black;
   position: relative;
   vertical-align: middle;
   z-index: 0;
   padding: 2em 0;
   border-radius: 0.5em;
-  margin: 0 0.2em;
-  margin-bottom: 2em;
-  margin-top: 1em;
 
   &__img {
     width: 100%;
-    height: auto;
-    z-index: 1;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__button {
@@ -62,6 +60,20 @@
 
       &.active {
         background-color: $primary-blue;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .slider {
+
+    &__button {
+      transition: all 200ms ease;
+
+      &:hover {
+        background-color: rgba(0, 174, 255, 0.252);
       }
     }
   }

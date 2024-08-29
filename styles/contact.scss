@@ -1,35 +1,20 @@
 @import "variables";
-.contact{
-  padding: 0.1em 1.5em 1em 1.5em;
+
+.contact {
   text-align: left;
-  max-width:$max-width-phone;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  @media only screen and (min-width: 1000px) {
-    max-width: $max-width-computer+6rem;
-    padding: 0;
-    text-align: center;
-    margin-bottom: 1em;
-  }
   &__info {
     display: block;
     text-align: left;
-    @media only screen and (min-width: 1000px) {
-      display: inline-block;
-      vertical-align: middle;
-      line-height: 1.5;
-      width: 35%;
-      margin-bottom: 15em;
-    }
+
     &__title {
       font-family: $font-Raleway;
       font-weight: 400;
       color: #000;
       font-size: 2.1rem;
       margin-bottom: 0.3em;
-      
+
     }
+
     &__text {
       font-family: $font-OpenSans;
       font-weight: 400;
@@ -37,16 +22,12 @@
       font-size: 0.8rem;
       margin-bottom: 2em;
     }
+
     &__details {
       display: block;
       text-align: left;
       margin-bottom: 0.7em;
-      @media only screen and (min-width: 1000px) {
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.5;
-        width: 48%;
-      }
+
       img {
         display: inline-block;
         vertical-align: middle;
@@ -55,6 +36,7 @@
         width: 1.35em;
         height: 1.35em;
       }
+
       span {
         display: inline-block;
         vertical-align: middle;
@@ -66,28 +48,25 @@
       }
     }
   }
-  &__form{
+
+  &__form {
     margin-top: 3.5em;
     margin-bottom: 2.5em;
     position: relative;
     display: block;
     text-align: left;
-    @media only screen and (min-width: 1000px) {
-      display: inline-block;
-      vertical-align: middle;
-      line-height: 1.5;
-      width: 37%;
-    }
-    &__label{
+
+    &__label {
       font-family: $font-OpenSans;
       font-weight: 600;
-      color:$primary-blue;
+      color: $primary-blue;
       font-size: 0.65rem;
       letter-spacing: 0.2em;
     }
+
     &__input {
       width: 100%;
-      border:none;
+      border: none;
       margin-bottom: 2.2em;
       margin-top: 1.2em;
       outline: none;
@@ -95,12 +74,13 @@
       border: 1px solid transparent;
       border-bottom: 1px solid $quart-grey;
     }
-    &__checkbox{
+
+    &__checkbox {
       position: absolute;
       opacity: 0;
-      
+
       // Text
-      & + label{
+      &+label {
         display: inline-block;
         position: relative;
         cursor: pointer;
@@ -108,10 +88,10 @@
         padding-left: $checkbox-size + 0.7rem;
         font-size: 0.6rem;
         font-family: sans-serif;
-        color: $tertiary-grey; 
-        
+        color: $tertiary-grey;
+
         // Checkbox
-        &:before{
+        &:before {
           position: absolute;
           display: block;
           left: 0;
@@ -124,9 +104,9 @@
           border-radius: 0.3em;
           border: 1px solid transparent;
         }
-        
+
         // Tick
-        &:after{
+        &:after {
           position: absolute;
           display: block;
           top: 0.7rem;
@@ -140,20 +120,22 @@
           transition: 200ms ease-in-out all;
         }
       }
-      
+
       // Checked
-      &:checked{
-        & + label{
-          &:before{
+      &:checked {
+        &+label {
+          &:before {
             background: white;
           }
-          &:after{
+
+          &:after {
             border-color: $primary-blue;
           }
         }
       }
     }
-    &__button{
+
+    &__button {
       display: block;
       font-weight: 700;
       margin-top: 2.5em;
@@ -167,14 +149,53 @@
       padding: 1em 0;
       width: 70%;
       margin-left: 30%;
-      @media only screen and (min-width: 1000px) {
+
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1000px) {
+  .contact {
+    padding: 0;
+    text-align: center;
+    &__info {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5;
+      width: 35%;
+      margin-bottom: 15em;
+
+
+
+      &__details {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.5;
+        width: 48%;
+
+
+      }
+    }
+
+    &__form {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5;
+      width: 37%;
+
+
+      &__button {
         cursor: pointer;
         transition: background-color 0.3s;
+
         &:hover {
           background-color: $tertiary-blue;
         }
+
       }
     }
+
   }
-  
+
 }

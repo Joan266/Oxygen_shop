@@ -1,31 +1,9 @@
 .contact {
-  padding: 0.1em 1.5em 1em 1.5em;
   text-align: left;
-  max-width: 18rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-@media only screen and (min-width: 1000px) {
-  .contact {
-    max-width: 56rem;
-    padding: 0;
-    text-align: center;
-    margin-bottom: 1em;
-  }
 }
 .contact__info {
   display: block;
   text-align: left;
-}
-@media only screen and (min-width: 1000px) {
-  .contact__info {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.5;
-    width: 35%;
-    margin-bottom: 15em;
-  }
 }
 .contact__info__title {
   font-family: Raleway;
@@ -45,14 +23,6 @@
   display: block;
   text-align: left;
   margin-bottom: 0.7em;
-}
-@media only screen and (min-width: 1000px) {
-  .contact__info__details {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.5;
-    width: 48%;
-  }
 }
 .contact__info__details img {
   display: inline-block;
@@ -77,14 +47,6 @@
   position: relative;
   display: block;
   text-align: left;
-}
-@media only screen and (min-width: 1000px) {
-  .contact__form {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.5;
-    width: 37%;
-  }
 }
 .contact__form__label {
   font-family: Open Sans;
@@ -164,7 +126,31 @@
   width: 70%;
   margin-left: 30%;
 }
+
 @media only screen and (min-width: 1000px) {
+  .contact {
+    padding: 0;
+    text-align: center;
+  }
+  .contact__info {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 35%;
+    margin-bottom: 15em;
+  }
+  .contact__info__details {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 48%;
+  }
+  .contact__form {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 37%;
+  }
   .contact__form__button {
     cursor: pointer;
     transition: background-color 0.3s;

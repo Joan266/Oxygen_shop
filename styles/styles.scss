@@ -2,6 +2,7 @@
 @import "footer.scss";
 @import "nav.scss";
 @import "whyus.scss";
+@import "slider.scss";
 @import "benefits.scss";
 @import "pricing.scss";
 @import "variables.scss";
@@ -11,13 +12,15 @@
   margin: 0;
   padding: 0;
 }
-.container{
+
+.container {
   padding: 0 1em;
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em;
 }
+
 main {
   display: block;
   text-align: center;
@@ -28,6 +31,7 @@ main {
 
 header {
   margin-top: 6em;
+
   .sellmore {
     display: block;
     font-family: $font-OpenSans;
@@ -72,6 +76,7 @@ header {
   .split-container {
     margin-top: 3.6em;
     width: 100%;
+
     >img {
       width: 100%;
       height: 100%;
@@ -312,16 +317,18 @@ header {
 
 
 @media only screen and (min-width: 1000px) {
-  .container{
+  .container {
     max-width: 950px;
     padding: 0;
     margin-bottom: 4em;
   }
+
   header {
     .sellmore {
       &__title {
         font-size: 2.4rem;
       }
+
       &__button {
         cursor: pointer;
         transition: background-color 0.3s;
@@ -383,11 +390,11 @@ header {
   }
 
 
-  
+
 }
 
 @media only screen and (min-width: 1500px) {
-  .container{
+  .container {
     max-width: 1200px;
   }
 }
