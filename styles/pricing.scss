@@ -1,31 +1,23 @@
 @import "variables";
+
 .pricing {
   padding: 0.1em 0 1em 0;
-  max-width:$max-width-phone;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3em;
-  @media only screen and (min-width: 1000px) {
-    margin-top: 4em;
-    max-width: $max-width-computer+8rem;
-  }
+
   &__title {
     font-family: $font-Raleway;
     font-weight: 400;
     font-size: 1.5rem;
     margin-bottom: 0.5em;
-    @media only screen and (min-width: 1000px) {
-      margin-bottom: 1.5em;
-    }
+
   }
+
   &__currency-selector {
     margin-bottom: 1.5em;
     cursor: pointer;
-    @media only screen and (min-width: 1000px) {
-      margin-bottom: 1em;
-    }  
+
   }
-  &__container{
+
+  &__container {
     position: relative;
     display: block;
     border-radius: 1.4em;
@@ -35,130 +27,99 @@
     height: 13rem;
     margin-left: 1em;
     margin-right: 1em;
-    @media only screen and (min-width: 1000px) {
-      display: inline-block;
-      vertical-align: middle;
-      line-height: 1.5;
-      width: 28%;
-      height: 23rem;
-      border-radius: 0.7em;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out; 
-      &:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease-in-out; 
-      }
-    }
+
     &--red {
       border: 1px solid $primary-red;
       box-shadow: none;
-      @media only screen and (min-width: 1000px) {
-        transition: box-shadow 0.3s;
-        &:hover {
-          box-shadow: 0 0.3em 0.4em 0 rgba($primary-red, 0.4)
-        }
-      }
+
     }
+
     &--blue {
       border: 1px solid $primary-blue;
       box-shadow: none;
-      @media only screen and (min-width: 1000px) {
-        transition: box-shadow 0.3s;
-        &:hover {
-          box-shadow: 0 0.3em 0.4em 0 rgba($primary-blue, 0.4)
-        }
-      }
+
     }
+
     &--green {
       border: 1px solid $primary-green;
       box-shadow: none;
-      @media only screen and (min-width: 1000px) {
-        transition: box-shadow 0.3s;
-        &:hover {
-          box-shadow: 0 0.3em 0.4em 0 rgba($primary-green, 0.4)
-        }
-      }
+
     }
+
     &__subscription {
       position: relative;
       display: block;
       height: 100%;
+
       &__type {
         display: inline-block;
         vertical-align: middle;
         line-height: 1.5;
         width: 48%;
-        @media only screen and (min-width: 1000px) {
-          display: block;
-          text-align: center;
-          width: 100%;
-          margin-top: 2em;
-          min-height: 6.5rem;
-        }
+
         &__title {
           font-family: $font-Raleway;
           font-weight: 700;
           font-size: 0.9rem;
-          color: #000; 
-          @media only screen and (min-width: 1000px) {
-            margin-bottom: 0.5em;
-          }
+          color: #000;
+
         }
-        &__price{
+
+        &__price {
           font-family: $font-OpenSans;
           font-weight: 300;
-          font-size: 2.4rem; 
+          font-size: 2.4rem;
+
           &--red {
             color: $primary-red;
           }
+
           &--blue {
             color: $primary-blue;
           }
+
           &--green {
             color: $primary-green;
           }
         }
-        &__text{
+
+        &__text {
           font-family: $font-Raleway;
           font-weight: 700;
           color: #000;
           font-size: 0.6rem;
         }
       }
+
       &__features {
         display: inline-block;
         vertical-align: middle;
         line-height: 1.5;
         width: 48%;
         margin-top: 1.5em;
-        @media only screen and (min-width: 1000px) {
-          display: block;
-          width: 100%;
-          margin-top: 2em;
-        }
-        &__list{
-         list-style-type: none;
-         margin-top: 1em;
-         img{
-          margin-right: 0.5em;
-         }
-         &__item{
-          font-family: $font-OpenSans;
-          font-weight: 400;
-          color: #000000;
-          font-size: 0.7rem;
-          text-align: left;
-          margin-bottom: 1em;
-          @media only screen and (min-width: 1000px) {
-            display: block;
-            width: 100%;
-            text-align: center;
+
+        &__list {
+          list-style-type: none;
+          margin-top: 1em;
+
+          img {
+            margin-right: 0.5em;
           }
-         }
+
+          &__item {
+            font-family: $font-OpenSans;
+            font-weight: 400;
+            color: #000000;
+            font-size: 0.7rem;
+            text-align: left;
+            margin-bottom: 1em;
+
+          }
         }
       }
     }
-    &__button{
+
+    &__button {
       position: absolute;
       top: 100%;
       left: 50%;
@@ -170,36 +131,144 @@
       font-family: $font-OpenSans;
       font-weight: 700;
       font-size: 0.75rem;
+
       &--red {
         background-color: $primary-red;
-        @media only screen and (min-width: 1000px) {
+
+      }
+
+      &--blue {
+        background-color: $primary-blue;
+
+      }
+
+      &--green {
+        background-color: $primary-green;
+
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .pricing {
+    padding: 0;
+
+    &__title {
+      margin-bottom: 1.5em;
+
+    }
+
+    &__currency-selector {
+      margin-bottom: 1em;
+
+    }
+
+    &__container {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5;
+      width: 28%;
+      height: 23rem;
+      border-radius: 0.7em;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &--red {
+        transition: box-shadow 0.3s;
+
+        &:hover {
+          box-shadow: 0 0.3em 0.4em 0 rgba($primary-red, 0.4)
+        }
+
+      }
+
+      &--blue {
+        transition: box-shadow 0.3s;
+
+        &:hover {
+          box-shadow: 0 0.3em 0.4em 0 rgba($primary-blue, 0.4)
+        }
+
+      }
+
+      &--green {
+        transition: box-shadow 0.3s;
+
+        &:hover {
+          box-shadow: 0 0.3em 0.4em 0 rgba($primary-green, 0.4)
+        }
+
+      }
+
+      &__subscription {
+        &__type {
+          display: block;
+          text-align: center;
+          width: 100%;
+          margin-top: 2em;
+          min-height: 6.5rem;
+
+          &__title {
+            margin-bottom: 0.5em;
+
+          }
+        }
+
+        &__features {
+          display: block;
+          width: 100%;
+          margin-top: 2em;
+
+          &__list {
+            &__item {
+              display: block;
+              width: 100%;
+              text-align: center;
+
+            }
+          }
+        }
+      }
+
+      &__button {
+        &--red {
           cursor: pointer;
           transition: background-color 0.3s;
+
           &:hover {
             background-color: $sencondary-red;
           }
+
         }
-      }
-      &--blue {
-        background-color: $primary-blue;
-        @media only screen and (min-width: 1000px) {
+
+        &--blue {
           cursor: pointer;
           transition: background-color 0.3s;
+
           &:hover {
             background-color: $tertiary-blue;
           }
+
         }
-      }
-      &--green {
-        background-color: $primary-green;
-        @media only screen and (min-width: 1000px) {
+
+        &--green {
           cursor: pointer;
           transition: background-color 0.3s;
+
           &:hover {
             background-color: $sencondary-green;
           }
+
         }
       }
     }
   }
+
 }

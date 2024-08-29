@@ -310,74 +310,6 @@ header {
   }
 }
 
-.slider {
-  display: inline-block;
-  background-color: black;
-  position: relative;
-  vertical-align: middle;
-  z-index: 0;
-  padding: 2em 0;
-  border-radius: 0.5em;
-  margin: 0 0.2em;
-  margin-bottom: 2em;
-  margin-top: 1em;
-
-  &__img {
-    width: 100%;
-    height: auto;
-    z-index: 1;
-  }
-
-  &__button {
-    z-index: 2;
-    position: absolute;
-    border: 0.15em solid $secondary-grey;
-    background-color: rgba(128, 128, 128, 0.745);
-    color: $secondary-grey;
-    border-radius: 50%;
-    font-size: 1rem;
-    font-family: $font-OpenSans;
-    font-weight: 800;
-    text-align: center;
-    width: 2em;
-    height: 2em;
-    cursor: pointer;
-    top: 45%;
-
-
-    &--left {
-      left: 1%;
-    }
-
-    &--right {
-      right: 1%;
-    }
-  }
-
-  &__img-selector {
-    display: flex;
-    justify-content: center;
-    z-index: 2;
-    position: absolute;
-    bottom: 2.5%;
-    left: 50%;
-    transform: translate(-50%, 0);
-
-    &__option {
-      margin: 0 0.25em;
-      cursor: pointer;
-      width: 0.5em;
-      height: 0.5em;
-      border-radius: 50%;
-      background-color: #ccc;
-      transition: background-color 0.3s ease;
-
-      &.active {
-        background-color: $primary-blue;
-      }
-    }
-  }
-}
 
 @media only screen and (min-width: 1000px) {
   .container{
@@ -451,16 +383,7 @@ header {
   }
 
 
-  .slider {
-
-    &__button {
-      transition: all 200ms ease;
-
-      &:hover {
-        background-color: rgba(0, 174, 255, 0.252);
-      }
-    }
-  }
+  
 }
 
 @media only screen and (min-width: 1500px) {
