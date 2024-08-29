@@ -1,0 +1,68 @@
+.container {
+  padding: 0 1em;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 950px;
+    padding: 0;
+    margin-bottom: 4em;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+.footer {
+  position: relative;
+  display: block;
+  height: 20%;
+  box-shadow: 0 -0.3em 2.4em 0 rgba(0, 0, 0, 0.2);
+  padding: 0.5em;
+}
+.footer__oxygenshop {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  width: 63%;
+}
+.footer__oxygenshop__title {
+  color: #08A6E4;
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.footer__oxygenshop__rights {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 0.6rem;
+  color: #A5A5A5;
+}
+.footer__media {
+  position: relative;
+  display: inline-block;
+  width: 35%;
+  vertical-align: middle;
+  line-height: 1;
+  text-align: right;
+}
+.footer__media__img {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  margin-left: 0.35em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}/*# sourceMappingURL=footer.css.map */

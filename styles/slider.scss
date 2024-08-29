@@ -1,0 +1,80 @@
+@import "variables";
+@import "common";
+
+.slider {
+  background-color: black;
+  position: relative;
+  z-index: 0;
+  border-radius: 0.5em;
+  overflow: hidden;
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__button {
+    z-index: 2;
+    position: absolute;
+    border: 0.15em solid $secondary-grey;
+    background-color: rgba(128, 128, 128, 0.745);
+    color: $secondary-grey;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: $font-OpenSans;
+    font-weight: 800;
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    top: 45%;
+
+
+    &--left {
+      left: 1%;
+    }
+
+    &--right {
+      right: 1%;
+    }
+  }
+
+  &__img-selector {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    bottom: 2.5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    &__option {
+      margin: 0 0.25em;
+      cursor: pointer;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      background-color: #ccc;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        background-color: $primary-blue;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .slider {
+    max-height: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    &__button {
+      transition: all 200ms ease;
+      &:hover {
+        background-color: rgba(0, 174, 255, 0.252);
+      }
+    }
+  }
+}

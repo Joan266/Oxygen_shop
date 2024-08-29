@@ -1,0 +1,93 @@
+@import "variables";
+@import "common";
+
+header {
+  margin-top: 6em;
+
+  .sellmore {
+    display: block;
+    font-family: $font-OpenSans;
+
+    &__title {
+      display: block;
+      font-weight: 400;
+      font-family: $font-Raleway;
+      font-size: 1.8em;
+    }
+
+    &__text {
+      display: block;
+      font-weight: 400;
+      margin-top: 1.2em;
+      font-size: 0.8rem;
+      padding: 0 0.4em;
+    }
+
+    &__button {
+      display: block;
+      font-weight: 700;
+      margin-top: 2.5em;
+      font-family: $font-OpenSans;
+      border-radius: 2em;
+      color: white;
+      background-color: $primary-blue;
+      box-shadow: 0.3em 0.6em 0.8em 0 $secondary-blue;
+      border: none;
+      font-size: 0.75rem;
+      width: 100%;
+      text-align: center;
+      padding: 1em 0;
+      max-width: 20rem;
+      margin-left: auto;
+      margin-right: auto;
+
+
+    }
+  }
+
+  .split-container {
+    margin-top: 3.6em;
+    width: 100%;
+
+    >img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 950px;
+    padding: 0;
+    margin-bottom: 4em;
+  }
+
+  header {
+    .sellmore {
+      margin-top:9em ;
+      &__title {
+        font-size: 5rem;
+        font-weight: bold;
+      }
+
+      &__text {
+
+        font-size: 1.2rem;
+      }
+      &__button {
+        cursor: pointer;
+        font-size:1.1rem;
+        max-width: 30rem;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $tertiary-blue;
+        }
+
+      }
+    }
+
+  }
+}

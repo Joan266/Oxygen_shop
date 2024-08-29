@@ -1,0 +1,298 @@
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.percentage-scroller {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0.2em;
+  background-color: $primary-blue;
+  z-index: 3;
+  transition: width 0.3s ease;
+}
+
+.scroll-top-button {
+  position: fixed;
+  bottom: 12%;
+  right: 4%;
+  display: block;
+  font-weight: 600;
+  border-radius: 50%;
+  font-family: $font-OpenSans;
+  color: white;
+  background-color: $primary-grey;
+  box-shadow: 0 0.1em 0.2em 0 $primary-grey;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  z-index: 3;
+  transition: opacity 0.6s ease;
+  opacity: 0;
+  width: 2.25em;
+  height: 2.25em;
+
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.783);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  display: block;
+  background-color: white;
+  border-radius: 1em;
+  width: 98%;
+
+
+  height: auto;
+  padding: 1em;
+
+  &__close-button {
+    position: relative;
+    cursor: pointer;
+    text-align: right;
+
+
+  }
+
+  &__title {
+    font-family: $font-Raleway;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+
+
+  }
+
+  &__form {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.25em;
+    padding-left: 0.8em;
+
+
+    &__label {
+      font-family: $font-OpenSans;
+      font-weight: 600;
+      color: $primary-blue;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+    }
+
+    &__input {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 0.2em 0.4em;
+      margin-bottom: 1.2em;
+      margin-top: 0.6em;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $quart-grey;
+
+
+    }
+
+    &__checkbox {
+      position: absolute;
+      opacity: 0;
+
+      // Text
+      &+label {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        line-height: $checkbox-size;
+        padding-left: $checkbox-size + 0.7rem;
+        font-size: 0.6rem;
+        font-family: sans-serif;
+        color: $tertiary-grey;
+        margin-right: 1.5em;
+
+        // Checkbox
+        &:before {
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 0.5rem;
+          content: "";
+          background: transparent;
+          width: $checkbox-size;
+          height: $checkbox-size;
+          box-shadow: inset 0 0 0 1px $quart-grey;
+          border-radius: 0.3em;
+          border: 1px solid transparent;
+        }
+
+        // Tick
+        &:after {
+          position: absolute;
+          display: block;
+          top: 0.7rem;
+          left: 0.55rem;
+          content: "";
+          width: 0.3rem;
+          height: 0.75rem;
+          border-right: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          transform: rotate(45deg);
+          transition: 200ms ease-in-out all;
+        }
+      }
+
+      // Checked
+      &:checked {
+        &+label {
+          &:before {
+            background: white;
+          }
+
+          &:after {
+            border-color: $primary-blue;
+          }
+        }
+      }
+    }
+
+    &__button {
+      display: block;
+      font-weight: 700;
+      margin-top: 2.5em;
+      border-radius: 2em;
+      font-family: $font-OpenSans;
+      color: white;
+      background-color: $primary-blue;
+      box-shadow: 0.2em 0.3em 0.4em 0 $secondary-blue;
+      border: none;
+      font-size: 0.7rem;
+      padding: 1em 0;
+      width: 70%;
+      margin-left: 30%;
+
+
+    }
+  }
+}
+
+.boxshadow-disabled {
+  box-shadow: none;
+}
+
+.disabled {
+  display: none;
+}
+
+.feedback {
+  border-radius: 0.3em;
+
+  &--error {
+    border: 1px solid $primary-red;
+
+    &+label {
+      &:before {
+        border: 1px solid $primary-red;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &--success {
+    border: 1px solid $sencondary-green;
+
+    &+label {
+      &:before {
+        border: 1px solid $sencondary-green;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .scroll-top-button {
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out opacity 0.6s ease-in-out;
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    &:hover {
+      background-color: $tertiary-blue;
+    }
+
+  }
+
+
+  .modal {
+    width: 50%;
+    padding: 1em 1.5em;
+
+    &__close-button {
+      margin-bottom: 0.5em;
+
+    }
+
+    &__title {
+      margin-bottom: 1.5em;
+      font-size: 1.5rem;
+
+    }
+
+    &__form {
+      margin-bottom: 0.8em;
+
+      &__input {
+        margin-bottom: 2.2em;
+        margin-top: 1.2em;
+
+      }
+
+      &__button {
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $tertiary-blue;
+        }
+
+      }
+    }
+  }
+
+}
