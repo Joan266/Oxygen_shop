@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css"> 
+    <link rel="stylesheet" href="./styles/contact.css"> 
+    <link rel="stylesheet" href="./styles/nav.css"> 
+    <link rel="stylesheet" href="./styles/index.css"> 
+    <link rel="stylesheet" href="./styles/benefits.css"> 
+    <link rel="stylesheet" href="./styles/footer.css"> 
+    <link rel="stylesheet" href="./styles/header.css"> 
+    <link rel="stylesheet" href="./styles/pricing.css"> 
+    <link rel="stylesheet" href="./styles/slider.css"> 
+    <link rel="stylesheet" href="./styles/whyus.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <title>Oxygen Shop</title>
@@ -191,16 +199,16 @@
           </section>
         </div>
       </section>
-      <article id="slider" class="slider container">
-        <img class="slider__img" src="./public/picsum-img/picsum-263.webp"></img>
-        <button class="slider__button slider__button--left"><</button>
-        <button class="slider__button slider__button--right">></button>
-        <div class="slider__img-selector">
-          <div class="slider__img-selector__option active" data-value="picsum-263"></div>
-          <div class="slider__img-selector__option" data-value="picsum-764"></div>
-          <div class="slider__img-selector__option" data-value="picsum-894"></div>
-          <div class="slider__img-selector__option" data-value="picsum-906"></div>
-          <div class="slider__img-selector__option" data-value="picsum-909"></div>
+      <article id="slider" class=" container">
+        <div class="slider">
+          <img class="slider__img" src="./public/picsum/pic1.webp"></img>
+          <button class="slider__button slider__button--left"><</button>
+          <button class="slider__button slider__button--right">></button>
+          <div class="slider__img-selector">
+            <div class="slider__img-selector__option active" data-value="pic1"></div>
+            <div class="slider__img-selector__option " data-value="pic2"></div>
+            <div class="slider__img-selector__option" data-value="pic3"></div>
+          </div>
         </div>
       </article>
       <section class="contact container" id="contact">
@@ -233,9 +241,9 @@
     </footer>
     <div id="root"></div>
   </body>
+  <script src="scripts/menu.js"></script>
   <script src="scripts/currencyExchange.js"></script>
   <script src="scripts/form.js"></script>
   <script src="scripts/imageSlider.js"></script>
-  <script src="scripts/menu.js"></script>
   <script src="scripts/scroll.js"></script>
 </html>

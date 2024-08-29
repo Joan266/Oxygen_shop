@@ -1,3 +1,23 @@
+.container {
+  padding: 0 1em;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 950px;
+    padding: 0;
+    margin-bottom: 4em;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .container {
+    max-width: 1300px;
+  }
+}
 .contact {
   text-align: left;
 }
@@ -150,6 +170,8 @@
     vertical-align: middle;
     line-height: 1.5;
     width: 37%;
+    margin-top: 10em;
+    margin-left: 2em;
   }
   .contact__form__button {
     cursor: pointer;

@@ -1,4 +1,4 @@
-export class ImageSlider {
+class ImageSlider {
   constructor(id) {
     this.slider = document.getElementById(id);
     this.sliderImg = this.slider.querySelector(".slider__img");
@@ -29,7 +29,6 @@ export class ImageSlider {
         this.pause = false;
       }
       this.clock();
-      console.log(`clock, pause: ${this.pause}`);
     }, 8000);
   };
   
@@ -74,7 +73,7 @@ export class ImageSlider {
   }
   
   changeImgSrcPath(value) {
-    const srcString = `./public/picsum-img/${value}.webp`;
+    const srcString = `./public/picsum/${value}.webp`;
     this.sliderImg.src = srcString;
   }
 }

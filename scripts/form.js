@@ -31,7 +31,7 @@ document.addEventListener('scroll', function scrollPopupHandler() {
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   const scrollPosition = document.documentElement.scrollTop;
   const scrollPercentage = Math.floor((scrollPosition / maxScroll) * 100);
-  if (scrollPercentage > 25) {
+  if (scrollPercentage > 35) {
     showModal();
     document.removeEventListener('scroll', scrollPopupHandler);
   }
@@ -39,9 +39,9 @@ document.addEventListener('scroll', function scrollPopupHandler() {
 
     
 //CONTACT FORM EVENT LISTENER
-contactForm.addEventListener("submit", function(event) {
+contactForm.addEventListener("submit", async function(event) {
   event.preventDefault();
-  subscribe(contactForm, contactFormNameInput, contactFormEmailInput, contactFormCheckbox);
+  await subscribe(contactForm, contactFormNameInput, contactFormEmailInput, contactFormCheckbox);
 });
 
 // FORM FUNCTIONS
@@ -69,7 +69,6 @@ async function subscribe(form, nameInput, emailInput, checkbox) {
         },
       });
       const json = await response.json();
-      console.log(json);
       if (json) {
         alert("Form submitted successfully!");
       }
@@ -132,9 +131,7 @@ function validateForm(nameInput, emailInput, checkbox) {
 //MODAL FORM FUNCTIONS
 
 function showModal() {
-  console.log(isModalClosed)
   if(!isModalClosed) {
-    console.log(!isModalClosed)
     modalOverlay.classList.remove('disabled');
   }
 }

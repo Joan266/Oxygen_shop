@@ -1,26 +1,27 @@
 @import "variables";
+@import "common";
+
 .footer {
   position: relative;
   display: block;
   height: 20%;
   box-shadow: 0 -0.3em 2.4em 0 #00000033;
   padding: 0.5em;
-  @media only screen and (min-width: 1000px) {
-    padding-left: 3em;
-    padding-right: 3em;
-  }
+
   &__oxygenshop {
     position: relative;
     display: inline-block;
-    vertical-align: middle; 
+    vertical-align: middle;
     line-height: 1;
     width: 63%;
-    &__title{
+
+    &__title {
       color: $primary-blue;
       font-family: $font-Raleway;
       font-weight: 300;
       font-size: 1.5rem;
     }
+
     &__rights {
       font-family: $font-OpenSans;
       font-weight: 400;
@@ -28,19 +29,29 @@
       color: $primary-grey;
     }
   }
+
   &__media {
     position: relative;
     display: inline-block;
-    width: 35%; 
-    vertical-align: middle; 
-    line-height: 1; 
+    width: 35%;
+    vertical-align: middle;
+    line-height: 1;
     text-align: right;
-    &__img{
+
+    &__img {
       position: relative;
       display: inline-block;
-      vertical-align: middle; 
+      vertical-align: middle;
       line-height: 1.5;
       margin-left: 0.35em;
     }
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .footer {
+      padding-left: 3em;
+      padding-right: 3em;
   }
 }

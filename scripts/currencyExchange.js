@@ -10,7 +10,6 @@ let subcriptions = JSON.parse(localStorage.getItem('subcriptions'));
 princingCurrencySelector.addEventListener("change", async (event) => {
   const selectedCurrency = event.target.value;
   if (!subcriptions) {
-    console.log('Subscription prices not available.');
     await calculateCurrency();
   }
   const convertPrice = (price) => {
@@ -74,7 +73,6 @@ async function calculateCurrency() {
     localStorage.setItem('subcriptions', JSON.stringify(subcriptions));
   }
   
-  console.log('Subcriptions:', subcriptions);
 }
 
 calculateCurrency();
