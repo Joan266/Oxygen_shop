@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/contact.css"> 
+    <link rel="stylesheet" href="styles/nav.css"> 
+    <link rel="stylesheet" href="styles/index.css"> 
+    <link rel="stylesheet" href="styles/benefits.css"> 
+    <link rel="stylesheet" href="styles/footer.css"> 
+    <link rel="stylesheet" href="styles/header.css"> 
+    <link rel="stylesheet" href="styles/pricing.css"> 
+    <link rel="stylesheet" href="styles/slider.css"> 
+    <link rel="stylesheet" href="styles/whyus.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Oxygen Shop</title>
+  </head>
+  <body>
+    <nav id='nav' class="nav">
+      <article class="nav__oxygenshop">
+        <h1 class="nav__oxygenshop__title">OXYGENShop</h1>
+        <article id='nav-oxygenshop-section-list' class="nav__oxygenshop__section-list">
+          <div class="nav__oxygenshop__section-list__option" data-value="why-us">WHY US</div>
+          <div class="nav__oxygenshop__section-list__option" data-value="benefits">BENEFITS</div>
+          <div class="nav__oxygenshop__section-list__option" data-value="prices">PRICES</div>
+          <div class="nav__oxygenshop__section-list__option" data-value="contact">CONTACT</div>
+        </article>
+      </article>
+      <article class="nav__menu">
+        <img id='nav-menu-img' class="nav__menu__img" src="./public/svg/menu.svg" alt="menu icon"><img/>
+      </article>
+    </nav>
+    <article class="percentage-scroller"></article>
+    <button class="scroll-top-button"><span class="scroll-top-button__text">^</span></button>
+    <article id="modal-overlay" class="modal-overlay disabled">
+      <div class="modal" >
+        <div class="modal__close-button" >
+          <img class="modal__close-button__img" src="./public/svg/x.svg" alt="cross icon">
+        </div>
+        <h2 class="modal__title">Subscribe to our newsletter</h2>
+        <form class="modal__form" id="modalForm" action="" method="post" novalidate>
+          <label class="modal__form__label" for="modalFormName">NAME</label>
+          <input class="modal__form__input" id="modalFormName" type="text">
+          <label class="modal__form__label" for="modalFormEmail">EMAIL</label>
+          <input class="modal__form__input" id="modalFormEmail" type="email">
+          <input class="modal__form__checkbox" id="modalFormCheckbox" type="checkbox">
+          <label class="modal__form__checkbox-label" for="modalFormCheckbox">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+          <button class="modal__form__button" type="submit" id="modalFormButton">Send</button>
+        </form>
+      </div>
+    </article>
+    <main>
+      <header id="why-us" class="container">
+        <article class="sellmore">
+          <h1 class="sellmore__title">Sell more!</h1>
+          <p class="sellmore__text">Open shop on our platform and increase your sales</p>
+          <button class="sellmore__button">Open your shop</button>
+        </article>
+        <article class="split-container">
+          <img class="split-container__img" src="./public/img/computers.webp" alt="Ordenador fondo" />
+        </article>
+      </header>
+      <section class="whyus container" >
+        <section class="whyus__mostpopular">
+          <h1 class="whyus__mostpopular__title">The most popular sales platform in country</h1>
+          <section class="whyus__mostpopular__content">
+            <article class="whyus__mostpopular__content__container">
+              <div class="circle circle--red "></div>
+              <img src="./public/svg/persona.svg" alt="Persona dibujado" />
+            </article>
+            <span class="whyus__mostpopular__content__num">100000+</span>
+            <p class="whyus__mostpopular__content__text">daily entries</p>
+          </section>
+          <section class="whyus__mostpopular__content">
+            <article class="whyus__mostpopular__content__container">
+              <div class="circle circle--blue"></div>
+              <img src="./public/svg/ojo.svg" alt="Ojo dibujado" />
+            </article>
+            <span class="whyus__mostpopular__content__num">2000000+</span>
+            <p class="whyus__mostpopular__content__text">seen products<br/>every day</p>
+          </section>
+          <section class="whyus__mostpopular__content">
+            <article class="whyus__mostpopular__content__container">
+              <div class="circle circle--green"></div>
+              <img src="./public/svg/posts.svg" alt="Posts" />
+            </article>
+            <span class="whyus__mostpopular__content__num">10000+</span>
+            <p class="whyus__mostpopular__content__text">added posts<br/>daily</p>
+          </section>
+        </section>
+      </section>
+      <section class="benefits" id="benefits">
+        <div class="container">
+          <section class="benefits__content ">
+            <article class="benefits__content__ilustration benefits__content__ilustration--reverse-order">
+              <div class="benefits__content__ilustration__container">
+                <div class="benefits__content__ilustration__container__redstain"></div>
+                <img class="benefits__content__ilustration__container__macbook" src="./public/img/macbook.png" alt="Foto mackbook" />
+              </div>
+            </article>
+            <article class="benefits__content__description benefits__content__description--reverse-order">
+              <h1 class="benefits__content__description__title"><br/>Be always first</h1>
+              <p class="benefits__content__description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <div class="benefits__content__description__vector benefits__content__description__vector--red"></div>
+            </article>
+          </section>
+          <section class="benefits__content">
+            <article class="benefits__content__ilustration">
+              <div class="benefits__content__ilustration__container">
+                <div class="benefits__content__ilustration__container__bluestain"></div>
+                <img class="benefits__content__ilustration__container__iPhone" src="./public/img/iPhone.png" alt="iPhone" />
+              </div>
+            </article>
+            <article class="benefits__content__description">
+              <h1 class="benefits__content__description__title">Your shop is<br/>where you are!</h1>
+              <p class="benefits__content__description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <div class="benefits__content__description__vector benefits__content__description__vector--blue"></div>
+            </article>
+          </section>
+          <section class="benefits__content benefits__content--third">
+            <article class="benefits__content__description benefits__content__description--third">
+              <h1 class="benefits__content__description__title">Increase recognition<br/>your brand!</h1>
+              <p class="benefits__content__description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <div class="benefits__content__description__vector benefits__content__description__vector--green"></div>
+            </article>
+           <article class="benefits__content__ilustration benefits__content__ilustration--third">
+             <div class="benefits__content__ilustration__container benefits__content__ilustration__container--third">
+               <div class="benefits__content__ilustration__container__greenstain"></div>
+               <img class="benefits__content__ilustration__container__trumpet" src="./public/img/trumpet.png" alt="Trumpet" />
+             </div>
+           </article>
+          </section>
+        </div>
+      </section>
+      <section class="pricing container" id="prices">
+        <h1 class="pricing__title">Pricing</h1>
+        <select class="pricing__currency-selector">
+          <option class="pricing__currency-selector__option" value="eur">EUR</option>
+          <option class="pricing__currency-selector__option" value="usd" selected>USD</option>
+          <option class="pricing__currency-selector__option" value="gbp">GBP</option>
+        </select>
+        <div>
+          <section class="pricing__container pricing__container--red">
+            <article class="pricing__container__subscription">
+              <div class="pricing__container__subscription__type">
+                <h2 class="pricing__container__subscription__type__title">Basic</h2>
+                <span id="basic-price" class="pricing__container__subscription__type__price pricing__container__subscription__type__price--red">$0</span>
+              </div>
+              <div class="pricing__container__subscription__features">
+                <ul class="pricing__container__subscription__features__list">
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>100 MB HDD</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>1 Subdomain</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>2 E-mails</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/cross.svg" alt="cross"><img/>Two years license</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/cross.svg" alt="cross"><img/>Full support</li>
+                </ul>
+              </div>
+            </article>
+            <button class="pricing__container__button pricing__container__button--red">Begin</button>
+          </section>
+          <section class="pricing__container pricing__container--blue">
+            <article class="pricing__container__subscription">
+              <div class="pricing__container__subscription__type">
+                <h2 class="pricing__container__subscription__type__title">Professional</h2>
+                <span id="professional-price" class="pricing__container__subscription__type__price pricing__container__subscription__type__price--blue">$25</span>
+                <p class="pricing__container__subscription__type__text">Limited offer</p>
+              </div>
+              <div class="pricing__container__subscription__features">
+                <ul class="pricing__container__subscription__features__list">
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>500 MB HDD</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>2 Subdomain</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>5 E-mails</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>One year license</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/cross.svg" alt="cross"><img/>Full support</li>
+                </ul>
+              </div>
+            </article>
+            <button class="pricing__container__button pricing__container__button--blue">Begin</button>
+          </section>
+          <section class="pricing__container pricing__container--green">
+            <article class="pricing__container__subscription">
+              <div class="pricing__container__subscription__type">
+                <h2 class="pricing__container__subscription__type__title">Premium</h2>
+                <span id="premium-price" class="pricing__container__subscription__type__price pricing__container__subscription__type__price--green">$60</span>
+                <p class="pricing__container__subscription__type__text">Limited offer</p>
+              </div>
+              <div class="pricing__container__subscription__features">
+                <ul class="pricing__container__subscription__features__list">
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>2 GB HDD</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>5 Subdomain</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>20 E-mails</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>Two year license</li>
+                  <li class="pricing__container__subscription__features__list__item"><img src="./public/svg/checkbox.svg" alt="checkbox"><img/>Full support</li>
+                </ul>
+              </div>
+            </article>
+            <button class="pricing__container__button pricing__container__button--green">Begin</button>
+          </section>
+        </div>
+      </section>
+      <article id="slider" class=" container">
+        <div class="slider">
+          <img class="slider__img" src="./public/picsum/pic1.webp"></img>
+          <button class="slider__button slider__button--left"><</button>
+          <button class="slider__button slider__button--right">></button>
+          <div class="slider__img-selector">
+            <div class="slider__img-selector__option active" data-value="pic1"></div>
+            <div class="slider__img-selector__option " data-value="pic2"></div>
+            <div class="slider__img-selector__option" data-value="pic3"></div>
+          </div>
+        </div>
+      </article>
+      <section class="contact container" id="contact">
+        <article class="contact__info">
+          <h1 class="contact__info__title">Any questions?</h1>
+          <p class="contact__info__text">Leave your email address or call us!</p>
+          <div class="contact__info__details"><img src="./public/svg/email.svg" alt="email icon"/><span>info@bestshop.xyz</span></div>
+          <div class="contact__info__details"><img src="./public/svg/telefono.svg" alt="telefono icon"/><span>123 456 789</span></div>
+        </article>
+        <form class="contact__form" id="contactForm" action="" method="post" novalidate>
+          <label class="contact__form__label" for="contactFormName">NAME</label>
+          <input class="contact__form__input" id="contactFormName" type="text" >
+          <label class="contact__form__label" for="contactFormEmail">EMAIL</label>
+          <input class="contact__form__input" id="contactFormEmail" type="email" >
+          <input class="contact__form__checkbox" id="contactFormCheckbox" type="checkbox">
+          <label for="contactFormCheckbox">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+          <button class="contact__form__button" type="submit" id="contactFormButton">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <article class="footer__oxygenshop">
+        <h1 class="footer__oxygenshop__title">OXYGENShop</h1>
+        <span class="footer__oxygenshop__rights">© 2022 OXYGEN, All Rights Reserved</span>
+      </article>
+      <article class="footer__media">
+        <img class="footer__media__img" src="./public/svg/twitter.svg" alt="twitter icon"><img/>
+        <img class="footer__media__img" src="./public/svg/facebook.svg" alt="facebook icon"><img/>
+      </article>
+    </footer>
+    <div id="root"></div>
+  </body>
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/currencyExchange.js"></script>
+  <script src="scripts/form.js"></script>
+  <script src="scripts/imageSlider.js"></script>
+  <script src="scripts/scroll.js"></script>
+</html>
