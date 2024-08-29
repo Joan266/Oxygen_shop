@@ -1,51 +1,31 @@
 @import "variables";
-.whyus{
-  display: block;
-  max-width:$max-width-phone;
-  margin-left: auto;
-  margin-right: auto;
-  @media only screen and (min-width: 1000px) {
-    max-width: $max-width-computer;
-  }
+
+.whyus {
   &__mostpopular {
     display: block;
-    padding: 0 1.5em;
-    margin-top: 0.5em;
-    margin-bottom: 2.3em;
-    font-family: $font-OpenSans; 
-    @media only screen and (min-width: 1000px) { 
-      margin-bottom: 4.5em; 
-      margin-top: 1.5em;
-    }
+    font-family: $font-OpenSans;
     &__title {
       font-family: $font-Raleway;
       font-weight: 300;
       padding: 0 0.5em;
       font-size: 1.4rem;
-      @media only screen and (min-width: 1000px) {  
-        margin-bottom: 2.5em;
-      }
-
     }
+
     &__content {
-      @media only screen and (min-width: 1000px) {
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.3;
-        width: 30%;
-        min-height: 10rem;
-      }
       margin-top: 1.7em;
-      &__container{
+
+      &__container {
         position: relative;
         margin-bottom: 0.7em;
-        img{
+
+        img {
           position: relative;
           width: 2.5em;
           height: 2.5em;
           margin-left: 3em;
           z-index: 1;
         }
+
         .circle {
           position: absolute;
           top: 50%;
@@ -55,17 +35,21 @@
           width: 3em;
           height: 3em;
           z-index: 0;
+
           &--red {
             background-color: $primary-red;
           }
+
           &--blue {
             background-color: $primary-blue;
           }
+
           &--green {
             background-color: $primary-green;
           }
         }
       }
+
       &__num {
         font-family: $font-Raleway;
         font-weight: 800;
@@ -73,10 +57,11 @@
         font-size: 1rem;
         letter-spacing: 0.3em;
       }
+
       &__text {
         font-family: $font-Raleway;
         font-weight: 400;
-        color:$primary-grey;
+        color: $primary-grey;
         font-size: 0.8rem;
         padding: 0 6em;
         margin-top: 1.3em;
@@ -84,4 +69,26 @@
       }
     }
   }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .whyus {
+    &__mostpopular {
+      &__title {
+        margin-bottom: 2.5em;
+      }
+
+      &__content {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.3;
+        width: 30%;
+        min-height: 10rem;
+
+      }
+    }
+  }
+
+
 }
